@@ -1,9 +1,7 @@
-import "./App.css";
-
 const App = () => {
   return (
     <>
-      <h1>ML Portfolio</h1>
+      <h1 className="text-3xl font-bold underline">ML Portfolio</h1>
     </>
   );
 }
