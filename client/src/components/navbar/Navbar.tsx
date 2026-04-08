@@ -8,7 +8,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="fixed w-full transition-all bg-white">
+            <nav className="fixed w-full transition-colors bg-white">
                 <div className="px-4 py-6 flex items-center justify-between">
                     <div>MARTA LEWAN</div>
                     <div className="flex items-center gap-7">
@@ -20,10 +20,10 @@ const Navbar = () => {
                                     smooth={true}
                                     duration={500}
                                     onClick={() => setActive(item.id)}
-                                    className={`uppercase cursor-pointer transition-all duration-400 ease-in-out
+                                    className={` bg-gray-700 bg-clip-text text-transparent uppercase cursor-pointer transition-all duration-600 ease-in-out
                                         ${active === item.id
-                                            ? "bg-linear-to-r items-center from-blue-500 via-teal-500 to-pink-500 bg-clip-text font-medium text-transparent drop-shadow-sm"
-                                            : "text-gray-700 hover:bg-linear-to-r hover:from-blue-400 hover:to-teal-400 hover:bg-clip-text hover:text-transparent"
+                                            ? "bg-linear-to-r items-center from-blue-500 via-teal-500 to-pink-500 font-medium drop-shadow-sm"
+                                            : "hover:bg-linear-to-r hover:from-blue-500 hover:to-teal-400 "
                                         }`}>{item.label}
                                 </Link>
                             ))
