@@ -1,7 +1,9 @@
+import Navbar from "./components/navbar/Navbar";
+
 const App = () => {
   return (
     <>
-      <h1>Marta Lewan</h1>
+      <Navbar />
     </>
   );
 }
