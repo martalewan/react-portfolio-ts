@@ -12,6 +12,14 @@
   body {
     font-family: 'Montserrat', sans-serif;
   }
+
+  h1 {
+    @apply text-5xl xl:text-6xl font-semibold;
+  }
+
+  h2 {
+    @apply text-3xl xl:text-4xl font-semibold;
+  }
 }
 
 @layer component {}
