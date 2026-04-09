@@ -1,46 +1,76 @@
+import GlassCard from "../glassCard/GlassCard"
+import { aboutData } from "./aboutData"
+
 const About = () => {
     return (
-        <section id="about">
-            <h2 className="">About</h2>
-            <div className="relative bg-(--secondary-color)/5 backdrop-blur-xl border border-(--secondary-color)/20 rounded-3xl shadow-lg p-8  ">
-                <div className="absolute -inset-1 bg-linear-to-r from-blue-400 via-teal-400 to-pink-500 rounded-3xl opacity-20 blur-2xl"></div>
-                <h2 className="text-2xl font-bold text(--secondary-color) mb-4">Who I am?</h2>
+        <section id="about" className="flex-col items-center gap-12">
+            <div className="flex flex-col items-center">
+                <h2>About Me</h2>
+                <span className="section-subtitle">Get to know more about me and my journey and my professional experience</span>
+            </div>
 
+            <GlassCard glow>
                 <div className="flex relative gap-14 z-10">
-                    <div>
-                        <p className="text-(--secondary-color)/80">
+                    <div className="flex-1">
+                        <div>
+                            <h3 className="mb-2">Who I am?</h3>
                             <p className="mb-6">
-                                When I’m not coding, I love bringing interfaces to life with animations, microinteractions, and thoughtful design touches. My background in graphic design gives me a strong eye for aesthetics, layout, and color, which I combine with frontend development to craft polished and engaging digital experiences.
+                                I am a Frontend Engineer with 4+ years of experience building scalable, accessible web applications using React and TypeScript. I specialize in creating clean, modular, and maintainable code while leveraging modern frontend tools and architectures to solve complex problems efficiently. I am excited to contribute to projects that challenge me, improve user experiences, and push the boundaries of frontend development.
                             </p>
                             <p className="mb-6">
-                                I enjoy building clean, maintainable code that balances functionality, performance, and user experience. Working with technologies like React, TypeScript, and GraphQL, I tackle challenging problems, optimize applications, and experiment with animations, interactive components, and design systems to push the boundaries of what a web application can feel like.
+                                Outside of coding, I am a former cellist and have 8 years of experience as a graphic designer - both of which continue to inspire my creativity. I also enjoy tennis, chess, and learning new languages, which sharpen my curiosity, discipline, and problem-solving skills - qualities I bring to every project.
                             </p>
-                            <p className="mb-6">
-                                Outside of work, I’m a former cellist, and music still inspires my creativity. I stay active by playing tennis, practicing chess, and learning new languages. These hobbies feed my curiosity and problem-solving skills, which I bring into my coding projects. I love collaborating with designers, product managers, and engineers to transform ideas into functional, beautiful, and user-friendly applications. Coding, for me, is about crafting experiences that delight users and leave a lasting impression.
+
+                        </div>
+                        <div className="grid grid-cols-2 gap-4">
+                            <p className="text-(--secondary-color)/80">Name:<br />
+                                <span className="font-bold">Marta Lewandowska</span>
                             </p>
-                        </p>
+
+                            <p className="text-(--secondary-color)/80">Based in:<br />
+                                <span className="font-bold">Paris, France</span>
+                            </p>
+
+                            <p className="text-(--secondary-color)/80">Availability:<br />
+                                <span className="font-bold">Full-Time & Freelance</span>
+                            </p>
+
+                            <p className="text-(--secondary-color)/80">Email:<br />
+                                <span className="font-bold">                   <a href="mailto:mlewan.design@gmail.com" className="hover:underline">
+                                    mlewan.design@gmail.com
+                                </a>
+                                </span>
+
+                            </p>
+                        </div>
                     </div>
-                    <div className="flex-1 flex flex-col gap-4">
+                    <div className="flex-1">
+                        <h3 className="mb-2">My Experience</h3>
+                        <div className="flex flex-col gap-6">
+                            {aboutData.map((item, index) => {
+                                return (
+                                    <div key={index} className="glass-block p-4 flex items-start justify-between">
+                                        <div>
+                                            <h4 className="text-(--secondary-color)/80">
+                                                {item.position}
+                                            </h4>
+                                            <p className="text-(--secondary-color)/60">
+                                                {item.place}
+                                            </p>
+                                        </div>
+                                        <div className="glass-block min-w-20 text-center"><span className="section-subtitle ">{item.years}</span></div>
+                                    </div>
+                                )
+                            })}</div>
 
-                        <p className="text-(--secondary-color)/80">
-                            <span className="font-bold">Availability:</span> <br /> Full-Time & Freelance
-                        </p>
 
-                        <p className="text-(--secondary-color)/80">
-                            <span className="font-bold">City:</span> <br />Paris
-                        </p>
-
-                        <p className="text-(--secondary-color)  /80">
-                            <span className="font-bold">Birthplace:</span> <br />Warsaw, Poland
-                        </p>
-
-                        <p className="text-(--secondary-color)/80">
-                            <span className="font-bold">Email:</span> <a href="mailto:mlewan.design@gmail.com" className="text-(--accent-color) hover:underline"><br />mlewan.design@gmail.com</a>
-                        </p>
                     </div>
 
                 </div>
-            </div>
+            </GlassCard>
+
+
+
         </section >
     )
 }

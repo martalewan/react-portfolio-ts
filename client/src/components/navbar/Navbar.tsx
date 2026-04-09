@@ -10,8 +10,8 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="w-full fixed flex items-center h-17 transition-colors bg-(--primary-color) z-10 text-(--secondary-color) border-b border-gray-700">
-                <div className="px-7 w-full flex items-center justify-between">
+            <nav className="w-full fixed flex items-center h-17 px-7 transition-colors bg-(--primary-color) z-10 text-(--secondary-color) border-b border-(--secondary-color)/20">
+                <div className="w-full flex items-center justify-between">
                     <Logo />
                     <DesktopNavigation navData={navData} active={active} setActive={setActive} />
                     <Drawer>

@@ -7,11 +7,11 @@ import Socials from "../socials/Socials";
 const Hero = () => {
     return (
         <section id="home">
-            <div className="container mx-auto ">
+            <div className="container mx-auto">
                 <div className="h-full flex flex-col xl:flex-row justify-center xl:justify-between items-center gap-6">
                     <div className="flex flex-col items-center gap-5 xl:items-start text-center xl:text-left order-2 xl:order-0">
                         <div>
-                            <span>Frontend Developer</span>
+                            <span className="section-subtitle">Frontend Developer</span>
                             <h1>
                                 <span className="hidden md:block">Hello, I am<br />
                                 </span>
@@ -21,7 +21,7 @@ const Hero = () => {
                             </h1>
                         </div>
 
-                        <p className="max-w-[550px]">
+                        <p className="max-w-137.5 p-large">
                             <span className="font-bold">Frontend Engineer with 4+ years of experience</span> building scalable, accessible web applications using <span className="font-bold">React</span> and <span className="font-bold">TypeScript</span>. I focus on turning design systems into high-quality, performant user experiences with strong attention to detail.
                         </p>
                         <div className="flex flex-col gap-5">
