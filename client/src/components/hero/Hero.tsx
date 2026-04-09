@@ -6,9 +6,9 @@ import Socials from "../socials/Socials";
 
 const Hero = () => {
     return (
-        <section id="home" className="flex min-h-screen text-white bg-gray-900">
+        <section id="home" className="flex min-h-screen text-white bg-gray-900 px-28">
             <div className="container mx-auto items-center">
-                <div className="flex flex-col xl:flex-row justify-center xl:justify-between items-center px-24 h-full">
+                <div className="flex flex-col xl:flex-row justify-center xl:justify-between items-center h-full">
                     <div className="flex flex-col items-center gap-1 xl:items-start text-center xl:text-left order-2 xl:order-0">
                         <span>Frontend Developer</span>
                         <h1 className="mb-3">
