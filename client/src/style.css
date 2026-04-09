@@ -3,8 +3,9 @@
 @custom-variant dark (&:where(.dark, dark *));
 
 @theme {
+  --primary-color: #111827;
+  --secondary-color: #ffffff;
   --accent-color: #0ff;
-
 }
 
 @layer base {
@@ -12,8 +13,12 @@
     font-family: 'Montserrat', sans-serif;
   }
 
+  section {
+    @apply flex min-h-screen pt-23 px-12 xl:px-28 scroll-mt-16 text-(--secondary-color) bg-(--primary-color);
+  }
+
   h1 {
-    @apply text-[52px] xl:text-[60px] font-semibold leading-16 xl:leading-19;
+    @apply text-[42px] font-semibold leading-12 xl:text-[60px] xl:leading-19;
   }
 
   h2 {
@@ -21,7 +26,7 @@
   }
 
   p {
-    @apply text-[16px] leading-7;
+    @apply text-[13px] xl:text-[15px] xl:leading-6;
   }
 }
 
