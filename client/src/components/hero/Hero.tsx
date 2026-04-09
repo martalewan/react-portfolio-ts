@@ -1,3 +1,4 @@
+import { FiDownload } from "react-icons/fi";
 import profil from "../../assets/profil.png";
 import ActionButton from "../actionButton/ActionButton";
 import { motion } from "framer-motion";
@@ -18,7 +19,7 @@ const Hero = () => {
                         <p className="max-w-[550px] mb-6">
                             <span className="font-bold">Frontend Engineer with 4+ years of experience</span> building scalable, accessible web applications using <span className="font-bold">React</span> and <span className="font-bold">TypeScript</span>. I focus on turning design systems into high-quality, performant user experiences with strong attention to detail.
                         </p>
-                        <ActionButton text="Download my CV" />
+                        <ActionButton text="Download my CV" icon={FiDownload} />
                     </div>
 
                     <div className="relative w-60 xl:w-130 flex justify-center items-center">
