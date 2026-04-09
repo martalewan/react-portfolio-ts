@@ -9,13 +9,13 @@ type DrawerProps = {
 
 const Drawer = ({ children }: DrawerProps) => {
     return (
-        <ElDialog className="xl:hidden" >
+        <ElDialog className="xl:hidden text-white" >
             <button
                 command="show-modal"
                 commandfor="drawer"
-                className="rounded-md  px-2 py-1 text-sm font-semibold text-gray-900 hover:bg-gray-950/10"
+                className="rounded-md px-2 py-1 text-sm font-semibold cursor-pointer"
             >
-                <CiMenuFries className="size-6" />
+                <CiMenuFries className="size-6 " />
             </button>
 
 
@@ -26,14 +26,14 @@ const Drawer = ({ children }: DrawerProps) => {
             >
                 <ElDialogBackdrop className="absolute inset-0 bg-gray-500/75 transition-opacity duration-500 ease-in-out data-closed:opacity-0" />
 
-                <div className="absolute inset-0 pl-10 focus:outline-none sm:pl-16">
+                <div className="absolute inset-0 pl-10 focus:outline-none sm:pl-16 text-white">
                     <ElDialogPanel className="group/dialog-panel relative ml-auto block size-full max-w-md transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700">
                         <div className="z-10 absolute top-6 right-6 flex duration-500 ease-in-out group-data-closed/dialog-panel:opacity-0">
                             <button
                                 type="button"
                                 command="close"
                                 commandfor="drawer"
-                                className="relative rounded-md text-gray-900 focus-visible:outline-2 cursor-pointer focus-visible:outline-offset-2 focus-visible:outline-gray-500"
+                                className="relative rounded-md cursor-pointer"
                             >
                                 <MdClose className="size-6" />
 
@@ -41,7 +41,7 @@ const Drawer = ({ children }: DrawerProps) => {
 
                         </div>
 
-                        <div className="flex h-full flex-col items-center overflow-y-auto bg-white py-6 shadow-xl">
+                        <div className="flex h-full flex-col items-center overflow-y-auto bg-gray-900 py-6 shadow-xl">
                             <div className="mt-20 sm:px-6">
                                 <Logo />
                             </div>

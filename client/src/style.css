@@ -14,11 +14,15 @@
   }
 
   h1 {
-    @apply text-5xl xl:text-6xl font-semibold;
+    @apply text-[52px] xl:text-[60px] font-semibold leading-16 xl:leading-19;
   }
 
   h2 {
-    @apply text-3xl xl:text-4xl font-semibold;
+    @apply text-[40px] xl:text-[52px] font-semibold;
+  }
+
+  p {
+    @apply text-[16px] leading-8;
   }
 }
 

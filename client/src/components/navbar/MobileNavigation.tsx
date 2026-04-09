@@ -13,7 +13,7 @@ const MobileNavigation = ({ navData, setActive, active }: NavigationProps) => {
                         smooth={true}
                         duration={500}
                         onClick={() => setActive(item.id)}
-                        className={` bg-gray-700 bg-clip-text text-transparent uppercase cursor-pointer transition-all duration-600 ease-in-out
+                        className={`bg-white bg-clip-text text-transparent uppercase cursor-pointer transition-all duration-600 ease-in-out
                                                     ${active === item.id
                                 ? "bg-linear-to-r items-center from-blue-500 via-teal-500 to-pink-500 drop-shadow-sm"
                                 : "hover:bg-linear-to-r hover:from-blue-500 hover:to-teal-400 "
