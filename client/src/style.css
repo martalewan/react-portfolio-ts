@@ -3,9 +3,8 @@
 @custom-variant dark (&:where(.dark, dark *));
 
 @theme {
-  --primary-color: #1a202c;
-  --secondary-color: #2d3748;
-  --accent-color: #4a5568;
+  --accent-color: #0ff;
+
 }
 
 @layer base {
@@ -26,4 +25,31 @@
   }
 }
 
-@layer component {}
+@layer component {
+  @keyframes neon-flicker {
+
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+      text-shadow: 0 0 2px #0ff, 0 0 4px #0ff, 0 0 8px #00ffff;
+      color: #0ff;
+    }
+
+    20%,
+    22%,
+    24%,
+    55% {
+      text-shadow: 0 0 1px #0ff, 0 0 2px #0ff, 0 0 4px #0ff;
+      color: #0cc;
+    }
+  }
+
+  .neon-flicker {
+    animation: neon-flicker 4s linear infinite;
+  }
+}
