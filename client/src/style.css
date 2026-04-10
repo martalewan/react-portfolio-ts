@@ -14,7 +14,7 @@
   }
 
   section {
-    @apply flex min-h-screen pt-18 px-12 xl:px-28 scroll-mt-16 text-(--secondary-color) bg-(--primary-color);
+    @apply flex p-20 px-12 xl:px-28 text-(--secondary-color) bg-(--primary-color);
   }
 
   h1 {
@@ -75,7 +75,7 @@
   }
 
   .glass-block {
-    @apply bg-(--secondary-color)/10 shadow-lg border border-(--secondary-color)/20 rounded-xl;
+    @apply bg-(--secondary-color)/10 shadow-lg border border-(--secondary-color)/20 rounded-md;
   }
 
 }

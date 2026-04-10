@@ -3,7 +3,7 @@ import { aboutData } from "./aboutData"
 
 const About = () => {
     return (
-        <section id="about" className="flex-col items-center gap-12">
+        <section id="about" className="flex-col items-center justify-center gap-12">
             <div className="flex flex-col items-center">
                 <h2>About Me</h2>
                 <span className="section-subtitle">Get to know more about me and my journey and my professional experience</span>

@@ -6,7 +6,7 @@ import Socials from "../socials/Socials";
 
 const Hero = () => {
     return (
-        <section id="home">
+        <section id="home" className="pt-18 min-h-screen">
             <div className="container mx-auto">
                 <div className="h-full flex flex-col xl:flex-row justify-center xl:justify-between items-center gap-6">
                     <div className="flex flex-col items-center gap-5 xl:items-start text-center xl:text-left order-2 xl:order-0">
