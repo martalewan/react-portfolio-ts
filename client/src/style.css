@@ -78,4 +78,36 @@
     @apply bg-(--secondary-color)/10 shadow-lg border border-(--secondary-color)/20 rounded-md;
   }
 
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scroll {
+    animation: scroll 50s linear infinite;
+  }
+
+  .skill-item {
+    transition: transform 0.2s linear, opacity 0.2s linear;
+  }
+
+  /* This creates a FIXED curve relative to viewport */
+  @media (min-width: 0px) {
+    .skill-item {
+      transform: perspective(1000px) rotateY(0deg);
+    }
+
+    .skill-item:nth-child(odd) {
+      transform: perspective(1000px) rotateY(10deg);
+    }
+
+    .skill-item:nth-child(even) {
+      transform: perspective(1000px) rotateY(-10deg);
+    }
+  }
 }

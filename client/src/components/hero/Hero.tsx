@@ -3,8 +3,12 @@ import profil from "../../assets/profil.png";
 import ActionButton from "../actionButton/ActionButton";
 import { motion } from "framer-motion";
 import Socials from "../socials/Socials";
+import { skillsData } from "../skills/sillsData";
+import SkillsBar from "../skillsBar/SkillsBar";
 
 const Hero = () => {
+    const allSkills = skillsData.flatMap((cat) => cat.skills);
+    const loopSkills = [...allSkills, ...allSkills];
     return (
         <section id="home" className="pt-18 min-h-screen">
             <div className="container mx-auto">
@@ -51,6 +55,7 @@ const Hero = () => {
                         />
                     </div>
                 </div>
+                <SkillsBar />
             </div>
         </section>
     );
