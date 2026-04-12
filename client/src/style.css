@@ -3,18 +3,23 @@
 @custom-variant dark (&:where(.dark, dark *));
 
 @theme {
-  --primary-color: #111827;
+  --primary-color: #0f131c;
   --secondary-color: #ffffff;
   --accent-color: #0ff;
 }
 
 @layer base {
   body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Geist', 'Montserrat', sans-serif;
+  }
+
+  button {
+    @apply text-[13px];
+
   }
 
   section {
-    @apply flex p-20 px-12 xl:px-28 text-(--secondary-color) bg-(--primary-color);
+    @apply flex text-(--secondary-color);
   }
 
   h1 {
@@ -75,7 +80,7 @@
   }
 
   .glass-block {
-    @apply bg-(--secondary-color)/10 shadow-lg border border-(--secondary-color)/20 rounded-md;
+    @apply bg-(--secondary-color)/10 shadow-lg border border-(--secondary-color)/20;
   }
 
   @keyframes scroll {
