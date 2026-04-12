@@ -9,20 +9,22 @@ const Skills = () => {
                 <span className="section-subtitle">Tools, technologies, and expertise I bring to projects</span>
             </div>
 
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-2">
                 {
                     skillsData.map((category) => (
-                        <div key={category.title} className="w-full flex gap-5">
-                            <div className="flex items-start justify-start min-w-20">
-                                <h4>
+                        <div key={category.title} className="w-full flex gap-2">
+                            <div className="flex items-start min-w-30">
+                                <h4 className="text-xs uppercase tracking-widest text-(--secondary-color)/60">
                                     {category.title}
                                 </h4>
                             </div>
                             <div className="flex flex-wrap gap-2">
                                 {
                                     category.skills.map((skill) => (
-                                        <div key={skill.name} className="flex items-center justify-start gap-1 glass-block min-w-32 min-h-8 px-2">
-                                            <div className="text-xl">{skill.icon}</div>
+                                        <div key={skill.name} className="flex flex-col items-center justify-center gap-1 glass-block min-w-22 min-h-22 px-1 rounded-xs transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+                                            <div className="text-xl transition duration-300 hover:drop-shadow-[0_0_8px_#0ff]">
+                                                {skill.icon}
+                                            </div>
                                             <span className="section-subtitle">{skill.name}</span>
                                         </div>
                                     ))

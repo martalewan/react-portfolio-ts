@@ -6,16 +6,14 @@ import { navData } from "./navbarData";
 import MobileNavigation from "./MobileNavigation";
 
 const Navbar = () => {
-    const [active, setActive] = useState('home');
-
     return (
         <>
-            <nav className="w-full fixed flex items-center h-17 px-7 transition-colors bg-(--primary-color) z-10 text-(--secondary-color) border-b border-(--secondary-color)/20">
+            <nav className="w-full fixed flex items-center h-17 px-7 text-(--secondary-color) z-10 bg-linear-to-b from-(--primary-color) to-(--primary-color)/80 backdrop-blur-md border-b border-(--secondary-color)/5">
                 <div className="w-full flex items-center justify-between">
                     <Logo />
-                    <DesktopNavigation navData={navData} active={active} setActive={setActive} />
+                    <DesktopNavigation navData={navData} />
                     <Drawer>
-                        <MobileNavigation navData={navData} active={active} setActive={setActive} />
+                        <MobileNavigation navData={navData} />
                     </Drawer>
                 </div>
             </nav >

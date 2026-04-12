@@ -15,8 +15,8 @@ const SkillsBar = () => {
                 const itemCenter = rect.left + rect.width / 2;
                 const distance = (itemCenter - center) / center;
 
-                const rotate = distance * 40;
-                const scale = 1 - Math.abs(distance) * 0.3;
+                const rotate = distance * 60;
+                const scale = 1 - Math.abs(distance) * 0.1;
                 const opacity = 1 - Math.abs(distance) * 0.6;
 
                 (el as HTMLElement).style.transform = `
@@ -27,25 +27,25 @@ const SkillsBar = () => {
             });
         };
 
-        const interval = setInterval(update, 16); // ~60fps
+        const interval = setInterval(update, 16);
 
         return () => clearInterval(interval);
     }, []);
 
     return (
-        <div ref={containerRef} className="relative w-full overflow-hidden py-10 perspective-[1000px]">
+        <div ref={containerRef} className="relative overflow-hidden py-10 perspective-[1000px]">
 
-            <div className="absolute left-0 top-0 h-full w-40 bg-linear-to-r from-gray-900 to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 h-full w-40 bg-linear-to-l from-gray-900 to-transparent z-10 pointer-events-none" />
+            <div className="absolute left-0 top-0 h-full w-40 bg-linear-to-r from-(--primary-color) to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 h-full w-40 bg-linear-to-l from-(--primary-color) to-transparent z-10 pointer-events-none" />
 
             <div className="flex w-max animate-scroll">
                 {[...allSkills, ...allSkills].map((skill, i) => (
-                    <div key={i} className="skill-item mx-8 text-4xl">
+                    <div key={i} className="skill-item mx-8 text-2xl transpare">
                         {skill.icon}
                     </div>
                 ))}
             </div>
-        </div>
+        </div >
     );
 };
 
