@@ -1,3 +1,4 @@
+import DotsContainer from "../dotsContainer/DotsContainer"
 import GlassCard from "../glassCard/GlassCard"
 import { aboutData } from "./aboutData"
 
@@ -69,7 +70,7 @@ const About = () => {
                 </div>
             </GlassCard>
 
-
+            <DotsContainer />
 
         </section >
     )
