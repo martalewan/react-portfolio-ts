@@ -7,16 +7,39 @@ type ActionButtonProps = {
 
 const ActionButton = ({ text, icon }: ActionButtonProps) => {
     const Icon = icon;
-    return (
-        <button className="group relative cursor-pointer w-fit">
-            <div className="relative z-1 inline-flex h-10 items-center justify-center gap-2 overflow-hidden rounded-md border border-neutral-200 bg-transparent px-6 font-medium text-white transition-all duration-300 group-hover:-translate-x-1 group-hover:-translate-y-1 group-active:translate-x-0 group-active:translate-y-0">
-                {text}
-                {icon && <Icon />}
-            </div>
-            <div className="absolute inset-0 z-0 h-full w-full rounded-md transition-all duration-300 group-hover:-translate-x-1 group-hover:-translate-y-1 group-hover:[box-shadow:1px_1px_#a3a3a3,2px_2px_#d4d4d4,3px_3px_#e5e5e5] group-active:translate-x-0 group-active:translate-y-0 group-active:shadow-none"></div>
 
+    return (
+        <button
+            className="group relative overflow-hidden rounded-xs px-5
+            bg-(--accent-color) border border-(--accent-color)
+            transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]
+            hover:bg-white hover:border-white
+            hover:-translate-y-px
+            hover:shadow-[0_0_12px_rgba(34,211,238,0.4)]"
+        >
+
+            <span className="relative flex items-center gap-2 h-full will-change-transform cursor-pointer">
+
+                <span className="p-2 flex items-center uppercase gap-2 
+                    transition-transform duration-300 
+                    group-hover:-translate-y-full 
+                text-(--primary-color)">
+                    {text}
+                    {Icon && <Icon className="text-sm" />}
+                </span>
+
+                <span className="p-2 uppercase absolute left-0 flex items-center gap-2 h-full 
+                    translate-y-full 
+                    transition-transform duration-300 
+                    group-hover:translate-y-0 
+                    text-(--primary-color)">
+                    {text}
+                    {Icon && <Icon className="text-sm" />}
+                </span>
+
+            </span>
         </button>
-    )
-}
+    );
+};
 
 export default ActionButton;
