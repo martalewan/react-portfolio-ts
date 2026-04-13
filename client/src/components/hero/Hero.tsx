@@ -7,14 +7,15 @@ import ScrollButton from "../scrollButton/ScrollButton";
 
 const Hero = () => {
     return (
-        <section id="home" className="relative min-h-screen p-20 px-12 xl:px-28">
+        <section id="home" className="page-padding relative min-h-screen pt-10">
+
             <div className="container">
                 <div className="h-full flex flex-col xl:flex-row justify-center xl:justify-between items-center gap-6">
                     <div className="flex flex-col items-center gap-5 xl:items-start text-center xl:text-left order-2 xl:order-0">
                         <div>
                             <span className="section-subtitle">Frontend Developer</span>
                             <h1>
-                                <span className="hidden md:block">Hello, I am<br />
+                                <span className="hidden md:block">Hi, I am<br />
                                 </span>
                                 <span className="neon-flicker">
                                     Marta Lewandowska
@@ -23,11 +24,14 @@ const Hero = () => {
                         </div>
 
                         <p className="max-w-137.5 p-large">
-                            Frontend Engineer with 4+ years of experience building scalable, accessible web applications using React and TypeScript. I focus on turning design systems into high-quality, performant user experiences with strong attention to detail.
+                            I build high-quality frontend experiences, transforming design systems into scalable, modular, and future-ready applications.
                         </p>
                         <div className="flex gap-9">
-                            <Button text="Download my CV" icon={FiDownload} />
-                            <Button text="Contact Me" variant="secondary" />
+                            <div className="flex gap-4">
+                                <Button text="Download my CV" icon={FiDownload} />
+                                <Button text="Contact Me" variant="secondary" />
+                            </div>
+
                             <Socials wrapperStyles="flex gap-10" iconsStyles="flex items-center justify-center border-1 border-white rounded-full p-2 w-9 h-9 hover:text-(--accent-color) hover:border-(--accent-color) hover:transition-all duration-500" />
                         </div>
                     </div>
