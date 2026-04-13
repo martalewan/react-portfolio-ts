@@ -15,7 +15,6 @@
 
   button {
     @apply text-[13px];
-
   }
 
   section {
@@ -24,22 +23,26 @@
 
   h1 {
     @apply text-[42px] font-semibold leading-12 xl:text-[60px] xl:leading-19;
+    font-family: "Plus Jakarta Sans", sans-serif;
   }
 
   h2 {
-    @apply text-[28px] xl:text-[36px] font-semibold;
+    @apply text-[28px] xl:text-[48px];
+    font-family: "Plus Jakarta Sans", sans-serif;
   }
 
   h3 {
-    @apply text-[18px] xl:text-[18px] font-semibold;
+    @apply text-[18px] xl:text-[38px];
+    font-family: "Plus Jakarta Sans", sans-serif;
   }
 
   h4 {
-    @apply text-[12px] xl:text-[14px] font-semibold;
+    @apply text-[12px] xl:text-[14px];
+    font-family: "Plus Jakarta Sans", sans-serif;
   }
 
   p {
-    @apply text-[12px] xl:text-[14px];
+    @apply text-[12px] xl:text-[18px] leading-9;
   }
 }
 
@@ -67,8 +70,17 @@
     }
   }
 
+  .page-padding {
+    @apply pl-[15%] pr-[15%];
+  }
+
+  .numero-font {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
   .p-large {
-    @apply text-[13px] xl:text-[15px] leading-6;
+    @apply text-[13px] xl:text-[28px] leading-9;
+    font-family: "Plus Jakarta Sans", sans-serif;
   }
 
   .neon-flicker {
@@ -76,11 +88,11 @@
   }
 
   .section-subtitle {
-    @apply text-(--secondary-color)/80 text-[13px];
+    @apply text-(--secondary-color)/70 text-[15px];
   }
 
   .glass-block {
-    @apply bg-(--secondary-color)/10 shadow-lg border border-(--secondary-color)/20;
+    @apply bg-(--secondary-color)/5 shadow-lg border border-(--secondary-color)/20;
   }
 
   @keyframes scroll {
@@ -101,7 +113,6 @@
     transition: transform 0.2s linear, opacity 0.2s linear;
   }
 
-  /* This creates a FIXED curve relative to viewport */
   @media (min-width: 0px) {
     .skill-item {
       transform: perspective(1000px) rotateY(0deg);
@@ -114,5 +125,26 @@
     .skill-item:nth-child(even) {
       transform: perspective(1000px) rotateY(-10deg);
     }
+  }
+
+  @keyframes soft-pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.6;
+    }
+
+    50% {
+      transform: scale(1.6);
+      opacity: 1;
+    }
+
+    100% {
+      transform: scale(1);
+      opacity: 0.6;
+    }
+  }
+
+  .pulse-dot {
+    animation: soft-pulse 2.2s ease-in-out infinite;
   }
 }
