@@ -1,5 +1,5 @@
 import { Link } from "react-scroll";
-import ActionButton from "../actionButton/ActionButton";
+import Button from "../button/Button";
 
 export type NavigationProps = {
     navData: { id: string; label: string }[];
@@ -20,7 +20,7 @@ const DesktopNavigation = ({ navData }: NavigationProps) => {
                     </Link>
                 ))
             }
-            <ActionButton text="Hire Me" />
+            <Button text="Hire Me" />
 
         </div >
     )
