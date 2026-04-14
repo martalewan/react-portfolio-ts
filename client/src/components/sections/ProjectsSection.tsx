@@ -1,10 +1,10 @@
-import Carousel from "../carousel/Carousel";
-import CarouselIndicator from "../carouselIndicator/CarouselIndicator";
-import ProjectInfo from "../ProjectInfo/ProjectInfo";
 import pic1 from "../../assets/pic1.jpg";
 import pic2 from "../../assets/pic2.jpg";
 import pic3 from "../../assets/pic3.jpg";
 import { useState } from "react";
+import Carousel from "../modules/Carousel";
+import CarouselIndicator from "../modules/CarouselIndicator";
+import ProjectInfo from "../modules/ProjectInfo";
 
 const project = {
     title: "Scalable Design System Engine for Modern Web Applications",

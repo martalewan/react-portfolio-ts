@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-import { skillsData } from "./../skills/sillsData";
+import { skillsData } from "../data/sillsData";
 
 const SkillsBar = () => {
     const containerRef = useRef<HTMLDivElement>(null);

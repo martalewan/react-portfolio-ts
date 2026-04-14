@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { skillsData } from "./sillsData";
+import { skillsData } from "../data/sillsData";
 const container = {
     hidden: {},
     show: {

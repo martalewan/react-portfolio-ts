@@ -1,7 +1,7 @@
 import { ElDialog, ElDialogPanel, ElDialogBackdrop } from "@tailwindplus/elements/react";
 import { CiMenuFries } from "react-icons/ci";
 import { MdClose } from 'react-icons/md';
-import Logo from "../logo/Logo";
+import Logo from "../ui/Logo";
 
 type DrawerProps = {
     children: React.ReactNode;

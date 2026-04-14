@@ -1,5 +1,5 @@
-import GlassCard from "../glassCard/GlassCard";
-import { aboutData } from "./aboutData";
+import GlassCard from "../ui/GlassCard";
+import { aboutData } from "../data/aboutData";
 
 const About = () => {
     return (

@@ -1,9 +1,9 @@
 import { FiDownload } from "react-icons/fi";
 import profil from "../../assets/profil.png";
-import Button from "../button/Button";
+import Button from "../ui/Button";
 import { motion } from "framer-motion";
-import Socials from "../socials/Socials";
-import ScrollButton from "../scrollButton/ScrollButton";
+import Socials from "../modules/Socials";
+import ScrollButton from "../ui/ScrollButton";
 
 const Hero = () => {
     return (

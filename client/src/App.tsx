@@ -1,10 +1,11 @@
-import About from "./components/about/About";
 import Cursor from "./components/Cursor";
-import DotsContainer from "./components/dotsContainer/DotsContainer";
-import Hero from "./components/hero/Hero";
-import Navbar from "./components/navbar/Navbar";
-import ProjectsSection from "./components/projectsSection/ProjectsSection";
-import Skills from "./components/skills/Skills";
+import DotsContainer from "./components/modules/DotsContainer";
+import Navbar from "./components/modules/Navbar";
+import About from "./components/sections/About";
+import Hero from "./components/sections/Hero";
+import ProjectsSection from "./components/sections/ProjectsSection";
+import Skills from "./components/sections/Skills";
+
 
 const App = () => {
   return (

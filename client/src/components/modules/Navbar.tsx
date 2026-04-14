@@ -1,9 +1,8 @@
-import { useState } from "react";
-import Logo from "../logo/Logo";
+import Logo from "../ui/Logo";
 import Drawer from "./Drawer";
 import DesktopNavigation from "./DesktopNavigation";
-import { navData } from "./navbarData";
 import MobileNavigation from "./MobileNavigation";
+import { navData } from "../data/navbarData";
 
 const Navbar = () => {
     return (
