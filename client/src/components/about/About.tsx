@@ -3,7 +3,7 @@ import { aboutData } from "./aboutData";
 
 const About = () => {
     return (
-        <section id="about" className="page-padding relative flex flex-col px-20 pt-24 gap-16">
+        <section id="about" className="page-padding relative flex flex-col pt-40 gap-16">
 
             <div className="relative flex flex-col items-start gap-2 pl-10">
 
@@ -16,12 +16,8 @@ const About = () => {
                     <span className="neon-flicker numero-font ">01.</span>
                     What makes me different
                 </h2>
-
-                <span className="section-subtitle max-w-xl">
-                    Get to know more about me, my journey, and professional experience
-                </span>
             </div>
-            <div className="grid grid-cols-2 gap-20">
+            <div className="grid grid-cols-2 gap-22 mt-20 mb-40">
                 <div>
                     <h3 className="mb-10">Strong frontend foundation</h3>
                     <p className="mt-4 text-(--secondary-color)/90">
@@ -37,7 +33,7 @@ const About = () => {
                 </div>
 
                 <div>
-                    <h3 className="mb-10">Curiosity & continuous growth</h3>
+                    <h3 className="mb-10">Creative discipline</h3>
                     <p className="mt-4 text-(--secondary-color)/90">
                         Before tech, I spent years as a cellist. That experience shaped my discipline, patience, and attention to nuance — qualities I bring into my work every day. Whether refining UI details or structuring complex components, I approach problems with focus and precision.
                     </p>
@@ -54,7 +50,6 @@ const About = () => {
                 <div className="grid grid-cols-2 gap-20 relative z-10">
 
                     <div>
-                        <h3 className="mb-4">Who I am</h3>
 
                         <p className="mb-6 text-(--secondary-color)/70">
                             I am a Frontend Engineer with 4+ years of experience building scalable,
@@ -70,32 +65,32 @@ const About = () => {
 
                         <div className="grid grid-cols-2 gap-6 mt-8">
 
-                            <p className="text-(--secondary-color)/60 text-sm">
+                            <p className="text-(--secondary-color)/60">
                                 Name:<br />
-                                <span className="text-(--secondary-color) font-medium">
+                                <span className="text-(--secondary-color)">
                                     Marta Lewandowska
                                 </span>
                             </p>
 
-                            <p className="text-(--secondary-color)/60 text-sm">
+                            <p className="text-(--secondary-color)/60">
                                 Based in:<br />
-                                <span className="text-(--secondary-color) font-medium">
+                                <span className="text-(--secondary-color)">
                                     Paris, France
                                 </span>
                             </p>
 
-                            <p className="text-(--secondary-color)/60 text-sm">
+                            <p className="text-(--secondary-color)/60">
                                 Availability:<br />
-                                <span className="text-(--secondary-color) font-medium">
+                                <span className="text-(--secondary-color)">
                                     Full-Time & Freelance
                                 </span>
                             </p>
 
-                            <p className="text-(--secondary-color)/60 text-sm">
+                            <p className="text-(--secondary-color)/60">
                                 Email:<br />
                                 <a
                                     href="mailto:mlewan.design@gmail.com"
-                                    className="text-(--secondary-color) font-medium hover:text-(--accent-color) transition"
+                                    className="text-(--secondary-color) hover:text-(--accent-color) transition"
                                 >
                                     mlewan.design@gmail.com
                                 </a>
@@ -106,16 +101,16 @@ const About = () => {
 
                     <div className="relative">
 
-                        <h3 className="mb-6">Experience</h3>
+                        <h3 className="mb-10">Experience</h3>
 
-                        <div className="absolute left-2 top-12 bottom-0 w-px bg-white/10" />
+                        <div className="absolute left-0 top-17 bottom-0 w-px bg-white/10" />
 
                         <div className="flex flex-col gap-8">
 
                             {aboutData.map((item, index) => (
                                 <div key={index} className="relative pl-10 group">
 
-                                    <div className="absolute left-[4.5px] top-1/2 -translate-y-1/2 w-2 h-2">
+                                    <div className="absolute left-[-3.5px] top-1/2 -translate-y-1/2 w-2 h-2">
 
                                         <span className="absolute w-2 h-2 rounded-full bg-(--secondary-color)" />
                                         <span className="absolute w-2 h-2 rounded-full bg-(--secondary-color) animate-ping opacity-80" />

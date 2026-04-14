@@ -16,7 +16,7 @@ const Cursor = () => {
 
         const addHoverListeners = () => {
             const hoverables = document.querySelectorAll(
-                "a, button, [data-hover]"
+                "a, [data-hover], .portfolio-image"
             );
 
             hoverables.forEach((el) => {

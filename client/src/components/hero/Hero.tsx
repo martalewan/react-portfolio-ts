@@ -26,7 +26,7 @@ const Hero = () => {
                         <p className="max-w-137.5 p-large">
                             I build high-quality frontend experiences, transforming design systems into scalable, modular, and future-ready applications.
                         </p>
-                        <div className="flex gap-9">
+                        <div className="flex flex-wrap gap-9">
                             <div className="flex gap-4">
                                 <Button text="Download my CV" icon={FiDownload} />
                                 <Button text="Contact Me" variant="secondary" />
