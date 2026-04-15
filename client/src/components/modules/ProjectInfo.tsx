@@ -8,16 +8,21 @@ type ProjectInfoProps = {
 
 const ProjectInfo = ({ project }: ProjectInfoProps) => {
     return (
-        <div>
-            <h3>{project.title}</h3>
-
+        <div className="grid grid-cols-2">
             <div>
-                {project.techStack.map((t) => (
-                    <span key={t}>{t}</span>
-                ))}
+                <h3 className="pb-5">{project.title}</h3>
+                <div className="flex gap-5">
+                    {project.techStack.map((t) => (
+                        <span key={t} className="badge"
+                        >{t}</span>
+                    ))}
+                </div>
+            </div>
+            <div>
+                <p>{project.description}</p>
             </div>
 
-            <p>{project.description}</p>
+
         </div>
     );
 };
