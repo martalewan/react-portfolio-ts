@@ -150,7 +150,7 @@ const Carousel = ({ images, active, setActive }: CarouselTypes) => {
                         data-index={i}
                         className={`
                                 carousel-item
-                                min-w-[80%]
+                                min-w-[87%]
                                 snap-center
                                 transition-all duration-500
                                 ${active === i

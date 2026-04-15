@@ -27,22 +27,22 @@
   }
 
   h2 {
-    @apply text-[28px] xl:text-[48px];
+    @apply text-[30px] xl:text-[48px];
     font-family: "Plus Jakarta Sans", sans-serif;
   }
 
   h3 {
-    @apply text-[18px] xl:text-[38px];
+    @apply text-[18px] xl:text-[30px];
     font-family: "Plus Jakarta Sans", sans-serif;
   }
 
   h4 {
-    @apply text-[12px] xl:text-[14px];
+    @apply text-[12px] xl:text-[18px];
     font-family: "Plus Jakarta Sans", sans-serif;
   }
 
   p {
-    @apply text-[12px] xl:text-[18px] leading-9;
+    @apply text-[12px] xl:text-[18px] leading-8;
   }
 }
 
@@ -93,6 +93,11 @@
 
   .glass-block {
     @apply bg-(--secondary-color)/5 shadow-lg border border-(--secondary-color)/20;
+  }
+
+  .badge {
+    @apply flex items-center gap-2 px-4 py-2.5 rounded-xs border border-white/10 bg-white/5 text-white/80;
+
   }
 
   @keyframes scroll {

@@ -4,11 +4,11 @@ import SectionTitle from "../modules/SectionTitle";
 
 const About = () => {
     return (
-        <section id="about" className="page-padding pt-40">
+        <section id="about" className="page-padding">
 
             <SectionTitle label="01." title="What makes me different" subtitle="Background" />
 
-            <div className="grid grid-cols-2 gap-22 mt-20 mb-40">
+            <div className="grid grid-cols-2 gap-22 mb-40">
                 <div>
                     <h3 className="mb-10">Strong frontend foundation</h3>
                     <p className="mt-4 text-(--secondary-color)/90">

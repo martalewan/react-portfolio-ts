@@ -17,7 +17,7 @@ const item = {
 
 const Skills = () => {
     return (
-        <section id="skills" className="page-padding px-20 pb-20">
+        <section id="skills" className="page-padding">
 
             <SectionTitle label="02." title="My Skills" subtitle="Developer Stack" />
 
@@ -46,7 +46,7 @@ const Skills = () => {
                             {category.skills.map((skill) => (
                                 <motion.div
                                     key={skill.name}
-                                    className="flex items-center gap-2 px-4 py-2.5 rounded-md border border-white/10 bg-white/5 text-white/70"
+                                    className="badge"
                                     variants={item}
                                 >
                                     <div className="text-lg text-white/70">
