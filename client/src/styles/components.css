@@ -1,0 +1,39 @@
+@layer components {
+
+    .neon-frame {
+        position: relative;
+        padding: 40px;
+        border-radius: 16px;
+        border: 8px solid var(--accent-color);
+
+        background: var(--primary-color);
+        color: var(--secondary-color);
+
+        z-index: 0;
+    }
+
+    .glass-block {
+        @apply bg-(--secondary-color)/5 shadow-lg border border-(--secondary-color)/20;
+    }
+
+    .badge {
+        @apply flex items-center gap-2 px-4 py-2.5 rounded-xs border border-white/10 bg-white/5 text-white/80;
+    }
+
+    .page-padding {
+        @apply pl-[15%] pr-[15%];
+    }
+
+    .numero-font {
+        font-family: 'JetBrains Mono', monospace;
+    }
+
+    .p-large {
+        @apply text-[13px] xl:text-[28px] leading-9;
+        font-family: "Plus Jakarta Sans", sans-serif;
+    }
+
+    .section-subtitle {
+        @apply text-(--secondary-color)/70 text-[15px];
+    }
+}

@@ -1,0 +1,39 @@
+@custom-variant dark (&:where(.dark, dark *));
+
+@layer base {
+    body {
+        font-family: 'Geist', 'Montserrat', sans-serif;
+    }
+
+    button {
+        @apply text-[13px];
+    }
+
+    section {
+        @apply flex flex-col gap-16 relative text-(--secondary-color);
+    }
+
+    h1 {
+        @apply text-[42px] font-semibold leading-12 xl:text-[52px] xl:leading-19;
+        font-family: "Plus Jakarta Sans", sans-serif;
+    }
+
+    h2 {
+        @apply text-[30px] xl:text-[48px];
+        font-family: "Plus Jakarta Sans", sans-serif;
+    }
+
+    h3 {
+        @apply text-[18px] xl:text-[30px];
+        font-family: "Plus Jakarta Sans", sans-serif;
+    }
+
+    h4 {
+        @apply text-[12px] xl:text-[18px];
+        font-family: "Plus Jakarta Sans", sans-serif;
+    }
+
+    p {
+        @apply text-[12px] xl:text-[18px] leading-8;
+    }
+}

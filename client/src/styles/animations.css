@@ -1,0 +1,186 @@
+@layer components {
+
+    /* TEXT NEON FLICKER */
+    @keyframes neon-flicker {
+
+        0%,
+        19%,
+        21%,
+        23%,
+        25%,
+        54%,
+        56%,
+        100% {
+            text-shadow: 0 0 2px #0ff, 0 0 4px #0ff, 0 0 8px #00ffff;
+            color: #0ff;
+        }
+
+        20%,
+        22%,
+        24%,
+        55% {
+            text-shadow: 0 0 1px #0ff, 0 0 2px #0ff, 0 0 4px #0ff;
+            color: #0cc;
+        }
+    }
+
+    .neon-flicker {
+        animation: neon-flicker 4s linear infinite;
+    }
+
+    /* BORDER FLICKER */
+    @keyframes neon-border-flicker {
+
+        0%,
+        19%,
+        21%,
+        23%,
+        25%,
+        54%,
+        56%,
+        100% {
+            opacity: 0.9;
+            filter: blur(8px);
+        }
+
+        20%,
+        22%,
+        24%,
+        55% {
+            opacity: 0.4;
+            filter: blur(4px);
+        }
+    }
+
+    /* BREATHING GLOW */
+    @keyframes neon-breathe {
+
+        0%,
+        100% {
+            transform: scale(1);
+            filter: blur(6px);
+            opacity: 0.85;
+        }
+
+        50% {
+            transform: scale(1.01);
+            filter: blur(8px);
+            opacity: 1;
+        }
+    }
+
+    /* MICRO FLICKER */
+    @keyframes neon-noise-flicker {
+
+        0%,
+        100% {
+            opacity: 1;
+        }
+
+        7% {
+            opacity: 0.92;
+        }
+
+        8% {
+            opacity: 1;
+        }
+
+        12% {
+            opacity: 0.85;
+        }
+
+        13% {
+            opacity: 1;
+        }
+
+        37% {
+            opacity: 0.95;
+        }
+
+        38% {
+            opacity: 1;
+        }
+    }
+
+    /* APPLY TO FRAME GLOW */
+    .neon-frame::before {
+        content: "";
+        position: absolute;
+        inset: -12px;
+        border-radius: inherit;
+        border: 6px solid var(--accent-color);
+
+        box-shadow:
+            0 0 4px rgba(0, 255, 255, 0.4),
+            0 0 10px rgba(0, 255, 255, 0.6),
+            0 0 22px rgba(0, 255, 255, 0.7),
+            0 0 40px rgba(0, 255, 255, 0.35),
+            inset 0 0 12px rgba(0, 255, 255, 0.4);
+
+        filter: blur(6px);
+        opacity: 0.9;
+        z-index: -1;
+        pointer-events: none;
+
+        animation:
+            neon-border-flicker 4s linear infinite,
+            neon-breathe 6s ease-in-out infinite,
+            neon-noise-flicker 2.8s linear infinite;
+    }
+
+    /* SCROLL */
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    .animate-scroll {
+        animation: scroll 50s linear infinite;
+    }
+
+    /* SKILL TILT */
+    .skill-item {
+        transition: transform 0.2s linear, opacity 0.2s linear;
+    }
+
+    @media (min-width: 0px) {
+        .skill-item {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+
+        .skill-item:nth-child(odd) {
+            transform: perspective(1000px) rotateY(10deg);
+        }
+
+        .skill-item:nth-child(even) {
+            transform: perspective(1000px) rotateY(-10deg);
+        }
+    }
+
+    /* PULSE */
+    @keyframes soft-pulse {
+        0% {
+            transform: scale(1);
+            opacity: 0.6;
+        }
+
+        50% {
+            transform: scale(1.6);
+            opacity: 1;
+        }
+
+        100% {
+            transform: scale(1);
+            opacity: 0.6;
+        }
+    }
+
+    .pulse-dot {
+        animation: soft-pulse 2.2s ease-in-out infinite;
+    }
+}
