@@ -1,7 +1,61 @@
 @layer components {
+    .neon-frame::before {
+        content: "";
+        position: absolute;
+        inset: -7px;
+        border-radius: inherit;
+        border: 9px solid var(--accent-color);
+        box-shadow:
+            0 0 6px rgba(0, 255, 255, 0.5),
+            0 0 14px rgba(0, 255, 255, 0.6),
+            0 0 30px rgba(0, 255, 255, 0.8),
 
-    /* TEXT NEON FLICKER */
-    @keyframes neon-flicker {
+            inset 0 0 50px rgba(0, 255, 255, 0.25),
+
+            inset 0 0 10px rgba(0, 255, 255, 0.5);
+
+        filter: blur(8px);
+        opacity: 0.9;
+        z-index: -1;
+        pointer-events: none;
+        animation:
+            neon-border-flicker 4s linear infinite,
+            neon-breathe 9s ease-in-out infinite,
+            neon-noise-flicker 2.8s linear infinite;
+        transition: filter 120ms linear, opacity 120ms linear;
+
+    }
+
+    .neon-frame::after {
+        content: "";
+        background: var(--accent-color);
+        position: absolute;
+        top: 65%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: perspective(900px) rotateX(60deg) scale(1.05, 0.25);
+        filter: blur(100px);
+        opacity: 15%;
+    }
+
+    .text-neon-flicker {
+        animation: text-neon-flicker 4s linear infinite;
+    }
+
+    .pulse-dot {
+        animation: soft-pulse 2.2s ease-in-out infinite;
+    }
+
+    .animate-scroll {
+        animation: scroll 50s linear infinite;
+    }
+
+    .skill-item {
+        transition: transform 0.2s linear, opacity 0.2s linear;
+    }
+
+    @keyframes text-neon-flicker {
 
         0%,
         19%,
@@ -24,11 +78,6 @@
         }
     }
 
-    .neon-flicker {
-        animation: neon-flicker 4s linear infinite;
-    }
-
-    /* BORDER FLICKER */
     @keyframes neon-border-flicker {
 
         0%,
@@ -52,24 +101,22 @@
         }
     }
 
-    /* BREATHING GLOW */
     @keyframes neon-breathe {
 
         0%,
         100% {
             transform: scale(1);
             filter: blur(6px);
-            opacity: 0.85;
+            opacity: 0.9;
         }
 
         50% {
-            transform: scale(1.01);
+            transform: scale(1.005);
             filter: blur(8px);
             opacity: 1;
         }
     }
 
-    /* MICRO FLICKER */
     @keyframes neon-noise-flicker {
 
         0%,
@@ -102,33 +149,6 @@
         }
     }
 
-    /* APPLY TO FRAME GLOW */
-    .neon-frame::before {
-        content: "";
-        position: absolute;
-        inset: -12px;
-        border-radius: inherit;
-        border: 6px solid var(--accent-color);
-
-        box-shadow:
-            0 0 4px rgba(0, 255, 255, 0.4),
-            0 0 10px rgba(0, 255, 255, 0.6),
-            0 0 22px rgba(0, 255, 255, 0.7),
-            0 0 40px rgba(0, 255, 255, 0.35),
-            inset 0 0 12px rgba(0, 255, 255, 0.4);
-
-        filter: blur(6px);
-        opacity: 0.9;
-        z-index: -1;
-        pointer-events: none;
-
-        animation:
-            neon-border-flicker 4s linear infinite,
-            neon-breathe 6s ease-in-out infinite,
-            neon-noise-flicker 2.8s linear infinite;
-    }
-
-    /* SCROLL */
     @keyframes scroll {
         0% {
             transform: translateX(0);
@@ -139,30 +159,6 @@
         }
     }
 
-    .animate-scroll {
-        animation: scroll 50s linear infinite;
-    }
-
-    /* SKILL TILT */
-    .skill-item {
-        transition: transform 0.2s linear, opacity 0.2s linear;
-    }
-
-    @media (min-width: 0px) {
-        .skill-item {
-            transform: perspective(1000px) rotateY(0deg);
-        }
-
-        .skill-item:nth-child(odd) {
-            transform: perspective(1000px) rotateY(10deg);
-        }
-
-        .skill-item:nth-child(even) {
-            transform: perspective(1000px) rotateY(-10deg);
-        }
-    }
-
-    /* PULSE */
     @keyframes soft-pulse {
         0% {
             transform: scale(1);
@@ -180,7 +176,18 @@
         }
     }
 
-    .pulse-dot {
-        animation: soft-pulse 2.2s ease-in-out infinite;
+    @media (min-width: 0px) {
+        .skill-item {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+
+        .skill-item:nth-child(odd) {
+            transform: perspective(1000px) rotateY(10deg);
+        }
+
+        .skill-item:nth-child(even) {
+            transform: perspective(1000px) rotateY(-10deg);
+        }
     }
+
 }

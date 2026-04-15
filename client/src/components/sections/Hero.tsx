@@ -17,7 +17,7 @@ const Hero = () => {
                             <h1>
                                 <span className="hidden md:block">Hi, I am<br />
                                 </span>
-                                <span className="neon-flicker">
+                                <span className="text-neon-flicker">
                                     Marta Lewandowska
                                 </span>
                             </h1>
