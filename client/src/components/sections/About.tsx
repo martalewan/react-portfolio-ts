@@ -1,22 +1,13 @@
 import GlassCard from "../ui/GlassCard";
 import { aboutData } from "../data/aboutData";
+import SectionTitle from "../modules/SectionTitle";
 
 const About = () => {
     return (
-        <section id="about" className="page-padding relative flex flex-col pt-40 gap-16">
+        <section id="about" className="page-padding pt-40">
 
-            <div className="relative flex flex-col items-start gap-2 pl-10">
+            <SectionTitle label="01." title="What makes me different" subtitle="Background" />
 
-                <div className="absolute left-0 top-1/2 w-6 h-px bg-white/20" />
-
-                <span className="text-xs tracking-widest text-white/30 uppercase">
-                    Background
-                </span>
-                <h2 className="tracking-tight">
-                    <span className="neon-flicker numero-font ">01.</span>
-                    What makes me different
-                </h2>
-            </div>
             <div className="grid grid-cols-2 gap-22 mt-20 mb-40">
                 <div>
                     <h3 className="mb-10">Strong frontend foundation</h3>

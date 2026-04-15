@@ -5,6 +5,7 @@ import { useState } from "react";
 import Carousel from "../modules/Carousel";
 import CarouselIndicator from "../modules/CarouselIndicator";
 import ProjectInfo from "../modules/ProjectInfo";
+import SectionTitle from "../modules/SectionTitle";
 
 const project = {
     title: "Scalable Design System Engine for Modern Web Applications",
@@ -18,26 +19,18 @@ const ProjectsSection = () => {
     const [active, setActive] = useState(0);
 
     return (
-        <section
-            id="projects"
-            className="relative flex flex-col pt-40 gap-16"
-        >
-            <div className="page-padding relative flex flex-col items-start gap-2 pl-10">
-                <div className="absolute left-0 top-1/2 w-6 h-px bg-white/20" />
+        <section id="projects" className="pt-40">
 
-                <span className="text-xs tracking-widest text-white/30 uppercase">
-                    Engineering-focused projects
-                </span>
-
-                <h2 className="tracking-tight">
-                    <span className="neon-flicker numero-font">01.</span>
-                    Selected Work
-                </h2>
+            <div className="page-padding">
+                <SectionTitle label="03." title="Selected Work" subtitle="Engineering-focused projects" />
             </div>
+
             <div className="flex flex-col pb-90 gap-12">
                 <Carousel images={project.images} active={active} setActive={setActive} />
                 <CarouselIndicator images={project.images} active={active} />
-                <ProjectInfo project={project} />
+                <div className="page-padding">
+                    <ProjectInfo project={project} />
+                </div>
             </div>
 
         </section>

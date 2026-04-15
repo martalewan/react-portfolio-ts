@@ -7,9 +7,9 @@ import ScrollButton from "../ui/ScrollButton";
 
 const Hero = () => {
     return (
-        <section id="home" className="page-padding relative min-h-screen pt-10">
+        <section id="home" className="page-padding min-h-screen">
 
-            <div className="container">
+            <div className="container h-screen">
                 <div className="h-full flex flex-col xl:flex-row justify-center xl:justify-between items-center gap-6">
                     <div className="flex flex-col items-center gap-5 xl:items-start text-center xl:text-left order-2 xl:order-0">
                         <div>
