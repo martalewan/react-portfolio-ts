@@ -2,6 +2,7 @@ import Cursor from "./components/Cursor";
 import DotsContainer from "./components/modules/DotsContainer";
 import Navbar from "./components/modules/Navbar";
 import About from "./components/sections/About";
+import Contact from "./components/sections/Contact";
 import Hero from "./components/sections/Hero";
 import ProjectsSection from "./components/sections/ProjectsSection";
 import Skills from "./components/sections/Skills";
@@ -18,6 +19,7 @@ const App = () => {
       <DotsContainer />
       <Skills />
       <ProjectsSection />
+      <Contact />
     </div>
   );
 }
