@@ -1,4 +1,79 @@
 @layer components {
+    @keyframes morph {
+        0% {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+
+        25% {
+            border-radius: 40% 60% 70% 30% / 50% 60% 40% 50%;
+        }
+
+        50% {
+            border-radius: 30% 70% 50% 50% / 40% 50% 60% 60%;
+        }
+
+        75% {
+            border-radius: 70% 30% 40% 60% / 60% 40% 50% 50%;
+        }
+
+        100% {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+    }
+
+
+    @keyframes float1 {
+
+        0%,
+        100% {
+            transform: translate(0, 0) scale(1);
+        }
+
+        25% {
+            transform: translate(90px, -60px) scale(1.15, 0.95);
+        }
+
+        50% {
+            transform: translate(40px, 80px) scale(0.95, 1.1);
+        }
+
+        75% {
+            transform: translate(-70px, 30px) scale(1.08);
+        }
+    }
+
+    @keyframes float2 {
+
+        0%,
+        100% {
+            transform: translate(0, 0) scale(1);
+        }
+
+        30% {
+            transform: translate(-120px, 70px) scale(1.2, 0.9);
+        }
+
+        60% {
+            transform: translate(-40px, -90px) scale(0.9, 1.1);
+        }
+    }
+
+    @keyframes float3 {
+
+        0%,
+        100% {
+            transform: translate(0, 0) scale(1);
+        }
+
+        40% {
+            transform: translate(80px, -110px) scale(1.1, 0.95);
+        }
+
+        70% {
+            transform: translate(-90px, -20px) scale(0.95, 1.05);
+        }
+    }
+
     .neon-frame::before {
         content: "";
         position: absolute;
@@ -16,7 +91,7 @@
 
         filter: blur(8px);
         opacity: 0.9;
-        z-index: -1;
+        z-index: 1;
         pointer-events: none;
         animation:
             neon-border-flicker 4s linear infinite,
@@ -37,22 +112,6 @@
         transform: perspective(900px) rotateX(60deg) scale(1.05, 0.25);
         filter: blur(100px);
         opacity: 15%;
-    }
-
-    .text-neon-flicker {
-        animation: text-neon-flicker 4s linear infinite;
-    }
-
-    .pulse-dot {
-        animation: soft-pulse 2.2s ease-in-out infinite;
-    }
-
-    .animate-scroll {
-        animation: scroll 50s linear infinite;
-    }
-
-    .skill-item {
-        transition: transform 0.2s linear, opacity 0.2s linear;
     }
 
     @keyframes text-neon-flicker {
@@ -173,6 +232,18 @@
         100% {
             transform: scale(1);
             opacity: 0.6;
+        }
+    }
+
+    @keyframes bgPulse {
+
+        0%,
+        100% {
+            filter: brightness(1);
+        }
+
+        50% {
+            filter: brightness(1.08);
         }
     }
 

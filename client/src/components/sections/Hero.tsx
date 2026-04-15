@@ -8,12 +8,18 @@ import ScrollButton from "../ui/ScrollButton";
 const Hero = () => {
     return (
         <section id="home" className="page-padding min-h-screen">
+            <div className="neon-bg">
+                <div className="blob b1"></div>
+                <div className="blob b2"></div>
+                <div className="blob b3"></div>
+            </div>
 
-            <div className="container h-screen">
+            <div className="container h-screen z-1">
                 <div className="h-full flex flex-col xl:flex-row justify-center xl:justify-between items-center gap-6">
                     <div className="flex flex-col items-center gap-5 xl:items-start text-center xl:text-left order-2 xl:order-0">
                         <div>
                             <span className="section-subtitle">Frontend Developer</span>
+
                             <h1>
                                 <span className="hidden md:block">Hi, I am<br />
                                 </span>
@@ -35,26 +41,15 @@ const Hero = () => {
                             <Socials wrapperStyles="flex gap-10" iconsStyles="flex items-center justify-center border-1 border-white rounded-full p-2 w-9 h-9 hover:text-(--accent-color) hover:border-(--accent-color) hover:transition-all duration-500" />
                         </div>
                     </div>
-                    <div className="relative w-52 xl:w-130 flex justify-center items-center">
-                        <motion.div
-                            className="absolute w-50 h-50 xl:w-120 xl:h-120 bg-pink-500 rounded-full opacity-20 blur-sm"
-                            initial={{ x: -50, y: -50 }}
-                            animate={{ x: [0, 50, -50], y: [0, -30, 30] }}
-                            transition={{ duration: 10, repeat: Infinity, repeatType: "mirror" }}
-                        />
-                        <motion.div
-                            className="absolute w-50 h-50 xl:w-120 xl:h-120 bg-teal-400 rounded-full opacity-25 blur-sm"
-                            initial={{ x: 50, y: 50 }}
-                            animate={{ x: [-40, 40, -40], y: [20, -20, 20] }}
-                            transition={{ duration: 12, repeat: Infinity, repeatType: "mirror" }}
-                        />
-                        <motion.img
-                            src={profil}
-                            alt="Portrait"
-                            className="w-90 xl:maxw-140 rounded-full relative mix-blend-lighten"
-                            transition={{ type: "spring", stiffness: 80 }}
-                        />
-                    </div>
+                    {/* <div className="relative flex justify-center items-center">
+                        <div className="neon-frame rounded-full p-0 opacity-99">
+                            <motion.img
+                                src={profil}
+                                alt="Portrait"
+                                className="rounded-full max-w-80 relative"
+                            />
+                        </div>
+                    </div> */}
                 </div>
             </div>
             <ScrollButton direction="down" scrollToId="about" />
