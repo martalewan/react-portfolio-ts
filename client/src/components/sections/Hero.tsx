@@ -3,10 +3,13 @@ import portrait from "../../assets/portrait.svg";
 import Button from "../ui/Button";
 import Socials from "../modules/Socials";
 import ScrollButton from "../ui/ScrollButton";
+import RadialGrandientBackground from "../modules/RadialGrandientBackground";
 
 const Hero = () => {
     return (
         <section id="home" className="page-padding min-h-screen">
+            <RadialGrandientBackground />
+
             <div className="container h-screen z-1">
                 <div className="h-full flex flex-col xl:flex-row justify-center xl:justify-between items-center gap-6">
                     <div className="flex flex-col items-center gap-5 xl:items-start text-center xl:text-left order-2 xl:order-0">

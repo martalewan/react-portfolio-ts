@@ -8,11 +8,8 @@
         position: absolute;
         inset: 0;
         pointer-events: none;
-
         opacity: 0.9;
-        /* IMPORTANT: stronger */
         mix-blend-mode: overlay;
-
         background-image: repeating-radial-gradient(circle,
                 rgba(255, 255, 255, 0.4) 0px,
                 rgba(236, 231, 231, 0.3) 1px,
@@ -20,8 +17,7 @@
                 transparent 3px);
 
         background-size: 3px 3px;
-
-        animation: grainShift 14s steps(6) infinite;
+        animation: grainShift 8s steps(6) infinite;
     }
 
     .neon-frame {
