@@ -1,37 +1,43 @@
 type Props = {
     item: {
-        position: string;
-        place: string;
-        years: string;
+        role: string;
+        company: string;
+        location: string;
+        period: string;
+        type: string;
+        description?: string;
     };
 };
 
 const ExperienceItem = ({ item }: Props) => {
     return (
-        <div className="relative pl-10 group">
-
-            <div className="absolute left-[-3.5px] top-1/2 -translate-y-1/2 w-2 h-2">
-
-                <span className="absolute w-2 h-2 rounded-full bg-(--secondary-color)" />
-                <span className="absolute w-2 h-2 rounded-full bg-(--secondary-color) animate-ping opacity-80" />
-
-            </div>
-
-            <div className="flex items-start justify-between p-4 rounded-md border border-(--secondary-color)/10 bg-(--secondary-color)/5 group-hover:bg-(--secondary-color)/10 transition">
+        <div className="relative group">
+            <div className="py-5 px-6 flex items-start justify-between gap-1 badge transition duration-300 ">
 
                 <div>
-                    <h4 className="text-(--secondary-color)/80">
-                        {item.position}
+                    <h4 className="text-(--secondary-color)/80 group-hover:text-white/90 transition">
+                        {item.role}
                     </h4>
+
                     <p className="text-(--secondary-color)/60 text-sm">
-                        {item.place}
+                        {item.company} · {item.location}
                     </p>
+
+                    {item.description && (
+                        <p className="text-sm text-(--secondary-color)/50 leading-6 mt-2">
+                            {item.description}
+                        </p>
+                    )}
                 </div>
 
-                <div className="px-3 py-1 rounded-full border border-(--secondary-color)/15 text-xs text-(--secondary-color)/70">
-                    {item.years}
-                </div>
+                <div className="absolute right-5">
 
+                    <div className="px-3 py-1 border border-white/10 text-xs text-(--secondary-color)/70 group-hover:border-cyan-400/30 group-hover:text-(--accent-color) transition">
+                        {item.period}
+                    </div>
+
+
+                </div>
             </div>
         </div>
     );

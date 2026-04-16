@@ -24,7 +24,7 @@
     }
 
     h3 {
-        @apply text-[18px] xl:text-[30px];
+        @apply text-[18px] xl:text-[26px];
         font-family: "Plus Jakarta Sans", sans-serif;
     }
 
@@ -34,6 +34,6 @@
     }
 
     p {
-        @apply text-[12px] xl:text-[18px] leading-8;
+        @apply text-[12px] xl:text-[16px] leading-8;
     }
 }
