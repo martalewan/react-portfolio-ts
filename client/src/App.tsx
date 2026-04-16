@@ -10,8 +10,12 @@ import Skills from "./components/sections/Skills";
 
 const App = () => {
   return (
-    <div className="bg-(--primary-color) relative bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)]
-  bg-size-[540px_540px] bg-position-[calc(50%)_calc(50%)]">
+    <div className="bg-(--primary-color) relative min-h-screen">
+      <div className=" grid-glow absolute bg-[linear-gradient(to_right,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)]
+                      bg-size-[64px_64px] bg-position-[0_0] inset-0 z-1" />
+
+      <div className="grain absolute inset-0 z-0" />
+
       <Cursor />
       <Navbar />
       <Hero />
@@ -20,7 +24,7 @@ const App = () => {
       <DotsContainer />
       <ProjectsSection />
       <Contact />
-    </div>
+    </div >
   );
 }
 
