@@ -3,7 +3,7 @@ import { FiCode, FiLayers, FiMusic, FiZap } from "react-icons/fi";
 const AboutIntro = () => {
     return (
         <div className="relative mb-40">
-            <div className="relative z-10 w-[45%]">
+            <div className="relative w-[45%]">
                 <NeonFrame>
                     <div className="flex items-center gap-3">
                         <FiCode className="w-4 h-4 text-(--accent-color)" />
@@ -18,7 +18,7 @@ const AboutIntro = () => {
 
             </div>
 
-            <div className="relative z-20 w-[45%] ml-auto -mt-12">
+            <div className="relative w-[45%] ml-auto -mt-12">
                 <NeonFrame>
                     <div className="flex items-center gap-3">
                         <FiLayers className="w-4 h-4 text-(--accent-color)" />
@@ -32,7 +32,7 @@ const AboutIntro = () => {
 
             </div>
 
-            <div className="relative z-10 w-[45%] -mt-12">
+            <div className="relative w-[45%] -mt-12">
 
                 <NeonFrame>
                     <div className="flex items-center gap-3">
@@ -46,7 +46,7 @@ const AboutIntro = () => {
                 </NeonFrame>
 
             </div>
-            <div className="relative z-20 w-[45%] ml-auto -mt-12">
+            <div className="relative w-[45%] ml-auto -mt-12">
                 <NeonFrame>
                     <div className="flex items-center gap-3">
                         <FiZap className="w-4 h-4 text-(--accent-color)" />

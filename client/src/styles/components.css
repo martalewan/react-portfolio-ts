@@ -9,7 +9,7 @@
         top: 0;
         left: 0;
         right: 0;
-        bottom: 20px;
+        bottom: 120px;
         pointer-events: none;
         opacity: 0.9;
         mix-blend-mode: overlay;
@@ -24,11 +24,11 @@
     }
 
     .neon-frame {
+        pointer-events: auto;
         position: relative;
         padding: 30px;
         border-radius: 10px 4px 10px 4px;
-        border: 8px solid var(--accent-color);
-        z-index: 1;
+        border: 5px solid var(--accent-color);
 
         box-shadow:
             0 0 10px rgba(0, 255, 255, 0.02),
@@ -37,7 +37,7 @@
             inset 0 2px 4px rgba(255, 255, 255, 0.05),
             inset 0 -2px 6px rgba(0, 0, 0, 0.03);
 
-        opacity: 0.8;
+        opacity: 0.9;
         transition: all 0.4s ease;
 
         transform: perspective(1000px) rotateX(0deg);
