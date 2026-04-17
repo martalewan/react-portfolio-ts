@@ -3,7 +3,7 @@ import portrait from "../../assets/portrait.svg";
 import Button from "../ui/Button";
 import Socials from "../modules/Socials";
 import ScrollButton from "../ui/ScrollButton";
-import RadialGrandientBackground from "../modules/RadialGrandientBackground";
+import RadialGrandientBackground from "../modules/RadialGradientBackground";
 import { Link } from "react-scroll";
 
 const Hero = () => {
