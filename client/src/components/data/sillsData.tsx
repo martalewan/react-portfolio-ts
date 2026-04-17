@@ -29,69 +29,50 @@ import {
 } from "react-icons/gi";
 import { DiPython, DiVisualstudio, DiPhotoshop, DiIllustrator } from "react-icons/di";
 import { TbBrandAdobeIndesign } from "react-icons/tb";
-
 export const skillsData = [
     {
         title: "Frontend",
         skills: [
-            { name: "HTML", icon: <FaHtml5 /> },
-            { name: "CSS", icon: <FaCss3Alt /> },
-            { name: "SASS", icon: <FaSass /> },
-            { name: "JavaScript", icon: <FaJs /> },
-            { name: "React JS", icon: <FaReact /> },
-            { name: "Angular", icon: <FaAngular /> },
-            { name: "Redux", icon: <SiRedux /> },
-            { name: "Next JS", icon: <RiNextjsFill /> },
-            {
-                name: "Tailwind CSS",
-                icon: <RiTailwindCssFill />,
-            },
-            {
-                name: "Material UI",
-                icon: <GiMaterialsScience />,
-            },
-            { name: "Bootstrap", icon: <FaBootstrap /> },
+            { name: "HTML", icon: <FaHtml5 />, level: "Advanced", years: 5 },
+            { name: "CSS", icon: <FaCss3Alt />, level: "Advanced", years: 5 },
+            { name: "SASS", icon: <FaSass />, level: "Intermediate", years: 3 },
+            { name: "React JS", icon: <FaReact />, level: "Advanced", years: 3 },
+            { name: "Angular", icon: <FaAngular />, level: "Intermediate", years: 2 },
+            { name: "Redux", icon: <SiRedux />, level: "Intermediate", years: 2 },
+            { name: "Next JS", icon: <RiNextjsFill />, level: "Intermediate", years: 2 },
+            { name: "Tailwind CSS", icon: <RiTailwindCssFill />, level: "Advanced", years: 3 },
+            { name: "Material UI", icon: <GiMaterialsScience />, level: "Intermediate", years: 2 },
         ],
     },
     {
         title: "Backend",
         skills: [
-            { name: "Node JS", icon: <FaNodeJs /> },
-            { name: "Express JS", icon: <SiExpress /> },
-            { name: "MySQL", icon: <SiMysql /> },
-            { name: "MongoDB", icon: <SiMongodb /> },
-            { name: "PostgreSQL", icon: <SiPostgresql /> },
+            { name: "Node JS", icon: <FaNodeJs />, level: "Intermediate", years: 3 },
+            { name: "Express JS", icon: <SiExpress />, level: "Intermediate", years: 3 },
+            { name: "MySQL", icon: <SiMysql />, level: "Intermediate", years: 2 },
+            { name: "MongoDB", icon: <SiMongodb />, level: "Intermediate", years: 3 },
+            { name: "PostgreSQL", icon: <SiPostgresql />, level: "Beginner", years: 1 },
         ],
     },
     {
         title: "Languages",
         skills: [
-            {
-                name: "JavaScript",
-                icon: <SiJavascript />,
-            },
-            { name: "TypeScript", icon: <SiTypescript /> },
-            { name: "Python", icon: <DiPython /> },
+            { name: "JavaScript", icon: <SiJavascript />, level: "Advanced", years: 4 },
+            { name: "TypeScript", icon: <SiTypescript />, level: "Intermediate", years: 2 },
+            { name: "Python", icon: <DiPython />, level: "Beginner", years: 1 },
         ],
     },
     {
-        title: "Tools",
+        title: "Tools & Design",
         skills: [
-            { name: "Git", icon: <SiGit /> },
-            { name: "GitHub", icon: <SiGithub /> },
-            { name: "VS Code", icon: <DiVisualstudio /> },
-            { name: "Postman", icon: <SiPostman /> },
-            { name: "Netlify", icon: <SiNetlify /> },
-            { name: "Storybook", icon: <SiStorybook /> },
-        ],
-    },
-    {
-        title: "Design",
-        skills: [
-            { name: "Photoshop", icon: <DiPhotoshop /> },
-            { name: "Illustrator", icon: <DiIllustrator /> },
-            { name: "InDesign", icon: <TbBrandAdobeIndesign /> },
-            { name: "Figma", icon: <SiFigma /> },
+            { name: "Git", icon: <SiGit />, level: "Advanced", years: 4 },
+            { name: "VS Code", icon: <DiVisualstudio />, level: "Advanced", years: 5 },
+            { name: "Postman", icon: <SiPostman />, level: "Intermediate", years: 3 },
+            { name: "Storybook", icon: <SiStorybook />, level: "Beginner", years: 1 },
+            { name: "Figma", icon: <SiFigma />, level: "Advanced", years: 3 },
+            { name: "Photoshop", icon: <DiPhotoshop />, level: "Intermediate", years: 2 },
+            { name: "Illustrator", icon: <DiIllustrator />, level: "Intermediate", years: 2 },
+            { name: "InDesign", icon: <TbBrandAdobeIndesign />, level: "Beginner", years: 1 },
         ],
     }
 ];
