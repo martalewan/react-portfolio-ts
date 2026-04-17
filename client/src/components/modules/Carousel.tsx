@@ -1,177 +1,207 @@
 import { useEffect, useRef } from "react";
 
 type CarouselTypes = {
-    images: string[]
-    active: number
-    setActive: (i: number) => void
-}
+    images: string[];
+    active: number;
+    setActive: (index: number) => void;
+};
 
 const Carousel = ({ images, active, setActive }: CarouselTypes) => {
-    const containerRef = useRef<HTMLDivElement>(null);
+    const ref = useRef<HTMLDivElement>(null);
+
+
+    const data = [...images, ...images, ...images];
 
     useEffect(() => {
-        const container = containerRef.current;
-        if (!container) return;
+        const el = ref.current;
+        if (!el) return;
+
+        const items = el.querySelectorAll(".carousel-item") as NodeListOf<HTMLElement>;
+        if (!items.length) return;
+
+        const activeIndex = images.length;
+
+        const target = items[activeIndex];
+
+        if (!target) return;
+
+        const offset =
+            target.offsetLeft -
+            el.offsetWidth / 2 +
+            target.offsetWidth / 2;
+
+        el.scrollLeft = offset;
+    }, []);
+
+    useEffect(() => {
+        const el = ref.current;
+        if (!el) return;
+
+        const oneSet = el.scrollWidth / 3;
+
+        const handleScroll = () => {
+            if (el.scrollLeft <= 0) el.scrollLeft += oneSet;
+            if (el.scrollLeft >= oneSet * 2) el.scrollLeft -= oneSet;
+
+            const items = el.querySelectorAll(".carousel-item");
+
+            const center = el.scrollLeft + el.offsetWidth / 2;
+
+            let closest = 0;
+            let minDist = Infinity;
+
+            items.forEach((item, i) => {
+                const rect = item as HTMLElement;
+                const itemCenter =
+                    rect.offsetLeft + rect.offsetWidth / 2;
+
+                const dist = Math.abs(center - itemCenter);
+
+                if (dist < minDist) {
+                    minDist = dist;
+                    closest = i % images.length;
+                }
+            });
+
+            setActive(closest);
+        };
+
+        el.addEventListener("scroll", handleScroll);
+        return () => el.removeEventListener("scroll", handleScroll);
+    }, [images.length]);
+
+    useEffect(() => {
+        const el = ref.current;
+        if (!el) return;
 
         let isDown = false;
         let startX = 0;
         let scrollLeft = 0;
 
-        const stopDragging = () => {
-            isDown = false;
-            container.classList.remove("cursor-grabbing");
+        const snapToClosest = () => {
+            const items = el.querySelectorAll(".carousel-item");
+
+            const center = el.scrollLeft + el.offsetWidth / 2;
+
+            let closest: HTMLElement | null = null;
+            let minDist = Infinity;
+
+            items.forEach((item) => {
+                const elItem = item as HTMLElement;
+
+                const itemCenter =
+                    elItem.offsetLeft + elItem.offsetWidth / 2;
+
+                const dist = Math.abs(center - itemCenter);
+
+                if (dist < minDist) {
+                    minDist = dist;
+                    closest = elItem;
+                }
+            });
+
+            if (closest) {
+                el.scrollTo({
+                    left:
+                        closest.offsetLeft -
+                        el.offsetWidth / 2 +
+                        closest.offsetWidth / 2,
+                    behavior: "smooth",
+                });
+            }
         };
 
         const onMouseDown = (e: MouseEvent) => {
             isDown = true;
-            container.classList.add("cursor-grabbing");
+            el.classList.add("cursor-grabbing");
 
-            startX = e.pageX - container.offsetLeft;
-            scrollLeft = container.scrollLeft;
+            startX = e.pageX - el.offsetLeft;
+            scrollLeft = el.scrollLeft;
         };
 
         const onMouseMove = (e: MouseEvent) => {
             if (!isDown) return;
-            e.preventDefault();
 
-            const x = e.pageX - container.offsetLeft;
+            const x = e.pageX - el.offsetLeft;
             const walk = (x - startX) * 1.2;
 
-            container.scrollLeft = scrollLeft - walk;
+            el.scrollLeft = scrollLeft - walk;
         };
 
-        const onMouseUp = () => stopDragging();
-        const onMouseLeave = () => stopDragging();
+        const stop = () => {
+            if (!isDown) return;
+            isDown = false;
 
-        // Touch support
-        const onTouchStart = (e: TouchEvent) => {
+            el.classList.remove("cursor-grabbing");
+
+            snapToClosest();
+        };
+
+        el.addEventListener("mousedown", onMouseDown);
+        el.addEventListener("mousemove", onMouseMove);
+        el.addEventListener("mouseup", stop);
+        el.addEventListener("mouseleave", stop);
+
+        el.addEventListener("touchstart", (e: TouchEvent) => {
             isDown = true;
-            startX = e.touches[0].pageX - container.offsetLeft;
-            scrollLeft = container.scrollLeft;
-        };
+            startX = e.touches[0].pageX - el.offsetLeft;
+            scrollLeft = el.scrollLeft;
+        });
 
-        const onTouchMove = (e: TouchEvent) => {
+        el.addEventListener("touchmove", (e: TouchEvent) => {
             if (!isDown) return;
 
-            const x = e.touches[0].pageX - container.offsetLeft;
+            const x = e.touches[0].pageX - el.offsetLeft;
             const walk = (x - startX) * 1.2;
 
-            container.scrollLeft = scrollLeft - walk;
-        };
+            el.scrollLeft = scrollLeft - walk;
+        });
 
-        const onTouchEnd = () => stopDragging();
-
-        window.addEventListener("mouseup", onMouseUp);
-
-        container.addEventListener("mousedown", onMouseDown);
-        container.addEventListener("mousemove", onMouseMove);
-        container.addEventListener("mouseleave", onMouseLeave);
-
-        container.addEventListener("touchstart", onTouchStart);
-        container.addEventListener("touchmove", onTouchMove);
-        container.addEventListener("touchend", onTouchEnd);
+        el.addEventListener("touchend", stop);
 
         return () => {
-            window.removeEventListener("mouseup", onMouseUp);
-
-            container.removeEventListener("mousedown", onMouseDown);
-            container.removeEventListener("mousemove", onMouseMove);
-            container.removeEventListener("mouseleave", onMouseLeave);
-
-            container.removeEventListener("touchstart", onTouchStart);
-            container.removeEventListener("touchmove", onTouchMove);
-            container.removeEventListener("touchend", onTouchEnd);
+            el.removeEventListener("mousedown", onMouseDown);
+            el.removeEventListener("mousemove", onMouseMove);
+            el.removeEventListener("mouseup", stop);
+            el.removeEventListener("mouseleave", stop);
         };
     }, []);
 
-    useEffect(() => {
-        const container = containerRef.current;
-        if (!container) return;
-
-        const items = container.querySelectorAll(".carousel-item");
-
-        const middleIndex = Math.floor(items.length / 2);
-        const middleEl = items[middleIndex] as HTMLElement;
-
-        if (middleEl) {
-            container.scrollTo({
-                left:
-                    middleEl.offsetLeft -
-                    container.offsetWidth / 2 +
-                    middleEl.offsetWidth / 2,
-                behavior: "instant" as ScrollBehavior,
-            });
-        }
-
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        const index = Number(
-                            (entry.target as HTMLElement).dataset.index
-                        );
-                        setActive(index);
-                    }
-                });
-            },
-            {
-                root: container,
-                threshold: 0.6,
-            }
-        );
-
-        items.forEach((el) => observer.observe(el));
-
-        return () => observer.disconnect();
-    }, []);
-
-
     return (
+        <div
+            ref={ref}
+            className="
+                flex overflow-x-auto
+                cursor-grab select-none
+                no-scrollbar
+                [&::-webkit-scrollbar]:hidden
+            "
+        >
+            {data.map((src, i) => {
+                const isActive = active === i % images.length;
 
-        <div className="relative">
-
-            <div
-                ref={containerRef}
-                className="
-                        flex overflow-x-auto
-                        scroll-smooth snap-x snap-mandatory
-                        px-[calc(50%-40%)]
-                        no-scrollbar
-                        cursor-grab
-                        select-none
-                        [-ms-overflow-style:none]
-                        [scrollbar-width:none]
-                        [&::-webkit-scrollbar]:hidden
-                    "
-            >
-                {images.map((src, i) => (
+                return (
                     <div
                         key={i}
-                        data-index={i}
                         className={`
-                                carousel-item
-                                min-w-[87%]
-                                snap-center
-                                transition-all duration-500
-                                ${active === i
-                                ? "scale-100 opacity-100"
-                                : "scale-98 opacity-40"
-                            }
-                            `}
+                            carousel-item
+                            min-w-[73%]
+                            transition-all duration-500
+                            ${isActive ? "scale-100 opacity-100" : "scale-98 opacity-40"}
+                        `}
                     >
-                        <div className=" overflow-hidden border border-white/10">
+                        <div className="border border-white/10 overflow-hidden rounded-sm">
                             <img
                                 src={src}
-                                className="w-full h-150 object-cover portfolio-image"
+                                className="w-full h-150 object-cover"
                                 draggable={false}
                             />
                         </div>
                     </div>
-                ))}
-
-            </div>
+                );
+            })}
         </div>
-    )
-}
+    );
+};
 
-export default Carousel
+export default Carousel;
