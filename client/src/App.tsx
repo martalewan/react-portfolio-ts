@@ -1,5 +1,5 @@
 import Cursor from "./components/ui/Cursor";
-import DotsContainer from "./components/modules/DotsContainer";
+import AmbientDots from "./components/modules/AmbientDots";
 import Navbar from "./components/modules/Navbar";
 import About from "./components/sections/About";
 import Contact from "./components/sections/Contact";
@@ -22,7 +22,7 @@ const App = () => {
       <Hero />
       <About />
       <Skills />
-      <DotsContainer />
+      <AmbientDots />
       <ProjectsSection />
       <Contact />
     </div >
