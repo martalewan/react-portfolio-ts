@@ -4,6 +4,7 @@ import Button from "../ui/Button";
 import Socials from "../modules/Socials";
 import ScrollButton from "../ui/ScrollButton";
 import RadialGrandientBackground from "../modules/RadialGrandientBackground";
+import { Link } from "react-scroll";
 
 const Hero = () => {
     return (
@@ -31,8 +32,12 @@ const Hero = () => {
                         </p>
                         <div className="flex flex-wrap gap-9">
                             <div className="flex gap-4">
-                                <Button text="Download my CV" icon={FiDownload} />
-                                <Button text="Contact Me" variant="secondary" />
+                                <a href="/CV_Marta_Lewandowska.pdf" download>
+                                    <Button text="Download my CV" icon={FiDownload} />
+                                </a>
+                                <Link to="contact" smooth={true} duration={500}>
+                                    <Button text="Contact Me" variant="secondary" />
+                                </Link>
                             </div>
 
                             <Socials wrapperStyles="flex gap-10" iconsStyles="flex items-center justify-center border-1 border-(--secondary-color)/80 rounded-full p-2 w-9 h-9" />

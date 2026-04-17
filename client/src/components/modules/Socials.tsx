@@ -1,25 +1,10 @@
-import { FaGithub, FaInstagram, FaLinkedinIn, } from "react-icons/fa";
-
+import { socialsData } from "../data/socialsData";
 
 type SocialsProps = {
     wrapperStyles: string;
     iconsStyles: string;
 };
 
-const socialsData = [
-    {
-        icon: <FaGithub />,
-        url: ""
-    },
-    {
-        icon: <FaLinkedinIn />,
-        url: ""
-    },
-    {
-        icon: <FaInstagram />,
-        url: ""
-    },
-];
 const Socials = ({ wrapperStyles, iconsStyles }: SocialsProps) => {
     return (
         <div className={wrapperStyles}>

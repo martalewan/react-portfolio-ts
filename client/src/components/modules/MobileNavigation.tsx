@@ -17,7 +17,9 @@ const MobileNavigation = ({ navData }: NavigationProps) => {
                     </Link>
                 ))
             }
-            <Button text="Hire Me" />
+            <Link to="contact" smooth={true} duration={500}>
+                <Button text="Hire Me" />
+            </Link>
         </div >
     )
 }
