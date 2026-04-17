@@ -1,36 +1,9 @@
-import { useEffect, useState } from "react";
+import { useCursorHover } from "../../hooks/useCursorHover";
+import { useCursorPosition } from "../../hooks/useCursorPosition";
 
 const Cursor = () => {
-    const [pos, setPos] = useState({ x: 0, y: 0 });
-    const [hovered, setHovered] = useState(false);
-
-    useEffect(() => {
-        const move = (e: MouseEvent) => {
-            setPos({ x: e.clientX, y: e.clientY });
-        };
-
-        const handleEnter = () => setHovered(true);
-        const handleLeave = () => setHovered(false);
-
-        window.addEventListener("mousemove", move);
-
-        const addHoverListeners = () => {
-            const hoverables = document.querySelectorAll(
-                "a, [data-hover], .portfolio-image"
-            );
-
-            hoverables.forEach((el) => {
-                el.addEventListener("mouseenter", handleEnter);
-                el.addEventListener("mouseleave", handleLeave);
-            });
-        };
-
-        addHoverListeners();
-
-        return () => {
-            window.removeEventListener("mousemove", move);
-        };
-    }, []);
+    const pos = useCursorPosition();
+    const hovered = useCursorHover();
 
     return (
         <div className="pointer-events-none fixed inset-0 z-12 mix-blend-difference">
