@@ -193,7 +193,7 @@ const Carousel = ({ images, active, setActive }: CarouselTypes) => {
                         <div className="border border-white/10 overflow-hidden rounded-sm">
                             <img
                                 src={src}
-                                className="w-full h-150 object-cover"
+                                className="w-full h-150 object-cover portfolio-image"
                                 draggable={false}
                             />
                         </div>

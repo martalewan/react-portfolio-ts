@@ -1,4 +1,4 @@
-import Cursor from "./components/Cursor";
+import Cursor from "./components/ui/Cursor";
 import DotsContainer from "./components/modules/DotsContainer";
 import Navbar from "./components/modules/Navbar";
 import About from "./components/sections/About";
