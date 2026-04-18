@@ -24,7 +24,7 @@ const ExperienceItem = ({ item }: Props) => {
                     </p>
 
                     {item.description && (
-                        <p className="text-sm text-(--secondary-color)/50 leading-6 mt-2">
+                        <p className="text-sm text-(--secondary-color)/50 mt-2">
                             {item.description}
                         </p>
                     )}

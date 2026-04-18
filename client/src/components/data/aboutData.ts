@@ -24,6 +24,6 @@ export const aboutData = [
         period: "2010 — 2022",
         type: "Freelance",
         description:
-            "Worked with multiple clients on branding, typography, and digital design projects.",
+            "Worked with multiple clients on branding, typography, and digital design projects, delivering creative solutions.",
     },
 ];

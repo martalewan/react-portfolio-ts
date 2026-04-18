@@ -1,6 +1,6 @@
 type ScrollButtonProps = {
     direction?: "up" | "down";
-    scrollToId?: "hero" | "about" | "projects" | "contact";
+    scrollToId?: "hero" | "about" | "skills" | "projects" | "contact";
 };
 
 const ScrollButton = ({ direction = "down", scrollToId = "hero" }: ScrollButtonProps) => {

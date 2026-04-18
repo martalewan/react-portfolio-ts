@@ -93,7 +93,7 @@
     }
 
     .p-large {
-        @apply text-[13px] xl:text-[25px] leading-9;
+        @apply text-[13px] xl:text-[23px];
         font-family: "Plus Jakarta Sans", sans-serif;
     }
 
