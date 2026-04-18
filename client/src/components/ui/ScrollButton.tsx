@@ -8,7 +8,7 @@ const ScrollButton = ({ direction = "down", scrollToId = "hero" }: ScrollButtonP
         <button
             onClick={() => document.getElementById(scrollToId)?.scrollIntoView({ behavior: "smooth" })}
             className="absolute bottom-10 left-1/2 -translate-x-1/2 cursor-pointer
-            w-10 h-10 flex items-center justify-center z-1"
+            w-10 h-10 items-center justify-center z-1 hidden xl:flex"
         >
             <span className="absolute w-10 h-10 rounded-full border border-white/20 animate-ping" />
             <span className="absolute w-10 h-10 rounded-full border border-white/30" />

@@ -14,7 +14,7 @@
     }
 
     h1 {
-        @apply text-[42px] font-semibold xl:text-[52px];
+        @apply text-[40px] font-semibold xl:text-[52px];
         font-family: "Plus Jakarta Sans", sans-serif;
     }
 

@@ -11,15 +11,18 @@ const Hero = () => {
         <section id="home" className="page-padding min-h-screen">
             <RadialGrandientBackground />
 
-            <div className="container h-screen z-1">
-                <div className="h-full flex flex-col xl:flex-row justify-center xl:justify-between items-center gap-6">
-                    <div className="flex flex-col items-center gap-5 xl:items-start text-center xl:text-left order-2 xl:order-0">
+            <div className="container z-1 ">
+                <div className="min-h-screen flex flex-col xl:flex-row justify-center xl:justify-between items-center gap-3 mt-5 xl:mt-0">
+                    <div className="flex flex-col items-center gap-6 xl:items-start text-center xl:text-left order-2 xl:order-0">
                         <div>
 
-                            <span className="section-subtitle">Frontend Developer & UI/UX Enthusiast | Based in Paris</span>
+                            <span className="section-subtitle">
+                                Frontend Developer & UI/UX Enthusiast | Based in Paris
+                            </span>
 
                             <h1>
-                                <span className="hidden md:block">Hi, I am<br />
+                                <span className="hidden md:block">
+                                    Hi, I am
                                 </span>
                                 <span className="text-neon-flicker">
                                     Marta Lewandowska
@@ -30,23 +33,30 @@ const Hero = () => {
                         <p className="max-w-137.5 p-large">
                             Building modern, high-quality web applications. Transforming design systems into scalable, modular digital experiences.
                         </p>
-                        <div className="flex flex-wrap gap-9">
-                            <div className="flex gap-4">
+                        <div className="flex flex-col gap-6 w-full max-w-md">
+
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                 <a href="/CV_Marta_Lewandowska.pdf" download>
                                     <Button text="Download my CV" icon={FiDownload} />
                                 </a>
-                                <Link to="contact" smooth={true} duration={500}>
+
+                                <Link to="contact" smooth duration={500}>
                                     <Button text="Contact Me" variant="secondary" />
                                 </Link>
                             </div>
 
-                            <Socials wrapperStyles="flex gap-10" iconsStyles="flex items-center justify-center border-1 border-(--secondary-color)/80 rounded-full p-2 w-9 h-9" />
+                            <Socials
+                                wrapperStyles="flex gap-8 justify-center xl:justify-start w-full"
+                                iconsStyles="flex items-center justify-center border border-(--secondary-color)/80 rounded-full p-2 w-9 h-9"
+                            />
+
                         </div>
                     </div>
-                    <div className="relative flex justify-center items-center">
-                        <img src={portrait} className="w-65 invert brightness-0 blur-md opacity-20 absolute scale-110" />
-                        <img src={portrait} className="w-65 invert brightness-0 blur-sm opacity-30 absolute scale-105" />
-                        <img src={portrait} className="w-65 invert brightness-0 relative z-10" />
+                    <div className="relative flex justify-center items-center w-[clamp(4rem,8vw,16rem)] xl:w-[clamp(12rem,16vw,18rem)]">
+                        <img src={portrait} draggable={false} className="invert brightness-0 blur-md opacity-20 absolute scale-110 pointer-events-none" />
+                        <img src={portrait} draggable={false} className="invert brightness-0 blur-sm opacity-30 absolute scale-105 pointer-events-none" />
+                        <img src={portrait} alt="Portrait of Marta Lewandowska"
+                            loading="eager" draggable={false} className="invert brightness-0 relative z-10" />
                     </div>
                 </div>
             </div>

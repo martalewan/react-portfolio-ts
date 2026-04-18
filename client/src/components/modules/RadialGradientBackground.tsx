@@ -29,7 +29,7 @@ const blobs = [
 
 const RadialGradientBackground = () => {
     return (
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
             {blobs.map((pos, i) => (
                 <div
                     key={i}

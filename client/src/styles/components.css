@@ -98,6 +98,6 @@
     }
 
     .section-subtitle {
-        @apply text-(--secondary-color)/70 text-[15px];
+        @apply text-(--secondary-color)/70 text-[13px] xl:text-[15px];
     }
 }

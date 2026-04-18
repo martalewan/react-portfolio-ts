@@ -15,32 +15,31 @@ const Button = ({ text, icon, variant = "primary", type = "button", onClick }: B
         <button
             type={type}
             onClick={onClick}
-            className={`group relative flex items-center justify-center overflow-hidden rounded-xs 
-            border border-transparent
+            className={`w-full group relative flex items-center justify-center overflow-hidden rounded-xs 
             transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]
-            hover:-translate-y-px
+            hover:-translate-y-px cursor-pointer
             ${variant === "primary" ? "bg-(--accent-color) text-(--primary-color)  hover:bg-(--secondary-color)" : "bg-(--secondary-color)/15 text-(--secondary-color)"}`}
         >
 
-            <span className="flex items-center gap-2 h-full will-change-transform cursor-pointer ">
+            <div className="flex items-center gap-2 h-full will-change-transform uppercase whitespace-nowrap">
 
-                <span className="flex items-center uppercase gap-2 w-full px-5 py-2
-                    transition-transform duration-300 
-                    group-hover:-translate-y-full 
+                <span className="flex items-center gap-2 w-full px-3 md:px-5 py-2
+                    transition-transform duration-300  will-change-transform
+                    group-hover:-translate-y-full
                 ">
                     {text}
-                    {Icon && <Icon className="text-sm" />}
+                    {Icon && <Icon />}
                 </span>
 
-                <span className="uppercase absolute left-0 flex items-center gap-2 h-full w-full px-5 py-3
+                <span className="absolute left-0 flex items-center gap-2 h-full w-full px-3 md:px-5 py-2
                     translate-y-full 
-                    transition-transform duration-300 
+                    transition-transform duration-300  will-change-transform
                     group-hover:translate-y-0">
                     {text}
-                    {Icon && <Icon className="text-sm" />}
+                    {Icon && <Icon />}
                 </span>
 
-            </span>
+            </div>
         </button>
     );
 };
