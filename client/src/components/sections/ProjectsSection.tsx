@@ -15,7 +15,7 @@ const ProjectsSection = () => {
                 <SectionTitle label="03." title="Selected Work" subtitle="Engineering-focused projects" />
             </div>
 
-            <div className="flex flex-col pb-90 gap-12">
+            <div className="flex flex-col pb-90 gap-12 overflow-hidden">
                 <Carousel images={project.images} active={active} setActive={setActive} />
                 <CarouselIndicator images={project.images} active={active} />
                 <div className="page-padding">
