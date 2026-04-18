@@ -10,7 +10,7 @@ const Contact = () => {
             <SectionTitle label="04." title="Get in touch with me" subtitle="Hire me and just tell me hello" />
             <NeonFrame>
 
-                <div className="grid grid-cols-2 gap-20 relative z-10">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 relative z-10">
 
                     <GlassCard>
                         <h3>Let's Connect</h3>
