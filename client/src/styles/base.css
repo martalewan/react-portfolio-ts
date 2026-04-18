@@ -29,7 +29,7 @@
     }
 
     h4 {
-        @apply text-[12px] xl:text-[18px];
+        @apply text-[13px] xl:text-[18px];
         font-family: "Plus Jakarta Sans", sans-serif;
     }
 

@@ -3,9 +3,8 @@ import { FiCode, FiLayers, FiMusic, FiZap } from "react-icons/fi";
 
 const AboutHighlights = () => {
     return (
-        <div className="relative mb-40">
-
-            <div className="relative w-[45%]">
+        <div className="relative mb-24 lg:mb-40 space-y-20 lg:space-y-0">
+            <div className="relative w-full lg:w-[45%]">
                 <NeonFrame>
                     <div className="flex items-center gap-3">
                         <FiCode className="w-4 h-4 text-(--accent-color)" />
@@ -20,7 +19,7 @@ const AboutHighlights = () => {
                 </NeonFrame>
             </div>
 
-            <div className="relative w-[45%] ml-auto -mt-12">
+            <div className="relative w-full lg:w-[45%] ml-auto -mt-12">
                 <NeonFrame>
                     <div className="flex items-center gap-3">
                         <FiLayers className="w-4 h-4 text-(--accent-color)" />
@@ -35,7 +34,7 @@ const AboutHighlights = () => {
                 </NeonFrame>
             </div>
 
-            <div className="relative w-[45%] -mt-12">
+            <div className="relative w-full lg:w-[45%] -mt-12">
                 <NeonFrame>
                     <div className="flex items-center gap-3">
                         <FiMusic className="w-4 h-4 text-(--accent-color)" />
@@ -50,7 +49,7 @@ const AboutHighlights = () => {
                 </NeonFrame>
             </div>
 
-            <div className="relative w-[45%] ml-auto -mt-12">
+            <div className="relative w-full lg:w-[45%] ml-auto -mt-12">
                 <NeonFrame>
                     <div className="flex items-center gap-3">
                         <FiZap className="w-4 h-4 text-(--accent-color)" />

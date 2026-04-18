@@ -2,7 +2,7 @@ import { FiCode, FiLayers, FiZap } from "react-icons/fi";
 
 const AboutContent = () => {
     return (
-        <div className="flex justify-between gap-20">
+        <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-20">
             <div className="flex flex-col gap-8 max-w-210">
                 <p className="p-large text-(--secondary-color)/90">
                     I’m a Frontend Engineer with 4+ years of experience building scalable,
