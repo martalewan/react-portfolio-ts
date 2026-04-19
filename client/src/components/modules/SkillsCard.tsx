@@ -25,7 +25,7 @@ const SkillCard = ({ skill }) => {
             variants={item}
         >
             <div className="flex items-center gap-2 mb-1">
-                <div className="text-base text-white/70 group-hover:text-(--accent-color) transition">
+                <div className="text-base text-white/70 group-hover:text-(--color-accent) transition">
                     {skill.icon}
                 </div>
 
@@ -34,7 +34,7 @@ const SkillCard = ({ skill }) => {
 
             <div className="w-full h-[2px] bg-white/10 rounded-full overflow-hidden">
                 <div
-                    className="h-full bg-(--accent-color) transition-all duration-500"
+                    className="h-full bg-(--color-accent) transition-all duration-500"
                     style={{
                         width: getWidth(skill.level),
                     }}

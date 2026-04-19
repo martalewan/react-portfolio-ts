@@ -4,17 +4,17 @@ const AboutContent = () => {
     return (
         <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-20">
             <div className="flex flex-col gap-8 max-w-210">
-                <p className="p-large text-(--secondary-color)/90">
+                <p className="p-large text-(--color-surface-muted)">
                     I’m a Frontend Engineer with 4+ years of experience building scalable,
                     accessible web applications using React and TypeScript.
                 </p>
 
-                <p className="p-large text-(--secondary-color)/90">
+                <p className="p-large text-(--color-text-muted)">
                     I focus on crafting clean, modular architectures and thoughtful UI systems
                     that balance performance, maintainability, and user experience.
                 </p>
 
-                <p className="p-large text-(--secondary-color)/90">
+                <p className="p-large text-(--color-text-muted)">
                     Outside of engineering, I’m a former cellist and graphic designer, which
                     shapes my attention to detail and design sensibility. I also enjoy tennis,
                     chess, and learning new languages.
@@ -30,7 +30,7 @@ const AboutContent = () => {
                         <h4>Expertise</h4>
                     </div>
 
-                    <p className="text-sm leading-relaxed text-(--secondary-color)/70">
+                    <p className="text-sm leading-relaxed text-(--color-text-muted)">
                         Specialized in building scalable web applications
                     </p>
                 </div>
@@ -42,7 +42,7 @@ const AboutContent = () => {
                         <h4>Clean Code</h4>
                     </div>
 
-                    <p className="text-sm text-(--secondary-color)/70">
+                    <p className="text-sm text-(--color-text-muted)">
                         Writing maintainable well-documented code that scales
                     </p>
                 </div>
@@ -54,7 +54,7 @@ const AboutContent = () => {
                         <h4>Performance</h4>
                     </div>
 
-                    <p className="text-sm text-(--secondary-color)/70">
+                    <p className="text-sm text-(--color-text-muted)">
                         Optimizing for speed and efficiency in every project
                     </p>
                 </div>

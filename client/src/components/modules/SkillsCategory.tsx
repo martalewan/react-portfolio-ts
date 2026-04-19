@@ -21,7 +21,7 @@ const SkillCategory = ({ category }) => {
         >
 
             <div className="flex items-center gap-3">
-                <h4 className="text-[10px] uppercase tracking-widest text-white/40 group-hover:text-(--accent-color) transition">
+                <h4 className="text-[10px] uppercase tracking-widest text-white/40 group-hover:text-(--color-accent) transition">
                     {category.title}
                 </h4>
                 <div className="h-px flex-1 bg-white/10" />

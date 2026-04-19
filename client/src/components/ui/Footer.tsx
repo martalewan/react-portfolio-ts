@@ -5,19 +5,19 @@ import Socials from "../modules/Socials";
 
 const Footer = () => {
     return (
-        <div className="w-full flex flex-col gap-30 justify-around page-padding pb-20 pt-10 text-(--secondary-color) z-10 bg-linear-to-b from-(--primary-color) to-(--primary-color)/80 backdrop-blur-md border-b border-(--secondary-color)/5">
+        <div className="w-full flex flex-col gap-30 justify-around page-padding pb-20 pt-10 text-(--color-text) z-10 bg-linear-to-b from-(--color-bg) to-(--color-bg-muted) backdrop-blur-md border-b border-(--color-border)">
             <div className="flex justify-between flex-wrap">
                 <div className="flex flex-col gap-3">
                     <h3>Marta Lewandowska</h3>
-                    <p className="text-sm text-(--accent-secondary)/80">Crafting digital experiences with modern web technologies</p>
+                    <p className="text-sm text-(--color-text-muted)">Crafting digital experiences with modern web technologies</p>
                     <div className="flex flex-col gap-3 justify-center md:justify-start">
                         <div className="badge text-[11px] px-3 py-1.5 flex items-center gap-2">
-                            <FiMapPin className="text-xs text-(--accent-color)" />
+                            <FiMapPin className="text-xs text-(--color-accent)" />
                             <span>Paris</span>
                         </div>
 
                         <div className="badge text-[11px] px-3 py-1.5 flex items-center gap-2">
-                            <FiMail className="text-sm text-(--accent-color)" />
+                            <FiMail className="text-sm text-(--color-accent)" />
                             <span className="break-all">
                                 mlewan.design@gmail.com
                             </span>
@@ -33,7 +33,7 @@ const Footer = () => {
                                 to={item.id}
                                 smooth={true}
                                 duration={500}
-                                className="text-[13px] text-(--secondary-color)/70 uppercase cursor-pointer transition-all duration-600 ease-in-out hover:text-(--secondary-color)">
+                                className="text-[13px] text-(--color-text-muted) uppercase cursor-pointer transition-all duration-600 ease-in-out hover:text-(--color-text)">
                                 {item.label}
                             </Link>
                         ))
@@ -42,10 +42,10 @@ const Footer = () => {
                 </div>
                 <div className="flex flex-col gap-3">
                     <h3>Connect With Me</h3>
-                    <p className="text-sm text-(--accent-secondary)/80">Let's connect and create something amazing together!</p>
+                    <p className="text-sm text-(--color-text-muted)">Let's connect and create something amazing together!</p>
                     <Socials
                         wrapperStyles="flex justify-center md:justify-start gap-4"
-                        iconsStyles="z-10 flex items-center justify-center border border-(--secondary-color)/80 rounded-xs p-2 w-9 h-9"
+                        iconsStyles="z-10 flex items-center justify-center border border-(--color-border) rounded-xs p-2 w-9 h-9"
                     />
                 </div>
             </div>
@@ -53,7 +53,7 @@ const Footer = () => {
                 <h4 className="text-sm ">© 2026 Marta Lewandowska. All rights reserved.</h4>
                 <h4 className="text-sm flex items-center gap-1 whitespace-nowrap">
                     Build with
-                    <FiHeart className="text-xs text-(--accent-color)" />
+                    <FiHeart className="text-xs text-(--color-accent)" />
                     using React, TypeScript & Tailwind CSS
                 </h4>
             </div>

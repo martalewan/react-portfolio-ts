@@ -15,7 +15,7 @@ const DesktopNavigation = ({ navData }: NavigationProps) => {
                         to={item.id}
                         smooth={true}
                         duration={500}
-                        className="text-[13px] text-(--secondary-color)/70 uppercase cursor-pointer transition-all duration-600 ease-in-out hover:text-(--secondary-color)">
+                        className="text-[13px] text-(--color-text-muted) uppercase cursor-pointer transition-all duration-600 ease-in-out hover:text-(--color-text)">
                         {item.label}
                     </Link>
                 ))

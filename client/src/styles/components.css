@@ -1,13 +1,16 @@
 @layer components {
+
+    /* =========================
+       BACKGROUND EFFECTS
+    ========================= */
+
     .grain {
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 120px;
+        inset: 0 0 120px 0;
         pointer-events: none;
         opacity: 0.9;
         mix-blend-mode: overlay;
+
         background-image: repeating-radial-gradient(circle,
                 rgba(255, 255, 255, 0.4) 0px,
                 rgba(236, 231, 231, 0.3) 1px,
@@ -18,12 +21,17 @@
         animation: grainShift 8s steps(6) infinite;
     }
 
+    /* =========================
+       NEON FRAME
+    ========================= */
+
     .neon-frame {
-        pointer-events: auto;
         position: relative;
+        pointer-events: auto;
+
         padding: 30px;
         border-radius: 10px 4px 10px 4px;
-        border: 5px solid var(--accent-color);
+        border: 5px solid var(--color-accent);
 
         box-shadow:
             0 0 10px rgba(0, 255, 255, 0.02),
@@ -33,10 +41,9 @@
             inset 0 -2px 6px rgba(0, 0, 0, 0.03);
 
         opacity: 0.9;
-        transition: all 0.4s ease;
-
         transform: perspective(1000px) rotateX(0deg);
 
+        transition: all 0.4s ease;
     }
 
     .neon-frame:hover {
@@ -51,6 +58,51 @@
             inset 0 -2px 8px rgba(0, 0, 0, 0.3);
     }
 
+    .neon-frame::before {
+        content: "";
+        position: absolute;
+        inset: -7px;
+        border-radius: inherit;
+        border: 9px solid var(--color-accent);
+
+        box-shadow:
+            0 0 6px rgba(0, 255, 255, 0.5),
+            0 0 14px rgba(0, 255, 255, 0.6),
+            0 0 30px rgba(0, 255, 255, 0.8),
+            inset 0 0 50px rgba(0, 255, 255, 0.25),
+            inset 0 0 10px rgba(0, 255, 255, 0.5);
+
+        filter: blur(8px);
+        opacity: 0.7;
+        z-index: 1;
+        pointer-events: none;
+
+        animation:
+            neon-border-flicker 4s linear infinite,
+            neon-breathe 9s ease-in-out infinite,
+            neon-noise-flicker 2.8s linear infinite;
+
+        transition: filter 120ms linear, opacity 120ms linear;
+    }
+
+    .neon-frame::after {
+        content: "";
+        position: absolute;
+        top: 65%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        background: var(--color-accent);
+        transform: perspective(900px) rotateX(60deg) scale(1.05, 0.25);
+        filter: blur(100px);
+        opacity: 15%;
+    }
+
+    /* =========================
+       ANIMATIONS HELPERS
+    ========================= */
+
     .text-neon-flicker {
         animation: text-neon-flicker 4s linear infinite;
     }
@@ -62,6 +114,10 @@
     .animate-scroll {
         animation: scroll 50s linear infinite;
     }
+
+    /* =========================
+       UI ELEMENTS
+    ========================= */
 
     .skill-item {
         transition: transform 0.2s linear, opacity 0.2s linear;
@@ -75,9 +131,12 @@
         @apply text-white border-white/20;
         transform: translateY(-1px);
         background-color: rgba(255, 255, 255, 0.08);
-        box-shadow:
-            0 0 8px rgba(0, 255, 200, 0.1);
+        box-shadow: 0 0 8px rgba(0, 255, 200, 0.1);
     }
+
+    /* =========================
+       TYPOGRAPHY HELPERS
+    ========================= */
 
     .page-padding {
         @apply pl-[15%] pr-[15%];
@@ -93,6 +152,6 @@
     }
 
     .section-subtitle {
-        @apply text-(--secondary-color)/70 text-[13px] xl:text-[15px];
+        @apply text-(--color-text-muted) text-[13px] xl:text-[15px];
     }
 }

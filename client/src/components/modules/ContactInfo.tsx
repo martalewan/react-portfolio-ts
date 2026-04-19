@@ -9,7 +9,7 @@ const ContactInfo = () => {
 
             <Socials
                 wrapperStyles="flex flex-row md:flex-col justify-center md:justify-start gap-4 shrink-0"
-                iconsStyles="z-10 flex items-center justify-center border border-(--secondary-color)/80 rounded-xs p-2 w-9 h-9"
+                iconsStyles="z-10 flex items-center justify-center border border-(--color-border) rounded-xs p-2 w-9 h-9"
             />
 
             <div className="flex flex-col gap-6 md:gap-8 items-center md:items-start w-full">
@@ -22,12 +22,12 @@ const ContactInfo = () => {
 
                 <div className="flex flex-wrap gap-3 justify-center md:justify-start">
                     <div className="badge text-[11px] px-3 py-1.5 flex items-center gap-2">
-                        <FiMapPin className="text-xs text-(--accent-color)" />
+                        <FiMapPin className="text-xs text-(--color-accent)" />
                         <span>Paris</span>
                     </div>
 
                     <div className="badge text-[11px] px-3 py-1.5 flex items-center gap-2">
-                        <FiMail className="text-sm text-(--accent-color)" />
+                        <FiMail className="text-sm text-(--color-accent)" />
                         <span className="break-all">
                             mlewan.design@gmail.com
                         </span>

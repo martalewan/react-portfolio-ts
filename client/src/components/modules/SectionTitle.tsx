@@ -9,7 +9,7 @@ const SectionTitle = ({ label, title, subtitle }: SectionTitle) => {
 
         <div className="relative flex flex-col items-start gap-2 mt-40 mb-20">
 
-            <span className="text-xs tracking-widest text-(--secondary-color)/60 uppercase">
+            <span className="text-xs tracking-widest text-(--color-text-muted) uppercase">
                 {subtitle}
             </span>
             <h2 className="tracking-tight">

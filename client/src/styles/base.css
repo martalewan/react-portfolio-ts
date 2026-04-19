@@ -1,39 +1,49 @@
-@custom-variant dark (&:where(.dark, dark *));
-
 @layer base {
+
+    /* =========================
+       TYPOGRAPHY SYSTEM
+    ========================= */
+
     body {
         font-family: 'Geist', 'Montserrat', sans-serif;
     }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+    }
+
+    h1 {
+        @apply text-[40px] font-semibold xl:text-[52px];
+    }
+
+    h2 {
+        @apply text-[30px] xl:text-[48px];
+    }
+
+    h3 {
+        @apply text-[18px] xl:text-[26px];
+    }
+
+    h4 {
+        @apply text-[13px] xl:text-[18px];
+    }
+
+    p {
+        @apply text-[12px] xl:text-[16px] leading-relaxed;
+    }
+
+    /* =========================
+       GLOBAL ELEMENTS
+    ========================= */
 
     button {
         @apply text-[13px];
     }
 
     section {
-        @apply flex flex-col gap-16 relative text-(--secondary-color);
-    }
-
-    h1 {
-        @apply text-[40px] font-semibold xl:text-[52px];
-        font-family: "Plus Jakarta Sans", sans-serif;
-    }
-
-    h2 {
-        @apply text-[30px] xl:text-[48px];
-        font-family: "Plus Jakarta Sans", sans-serif;
-    }
-
-    h3 {
-        @apply text-[18px] xl:text-[26px];
-        font-family: "Plus Jakarta Sans", sans-serif;
-    }
-
-    h4 {
-        @apply text-[13px] xl:text-[18px];
-        font-family: "Plus Jakarta Sans", sans-serif;
-    }
-
-    p {
-        @apply text-[12px] xl:text-[16px] leading-relaxed;
+        @apply flex flex-col gap-16 relative text-(--color-text);
     }
 }

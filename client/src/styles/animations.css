@@ -1,4 +1,9 @@
 @layer components {
+
+    /* =========================
+       BASE ANIMATIONS
+    ========================= */
+
     @keyframes grainShift {
         0% {
             transform: translate(0, 0);
@@ -21,45 +26,36 @@
         }
     }
 
-    .neon-frame::before {
-        content: "";
-        position: absolute;
-        inset: -7px;
-        border-radius: inherit;
-        border: 9px solid var(--accent-color);
-        box-shadow:
-            0 0 6px rgba(0, 255, 255, 0.5),
-            0 0 14px rgba(0, 255, 255, 0.6),
-            0 0 30px rgba(0, 255, 255, 0.8),
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
 
-            inset 0 0 50px rgba(0, 255, 255, 0.25),
-
-            inset 0 0 10px rgba(0, 255, 255, 0.5);
-
-        filter: blur(8px);
-        opacity: 0.7;
-        z-index: 1;
-        pointer-events: none;
-        animation:
-            neon-border-flicker 4s linear infinite,
-            neon-breathe 9s ease-in-out infinite,
-            neon-noise-flicker 2.8s linear infinite;
-        transition: filter 120ms linear, opacity 120ms linear;
-
+        100% {
+            transform: translateX(-50%);
+        }
     }
 
-    .neon-frame::after {
-        content: "";
-        background: var(--accent-color);
-        position: absolute;
-        top: 65%;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        transform: perspective(900px) rotateX(60deg) scale(1.05, 0.25);
-        filter: blur(100px);
-        opacity: 15%;
+    @keyframes soft-pulse {
+        0% {
+            transform: scale(1);
+            opacity: 0.6;
+        }
+
+        50% {
+            transform: scale(1.6);
+            opacity: 1;
+        }
+
+        100% {
+            transform: scale(1);
+            opacity: 0.6;
+        }
     }
+
+    /* =========================
+       NEON ANIMATIONS
+    ========================= */
 
     @keyframes text-neon-flicker {
 
@@ -152,33 +148,6 @@
 
         38% {
             opacity: 1;
-        }
-    }
-
-    @keyframes scroll {
-        0% {
-            transform: translateX(0);
-        }
-
-        100% {
-            transform: translateX(-50%);
-        }
-    }
-
-    @keyframes soft-pulse {
-        0% {
-            transform: scale(1);
-            opacity: 0.6;
-        }
-
-        50% {
-            transform: scale(1.6);
-            opacity: 1;
-        }
-
-        100% {
-            transform: scale(1);
-            opacity: 0.6;
         }
     }
 }
