@@ -1,4 +1,4 @@
-import { aboutData } from "../data/aboutData";
+import { aboutData } from "../../data/aboutData";
 import ExperienceItem from "./ExperienceItem";
 import { FiArrowRight } from "react-icons/fi";
 

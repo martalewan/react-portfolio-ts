@@ -1,11 +1,11 @@
 import { FiMapPin, FiMail, FiHeart } from "react-icons/fi";
-import { navData } from "../data/navbarData";
+import { navData } from "../../data/navbarData";
 import { Link } from "react-scroll";
 import Socials from "../modules/Socials";
 
 const Footer = () => {
     return (
-        <div className="w-full flex flex-col gap-30 justify-around page-padding pb-20  text-(--secondary-color) z-10 bg-linear-to-b from-(--primary-color) to-(--primary-color)/80 backdrop-blur-md border-b border-(--secondary-color)/5">
+        <div className="w-full flex flex-col gap-30 justify-around page-padding pb-20 pt-10 text-(--secondary-color) z-10 bg-linear-to-b from-(--primary-color) to-(--primary-color)/80 backdrop-blur-md border-b border-(--secondary-color)/5">
             <div className="flex justify-between flex-wrap">
                 <div className="flex flex-col gap-3">
                     <h3>Marta Lewandowska</h3>

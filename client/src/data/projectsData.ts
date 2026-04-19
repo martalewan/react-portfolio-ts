@@ -1,6 +1,6 @@
-import pic1 from "../../assets/pic1.jpg";
-import pic2 from "../../assets/pic2.jpg";
-import pic3 from "../../assets/pic3.jpg";
+import pic1 from "../assets/pic1.jpg";
+import pic2 from "../assets/pic2.jpg";
+import pic3 from "../assets/pic3.jpg";
 
 export const project = {
     title: "Scalable Design System Engine for Modern Web Applications",

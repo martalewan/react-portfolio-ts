@@ -1,4 +1,4 @@
-import { socialsData } from "../data/socialsData";
+import { socialsData } from "../../data/socialsData";
 
 type SocialsProps = {
     wrapperStyles: string;

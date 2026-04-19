@@ -1,8 +1,8 @@
-import Logo from "../ui/Logo";
-import Drawer from "./Drawer";
-import DesktopNavigation from "./DesktopNavigation";
-import MobileNavigation from "./MobileNavigation";
-import { navData } from "../data/navbarData";
+import Logo from "./Logo";
+import Drawer from "../modules/Drawer";
+import DesktopNavigation from "../modules/DesktopNavigation";
+import MobileNavigation from "../modules/MobileNavigation";
+import { navData } from "../../data/navbarData";
 
 const Navbar = () => {
     return (

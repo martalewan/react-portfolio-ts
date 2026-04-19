@@ -3,7 +3,7 @@ import Carousel from "../modules/Carousel";
 import CarouselIndicator from "../modules/CarouselIndicator";
 import ProjectInfo from "../modules/ProjectInfo";
 import SectionTitle from "../modules/SectionTitle";
-import { project } from "../data/projectsData";
+import { project } from "../../data/projectsData";
 
 const ProjectsSection = () => {
     const [active, setActive] = useState(0);
