@@ -12,7 +12,7 @@ const AmbientDots = () => {
     useAmbientDots(containerRef);
 
     return (
-        <div className="w-full h-full overflow-hidden flex items-center justify-center mt-15 mb-15">
+        <div className="w-full h-full overflow-hidden flex items-center justify-center pt-15 pb-15">
             <div
                 ref={containerRef}
                 className="grid"

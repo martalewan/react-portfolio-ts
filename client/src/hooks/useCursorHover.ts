@@ -8,7 +8,7 @@ export const useCursorHover = () => {
         const handleEnter = () => setHovered(true);
         const handleLeave = () => setHovered(false);
         const hoverables = document.querySelectorAll(
-            "a, [data-hover], .portfolio-image"
+            "a, [data-hover], button, .portfolio-image"
         );
 
         hoverables.forEach((el) => {

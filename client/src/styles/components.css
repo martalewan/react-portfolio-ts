@@ -1,9 +1,4 @@
 @layer components {
-    .grid-glow {
-        opacity: 0.75;
-        filter: drop-shadow(0 0 6px rgba(0, 255, 255, 0.25));
-    }
-
     .grain {
         position: absolute;
         top: 0;
