@@ -25,7 +25,7 @@ const ExperienceItem = ({ item }: Props) => {
                     </div>
 
                     <div className="shrink-0">
-                        <div className="px-3 py-1 border border-white/10 text-xs text-(--color-text-muted) group-hover:border-cyan-400/30 group-hover:text-(--color-accent) transition whitespace-nowrap">
+                        <div className="px-3 py-1 border border-white/10 text-xs text-(--color-text-muted) group-hover:border-accent group-hover:text-accent transition whitespace-nowrap">
                             {item.period}
                         </div>
                     </div>

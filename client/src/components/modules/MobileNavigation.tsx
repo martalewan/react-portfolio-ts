@@ -12,7 +12,7 @@ const MobileNavigation = ({ navData }: NavigationProps) => {
                         to={item.id}
                         smooth={true}
                         duration={500}
-                        className="text-(--color-text-muted) uppercase cursor-pointer transition-all duration-600 ease-in-out hover:text-(--color-accent)"
+                        className="text-(--color-text-muted) uppercase cursor-pointer transition-all duration-600 ease-in-out hover:text-accent"
                     >{item.label}
                     </Link>
                 ))

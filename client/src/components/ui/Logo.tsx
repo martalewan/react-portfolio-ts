@@ -5,7 +5,7 @@ const Logo = () => {
         <header>
             <Link className="text-xl font-bold cursor-pointer" to="home" smooth={true} duration={500}>
                 m
-                <span className="text-gradient font-bold text-(--color-accent)">lewan.</span>
+                <span className="text-gradient font-bold text-accent">lewan.</span>
             </Link>
         </header>
     )

@@ -11,19 +11,19 @@ const ContactForm = () => {
             <input
                 type="text"
                 placeholder="Your name"
-                className="w-full px-4 py-3 rounded-xs bg-(--color-bg-inverse-faint) border border-(--color-border-faint) text-(--color-text-muted) placeholder-(--color-text-faint) focus:outline-none focus:border-(--color-accent)"
+                className="w-full px-4 py-3 rounded-xs bg-bg-inverse-faint border border-border-faint text-(--color-text-muted) placeholder-text-faint focus:outline-none focus:border-accent"
             />
 
             <input
                 type="email"
                 placeholder="Your email"
-                className="w-full px-4 py-3 rounded-xs bg-(--color-bg-inverse-faint) border border-(--color-border-faint) text-(--color-text-muted) placeholder-(--color-text-faint) focus:outline-none focus:border-(--color-accent)"
+                className="w-full px-4 py-3 rounded-xs bg-bg-inverse-faint border border-border-faint text-(--color-text-muted) placeholder-text-faint focus:outline-none focus:border-accent"
             />
 
             <textarea
                 placeholder="Your message"
                 rows={4}
-                className="w-full px-4 py-3 rounded-xs bg-(--color-bg-inverse-faint) border border-(--color-border-faint) text-(--color-text-muted) placeholder-(--color-text-faint) focus:outline-none focus:border-(--color-accent) resize-none"
+                className="w-full px-4 py-3 rounded-xs bg-bg-inverse-faint border border-border-faint text-(--color-text-muted) placeholder-text-faint focus:outline-none focus:border-accent resize-none"
             />
 
             <Button

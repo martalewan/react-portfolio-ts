@@ -7,7 +7,7 @@ import { navData } from "../../data/navbarData";
 const Navbar = () => {
     return (
         <>
-            <nav className="w-full fixed flex items-center h-17 px-7 z-10 bg-linear-to-b from-(--color-bg) to-(--color-bg-muted) backdrop-blur-md border-b border-(--color-border)/5">
+            <nav className="w-full fixed flex items-center h-17 px-7 z-10 bg-linear-to-b from-(--color-bg) to-bg-muted backdrop-blur-md border-b border-border-faint">
                 <div className="w-full flex items-center justify-between">
                     <Logo />
                     <DesktopNavigation navData={navData} />

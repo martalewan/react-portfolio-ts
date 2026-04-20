@@ -22,12 +22,12 @@ const ContactInfo = () => {
 
                 <div className="flex flex-wrap gap-3 justify-center md:justify-start">
                     <div className="badge text-[11px] px-3 py-1.5 flex items-center gap-2">
-                        <FiMapPin className="text-xs text-(--color-accent)" />
+                        <FiMapPin className="text-xs text-accent" />
                         <span>Paris</span>
                     </div>
 
                     <div className="badge text-[11px] px-3 py-1.5 flex items-center gap-2">
-                        <FiMail className="text-sm text-(--color-accent)" />
+                        <FiMail className="text-sm text-accent" />
                         <span className="break-all">
                             mlewan.design@gmail.com
                         </span>

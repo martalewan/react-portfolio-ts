@@ -11,7 +11,6 @@ const About = () => {
             <SectionTitle label="01." title="Crafting Digital Experiences That Matter" subtitle="Background" />
 
             <div className="flex flex-col gap-50">
-
                 <AboutContent />
                 <AboutHighlights />
                 <AboutExperience />
