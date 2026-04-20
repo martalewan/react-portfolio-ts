@@ -15,8 +15,9 @@ const About = () => {
                 <AboutHighlights />
                 <AboutExperience />
             </div>
-
-            <ScrollButton direction="down" scrollToId="skills" />
+            <div className="flex justify-center">
+                <ScrollButton direction="down" scrollToId="skills" />
+            </div>
 
         </section>
     );

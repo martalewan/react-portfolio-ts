@@ -80,7 +80,9 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
-            <ScrollButton direction="down" scrollToId="about" />
+            <div className="absolute bottom-11 left-1/2 -translate-x-1/2">
+                <ScrollButton direction="down" scrollToId="about" />
+            </div>
         </section>
     );
 };

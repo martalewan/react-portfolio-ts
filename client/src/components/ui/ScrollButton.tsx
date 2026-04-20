@@ -7,13 +7,12 @@ const ScrollButton = ({ direction = "down", scrollToId = "hero" }: ScrollButtonP
     return (
         <button
             onClick={() => document.getElementById(scrollToId)?.scrollIntoView({ behavior: "smooth" })}
-            className="absolute bottom-10 left-1/2 -translate-x-1/2 cursor-pointer
-            w-10 h-10 items-center justify-center z-1 hidden xl:flex"
+            className="cursor-pointer w-10 h-10 items-center justify-center z-1 hidden xl:flex"
         >
-            <span className="absolute w-10 h-10 rounded-full border border-white/20 animate-ping" />
-            <span className="absolute w-10 h-10 rounded-full border border-white/30" />
+            <span className="absolute w-10 h-10 rounded-full border border-border-faint animate-ping" />
+            <span className="absolute w-10 h-10 rounded-full border border-border" />
 
-            <span className="text-white/70 text-sm">{direction === "down" ? "↓" : "↑"}</span>
+            <span className="text-text-muted text-sm">{direction === "down" ? "↓" : "↑"}</span>
         </button>
     );
 };
