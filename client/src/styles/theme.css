@@ -15,6 +15,7 @@
     --color-accent: #0ff;
     --color-accent-soft: rgba(0, 255, 255, 0.2);
 
+    /* BORDER SYSTEM */
     --color-border: rgba(255, 255, 255, 0.8);
     --color-border-faint: rgba(255, 255, 255, 0.2);
 }

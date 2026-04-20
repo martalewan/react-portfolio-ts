@@ -4,8 +4,17 @@
        TYPOGRAPHY SYSTEM
     ========================= */
 
-    body {
+    html {
         font-family: 'Geist', 'Montserrat', sans-serif;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-oosx-font-smoothing: grayscale;
+        background-color: var(--color-bg);
+        color: var(--color-text);
+        overflow-x: hidden;
     }
 
     h1,
@@ -44,6 +53,35 @@
     }
 
     section {
-        @apply flex flex-col gap-16 relative text-(--color-text);
+        @apply flex flex-col gap-16 relative;
+    }
+
+    /* =========================
+       CUSTOM SCOLLBAR
+    ========================= */
+
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--color-bg-inverse-faint);
+        border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--color-bg-inverse);
+    }
+
+    /* =========================
+       FIREFOX SCOLLBAR
+    ========================= */
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: var(--color-bg-inverse-faint) transparent;
     }
 }

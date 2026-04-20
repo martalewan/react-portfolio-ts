@@ -11,7 +11,7 @@ const Footer = () => {
             gap-10
             md:gap-12
             page-padding
-            py-10
+            py-13
             text-text
             z-10
             bg-linear-to-b from-(--color-bg) to-bg-muted
@@ -26,14 +26,14 @@ const Footer = () => {
                 gap-10
             ">
 
-                <div className="flex flex-col gap-(--space-3)">
+                <div className="flex flex-col gap-3">
                     <h3>Marta Lewandowska</h3>
 
                     <p className="text-sm text-(--color-text-muted)">
                         Crafting digital experiences with modern web technologies
                     </p>
 
-                    <div className="flex flex-col gap-(--space-2)">
+                    <div className="flex flex-col gap-2">
                         <div className="badge text-[11px] px-3 py-1.5 flex items-center gap-2">
                             <FiMapPin className="text-xs text-accent" />
                             <span>Paris</span>
@@ -48,10 +48,10 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-col gap-(--space-3)">
+                <div className="flex flex-col gap-3">
                     <h3>Quick Links</h3>
 
-                    <div className="flex flex-col gap-(--space-2)">
+                    <div className="flex flex-col gap-2)">
                         {navData.map((item) => (
                             <Link
                                 key={item.id}
@@ -64,7 +64,7 @@ const Footer = () => {
                                     uppercase
                                     cursor-pointer
                                     transition-colors duration-300
-                                    hover:text-(--color-text)
+                                    hover:text-text
                                 "
                             >
                                 {item.label}
@@ -73,7 +73,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-col gap-(--space-3)">
+                <div className="flex flex-col gap-3">
                     <h3>Connect With Me</h3>
 
                     <p className="text-sm text-(--color-text-muted)">
@@ -103,7 +103,7 @@ const Footer = () => {
                 md:flex-row
                 justify-between
                 items-center
-                gap-(--space-3)
+                gap-3
                 text-center md:text-left
             ">
 

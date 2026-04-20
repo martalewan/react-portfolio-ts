@@ -23,8 +23,7 @@ const Carousel = ({ images, active, setActive }: CarouselTypes) => {
             className="
                 flex overflow-x-auto
                 cursor-grab select-none
-                no-scrollbar
-                [&::-webkit-scrollbar]:hidden
+                hide-scrollbar
             "
         >
             {data.map((src, i) => {

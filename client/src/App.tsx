@@ -13,7 +13,7 @@ import Footer from "./components/ui/Footer";
 
 const App = () => {
   return (
-    <div className="bg-(--color-bg) relative min-h-screen">
+    <div className="relative min-h-screen overflow-hidden">
 
       <BackgroundEffects />
       <BottomBlurFade height={"h-17"} />
