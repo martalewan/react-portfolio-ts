@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import SkillCard from "./SkillsCard";
+import HorizontalDivider from "../ui/HorizontalDivider";
 
 const container = {
     hidden: {},
@@ -24,7 +25,8 @@ const SkillCategory = ({ category }) => {
                 <h4 className="text-[10px] uppercase tracking-widest text-white/40 group-hover:text-accent transition">
                     {category.title}
                 </h4>
-                <div className="h-px flex-1 bg-white/10" />
+                <HorizontalDivider className="flex-1" />
+
             </div>
 
             <div className="space-y-3">
