@@ -6,7 +6,7 @@
 
     .grain {
         position: absolute;
-        inset: 0 0 120px 0;
+        inset: 0 0 0 0;
         pointer-events: none;
         opacity: 0.9;
         mix-blend-mode: overlay;
@@ -153,5 +153,44 @@
 
     .section-subtitle {
         @apply text-(--color-text-muted) text-[13px] xl:text-[15px];
+    }
+
+    /* =========================
+       ZIGZAG GRID
+    ========================= */
+
+    .zigzag-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5rem;
+    }
+
+    @media (min-width: 1024px) {
+        .zigzag-grid {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 7rem;
+            gap: 10rem;
+
+        }
+
+        .zigzag-item:nth-child(odd) {
+            transform: translateY(-4rem);
+        }
+
+        .zigzag-item:nth-child(even) {
+            transform: translateY(4rem);
+        }
+    }
+
+    /* =========================
+       CAROUSEL HIDE SCROLLBAR
+    ========================= */
+    .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
     }
 }

@@ -1,4 +1,4 @@
-import { aboutData } from "../../data/aboutData";
+import { EXPERIENCES_DATA } from "../../data/aboutData";
 import ExperienceItem from "./ExperienceItem";
 import { FiArrowRight } from "react-icons/fi";
 
@@ -16,7 +16,7 @@ const AboutExperience = () => {
                 />
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-                {aboutData.map((item, index) => (
+                {EXPERIENCES_DATA.map((item, index) => (
                     <ExperienceItem key={index} item={item} />
                 ))}
 
