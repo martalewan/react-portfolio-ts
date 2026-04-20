@@ -19,32 +19,36 @@ const getWidth = (level: string) => {
 };
 
 const SkillCard = ({ skill }) => {
+    const Icon = skill.icon;
     return (
         <motion.div
-            className="p-2 border border-white/10 bg-white/5 hover:bg-white/10 transition rounded-xs group"
+            className="flex flex-col gap-2 p-2 border border-border-15 bg-bg-inverse-05 hover:bg-bg-inverse-15 transition rounded-xs group"
             variants={item}
         >
-            <div className="flex items-center gap-2 mb-1">
-                <div className="text-base text-text-muted group-hover:text-accent transition">
-                    {skill.icon}
+            <div className="flex items-center gap-2">
+                <div className="text-text-80">
+                    <Icon />
                 </div>
 
-                <span className="text-[12px]">{skill.name}</span>
+                <span className="text-xs">{skill.name}</span>
             </div>
 
-            <div className="w-full h-0.5 bg-white/10 rounded-full overflow-hidden">
-                <div
-                    className="h-full bg-accent transition-all duration-500"
-                    style={{
-                        width: getWidth(skill.level),
-                    }}
-                />
-            </div>
+            <div>
+                <div className="w-full h-0.5 bg-bg-inverse-15 rounded-full overflow-hidden">
+                    <div
+                        className="h-full bg-accent transition-all duration-500"
+                        style={{
+                            width: getWidth(skill.level),
+                        }}
+                    />
 
-            <div className="flex justify-between text-[11px] text-white/40 mt-1">
-                <span>{skill.level}</span>
-                <span>{skill.years}y</span>
-            </div>
+                </div>
+                <div className="flex justify-between text-xs text-text-40 mt-1">
+                    <span>{skill.level}</span>
+                    <span>+ {skill.years} years</span>
+                </div></div>
+
+
         </motion.div>
     );
 };

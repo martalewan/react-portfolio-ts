@@ -9,7 +9,7 @@ const ContactInfo = () => {
 
             <Socials
                 wrapperStyles="flex flex-row md:flex-col justify-center md:justify-start gap-4 shrink-0"
-                iconsStyles="z-10 flex items-center justify-center border border-(--color-border) rounded-xs p-2 w-9 h-9"
+                iconsStyles="flex items-center justify-center border border-border-80 rounded-xs p-2 w-9 h-9"
             />
 
             <div className="flex flex-col gap-6 md:gap-8 items-center md:items-start w-full">

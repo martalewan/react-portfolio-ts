@@ -8,15 +8,14 @@ const Footer = () => {
         <footer className="
             w-full
             flex flex-col
-            gap-10
+            gap-20
             md:gap-12
             page-padding
             py-13
             text-text
             z-10
-            bg-linear-to-b from-(--color-bg) to-bg-muted
             backdrop-blur-md
-            border-t border-border-faint
+            border-t border-border-15
         ">
 
             <div className="
@@ -29,7 +28,7 @@ const Footer = () => {
                 <div className="flex flex-col gap-3">
                     <h3>Marta Lewandowska</h3>
 
-                    <p className="text-sm text-(--color-text-muted)">
+                    <p className="text-sm">
                         Crafting digital experiences with modern web technologies
                     </p>
 
@@ -59,8 +58,8 @@ const Footer = () => {
                                 smooth
                                 duration={500}
                                 className="
-                                    text-[13px]
-                                    text-(--color-text-muted)
+                                    text-sm
+                                    text-text-80
                                     uppercase
                                     cursor-pointer
                                     transition-colors duration-300
@@ -76,7 +75,7 @@ const Footer = () => {
                 <div className="flex flex-col gap-3">
                     <h3>Connect With Me</h3>
 
-                    <p className="text-sm text-(--color-text-muted)">
+                    <p className="text-sm">
                         Let's connect and create something amazing together!
                     </p>
 
@@ -89,7 +88,7 @@ const Footer = () => {
                         "
                         iconsStyles="
                             flex items-center justify-center
-                            border border-(--color-border)
+                            border border-border-80
                             rounded-xs
                             p-2
                             w-9 h-9

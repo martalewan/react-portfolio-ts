@@ -8,7 +8,7 @@ const AboutContent = () => {
                 {ABOUT_PARAGRAPHS.map((item) => (
                     <p
                         key={item.id}
-                        className="p-large text-(--color-text-muted)"
+                        className="p-large"
                     >
                         {item.text}
                     </p>

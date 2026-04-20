@@ -47,7 +47,7 @@ const HeroPresentation = () => {
 
                 <Socials
                     wrapperStyles="flex gap-8 justify-center xl:justify-start w-full"
-                    iconsStyles="flex items-center justify-center border border-(--color-text-muted) rounded-full p-2 w-9 h-9"
+                    iconsStyles="flex items-center justify-center border border-border-80 rounded-full p-2 w-9 h-9"
                 />
             </div>
         </div>

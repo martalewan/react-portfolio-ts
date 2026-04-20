@@ -9,7 +9,7 @@ type DrawerProps = {
 
 const Drawer = ({ children }: DrawerProps) => {
     return (
-        <ElDialog className="xl:hidden text-white" >
+        <ElDialog className="xl:hidden text-text" >
             <button
                 command="show-modal"
                 commandfor="drawer"
@@ -24,9 +24,9 @@ const Drawer = ({ children }: DrawerProps) => {
                 aria-labelledby="drawer-title"
                 className="fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent"
             >
-                <ElDialogBackdrop className="absolute inset-0 bg-gray-500/75 transition-opacity duration-500 ease-in-out data-closed:opacity-0" />
+                <ElDialogBackdrop className="absolute inset-0 bg-bg-inverse-80 transition-opacity duration-500 ease-in-out data-closed:opacity-0" />
 
-                <div className="absolute inset-0 pl-10 focus:outline-none sm:pl-16 text-white">
+                <div className="absolute inset-0 pl-10 focus:outline-none sm:pl-16 text-text">
                     <ElDialogPanel className="group/dialog-panel relative ml-auto block size-full max-w-md transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700">
                         <div className="z-10 absolute top-6 right-6 flex duration-500 ease-in-out group-data-closed/dialog-panel:opacity-0">
                             <button
@@ -41,7 +41,7 @@ const Drawer = ({ children }: DrawerProps) => {
 
                         </div>
 
-                        <div className="flex h-full flex-col items-center overflow-y-auto bg-gray-900 py-6 shadow-xl">
+                        <div className="flex h-full flex-col items-center overflow-y-auto bg-bg-80 py-6 shadow-xl">
                             <div className="mt-20 sm:px-6">
                                 <Logo />
                             </div>

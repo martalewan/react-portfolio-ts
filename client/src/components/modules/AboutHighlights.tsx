@@ -12,7 +12,7 @@ const AboutHighlights = () => {
                             <h3>{item.title}</h3>
                         </div>
 
-                        <p className="mt-4 text-(--color-text-muted)">
+                        <p className="mt-4">
                             {item.text}
                         </p>
                     </NeonFrame>

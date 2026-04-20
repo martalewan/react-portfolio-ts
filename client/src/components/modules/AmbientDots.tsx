@@ -12,7 +12,7 @@ const AmbientDots = () => {
     useAmbientDots(containerRef);
 
     return (
-        <div className="w-full h-full overflow-hidden flex items-center justify-center pt-15 pb-15">
+        <div className="w-full h-full flex items-center justify-center pt-15 pb-15">
             <div
                 ref={containerRef}
                 className="grid"
@@ -27,7 +27,7 @@ const AmbientDots = () => {
                 {Array.from({ length: TOTAL }).map((_, i) => (
                     <div
                         key={i}
-                        className="dot w-1 h-1 bg-white/40 rounded-full transition-transform duration-150 ease-out pointer-events-none"
+                        className="dot w-1 h-1 bg-bg-inverse-80 rounded-full transition-transform duration-150 ease-out pointer-events-none"
                     />
                 ))}
             </div>

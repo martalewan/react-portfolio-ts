@@ -9,11 +9,11 @@ const SectionTitle = ({ label, title, subtitle }: SectionTitle) => {
 
         <div className="relative flex flex-col items-start gap-2 mt-40 mb-20">
 
-            <span className="text-xs tracking-widest text-(--color-text-muted) uppercase">
+            <span className="text-xs tracking-widest text-text-40 uppercase">
                 {subtitle}
             </span>
             <h2 className="tracking-tight">
-                <span className="text-neon-flicker numero-font ">{label}</span>
+                <span className="text-neon-flicker numero-font">{label}</span>
                 {title}
             </h2>
         </div>

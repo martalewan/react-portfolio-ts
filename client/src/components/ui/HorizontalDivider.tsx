@@ -5,7 +5,7 @@ type HorizontalDividerProps = {
 const HorizontalDivider = ({ className = "" }: HorizontalDividerProps) => {
     return (
         <div
-            className={`w-6 h-px bg-bg-inverse-faint ${className}`}
+            className={`w-6 h-px bg-bg-inverse-15 ${className}`}
         />
     );
 };

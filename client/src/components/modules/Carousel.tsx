@@ -36,10 +36,10 @@ const Carousel = ({ images, active, setActive }: CarouselTypes) => {
                             carousel-item
                             min-w-[73%]
                             transition-all duration-500
-                            ${isActive ? "scale-100 opacity-100" : "scale-98 opacity-40"}
+                            ${isActive ? "scale-100 opacity-100" : "scale-99 opacity-50"}
                         `}
                     >
-                        <div className="border border-white/10 overflow-hidden rounded-sm">
+                        <div className="overflow-hidden">
                             <img
                                 src={src}
                                 className="w-full h-150 object-cover portfolio-image"

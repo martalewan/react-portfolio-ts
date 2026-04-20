@@ -12,7 +12,7 @@ const AboutInfoBadge = ({ icon: Icon, title, description }: AboutInfoBadgeProps)
                 <h4>{title}</h4>
             </div>
 
-            <p className="text-sm text-(--color-text-muted)">
+            <p className="text-sm">
                 {description}
             </p>
         </div>

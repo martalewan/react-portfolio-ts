@@ -25,7 +25,7 @@ const ProjectInfo = ({ project }: ProjectInfoProps) => {
             </div>
 
             <div>
-                <p className="text-(--color-text-muted) leading-relaxed">
+                <p className="text-text-80">
                     {project.description}
                 </p>
             </div>

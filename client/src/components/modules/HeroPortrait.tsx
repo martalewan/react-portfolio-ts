@@ -25,7 +25,7 @@ const HeroPortrait = () => {
                 alt="Portrait of Marta Lewandowska"
                 loading="eager"
                 draggable={false}
-                className="invert brightness-0 relative z-10"
+                className="invert brightness-0 relative"
             />
         </div>
     )

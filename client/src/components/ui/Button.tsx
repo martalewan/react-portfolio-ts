@@ -18,7 +18,7 @@ const Button = ({ text, icon, variant = "primary", type = "button", onClick }: B
             className={`w-full group relative flex items-center justify-center overflow-hidden rounded-xs 
             transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]
             hover:-translate-y-px cursor-pointer
-            ${variant === "primary" ? "bg-accent text-(--color-text-inverse)  hover:bg-(--color-bg-inverse)" : "bg-bg-inverse-faint text-text"}`}
+            ${variant === "primary" ? "bg-accent text-text-inverse hover:bg-bg-inverse" : "bg-bg-inverse-15 text-text"}`}
         >
 
             <div className="flex items-center gap-2 h-full will-change-transform uppercase whitespace-nowrap">
@@ -33,7 +33,7 @@ const Button = ({ text, icon, variant = "primary", type = "button", onClick }: B
 
                 <span className="absolute left-0 flex items-center gap-2 h-full w-full px-3 md:px-5 py-2
                     translate-y-full 
-                    transition-transform duration-300  will-change-transform
+                    transition-transform duration-300 will-change-transform
                     group-hover:translate-y-0">
                     {text}
                     {Icon && <Icon />}
