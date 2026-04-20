@@ -5,7 +5,13 @@ import { Link } from "react-scroll";
 import { HERO_DATA } from "../../data/heroData";
 
 const HeroPresentation = () => {
-    const { subtitle, name, description, cvFile, actions } = HERO_DATA;
+    const {
+        subtitle,
+        name,
+        description,
+        cvFile,
+        actions: { downloadLabel, contactLabel }
+    } = HERO_DATA;
 
     return (
         <div className="flex flex-col items-center gap-6 xl:items-start text-center xl:text-left order-2 xl:order-0">
@@ -30,12 +36,12 @@ const HeroPresentation = () => {
 
             <div className="flex flex-col gap-6 w-full max-w-md">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <a href={cvFile} download>
-                        <Button text={actions.downloadLabel} icon={FiDownload} />
+                    <a href={cvFile} download aria-label="Download CV">
+                        <Button text={downloadLabel} icon={FiDownload} />
                     </a>
 
                     <Link to="contact" smooth duration={500}>
-                        <Button text={actions.contactLabel} variant="secondary" />
+                        <Button text={contactLabel} variant="secondary" />
                     </Link>
                 </div>
 
