@@ -72,10 +72,9 @@ export const ABOUT_HIGHLIGHTS = [
         icon: FiCode,
         title: "Strong frontend foundation",
         text: `
-        I build scalable, high-performance web applications using React and TypeScript.
-        My focus is clean architecture, maintainable code, and interfaces that feel fast,
-        accessible, and reliable in real-world use.
-        scalable, high-performance web applications clean architecture
+        I build scalable, high-performance web applications with React and TypeScript.
+        My focus is clean architecture, maintainable code, and interfaces that feel
+        fast, accessible, and reliable in real-world use.
         `,
     },
     {
@@ -84,8 +83,8 @@ export const ABOUT_HIGHLIGHTS = [
         title: "Design-first engineering",
         text: `
         With a background in graphic design, I approach frontend development through
-        structure, hierarchy, and visual clarity.
-        I care about how interfaces communicate — not just how they look.
+        structure, hierarchy, and visual clarity. I focus on interfaces that not only
+        look polished but also communicate clearly and intuitively.
         `,
     },
     {
@@ -94,8 +93,8 @@ export const ABOUT_HIGHLIGHTS = [
         title: "Creative discipline",
         text: `
         Years as a cellist shaped my discipline, patience, and attention to detail.
-        I bring that same mindset into development, especially when refining UI details
-        and working through complex component logic.
+        I bring that same mindset into development, refining UI details and solving
+        complex component challenges with precision and consistency.
         `,
     },
     {
@@ -104,8 +103,8 @@ export const ABOUT_HIGHLIGHTS = [
         title: "Curiosity & continuous growth",
         text: `
         My path from design to engineering has been intentional and continuous.
-        I enjoy learning, experimenting, and improving with every project — always
-        pushing toward better systems and better user experiences.
+        I enjoy learning, experimenting, and improving with every project, always
+        striving to build better systems and stronger user experiences.
         `,
     },
 ];
