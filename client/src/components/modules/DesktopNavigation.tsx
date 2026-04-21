@@ -21,7 +21,7 @@ const DesktopNavigation = ({ navData }: NavigationProps) => {
                 ))
             }
             <Link to="contact" smooth={true} duration={500}>
-                <Button text="Hire Me" />
+                <Button text="Start a project" />
             </Link>
         </div >
     )

@@ -100,7 +100,7 @@ export const ABOUT_HIGHLIGHTS = [
     {
         id: "curiosity-growth",
         icon: FiZap,
-        title: "Curiosity & continuous growth",
+        title: "Curiosity & growth",
         text: `
         My path from design to engineering has been intentional and continuous.
         I enjoy learning, experimenting, and improving with every project, always
