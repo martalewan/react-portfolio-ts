@@ -23,8 +23,8 @@ const createGradient = (colors: ColorStop[]) => {
 
 const blobs = [
     "top-0 left-0 -translate-x-1/2 -translate-y-1/2",
-    "top-10 left-0",
-    "bottom-1 left-10",
+    "top-12 right-10",
+    "bottom-25 right-10",
 ];
 
 const RadialGradientBackground = () => {
@@ -33,11 +33,11 @@ const RadialGradientBackground = () => {
             {blobs.map((pos, i) => (
                 <div
                     key={i}
-                    className={`absolute w-[97vw] h-[97vw] rounded-full ${pos}`}
+                    className={`absolute w-[92vw] h-[92vw] rounded-full ${pos}`}
                     style={{
                         background: createGradient(colors),
                         filter: "blur(0px)",
-                        opacity: 0.3,
+                        opacity: 0.25,
                     }}
                 />
             ))}
