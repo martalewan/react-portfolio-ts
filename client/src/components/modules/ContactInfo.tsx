@@ -1,6 +1,5 @@
 import Socials from "./Socials";
 import profil from "../../assets/profil.jpeg";
-import { motion } from "framer-motion";
 import { FiMapPin, FiMail } from "react-icons/fi";
 
 const ContactInfo = () => {
@@ -14,7 +13,7 @@ const ContactInfo = () => {
 
             <div className="flex flex-col gap-6 md:gap-8 items-center md:items-start w-full">
 
-                <motion.img
+                <img
                     src={profil}
                     alt="Portrait"
                     className="rounded-sm w-40 sm:w-52 md:w-88 object-contain"

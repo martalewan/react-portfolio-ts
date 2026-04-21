@@ -1,25 +1,9 @@
-import { motion } from "framer-motion";
 import SkillCard from "./SkillsCard";
 import HorizontalDivider from "../ui/HorizontalDivider";
 
-const container = {
-    hidden: {},
-    show: {
-        transition: {
-            staggerChildren: 0.04,
-        },
-    },
-};
-
 const SkillCategory = ({ category }) => {
     return (
-        <motion.div
-            className="space-y-3 group"
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={container}
-        >
+        <div className="space-y-3 group">
 
             <div className="flex items-center gap-3">
                 <h4 className="text-xs uppercase tracking-widest text-text-40 group-hover:text-accent transition">
@@ -34,7 +18,7 @@ const SkillCategory = ({ category }) => {
                     <SkillCard key={skill.name} skill={skill} />
                 ))}
             </div>
-        </motion.div>
+        </div>
     );
 };
 

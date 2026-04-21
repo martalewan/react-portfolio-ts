@@ -9,7 +9,7 @@ const AboutHighlights = () => {
                     <NeonFrame>
                         <div className="flex items-center gap-3">
                             <item.icon className="w-4 h-4 text-accent" />
-                            <h3>{item.title}</h3>
+                            <h4>{item.title}</h4>
                         </div>
 
                         <p className="mt-4">
