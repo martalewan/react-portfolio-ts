@@ -6,7 +6,7 @@ type AboutInfoBadgeProps = {
 
 const AboutInfoBadge = ({ icon: Icon, title, description }: AboutInfoBadgeProps) => {
     return (
-        <div className="flex flex-col items-start badge">
+        <div className="ui-elevated">
             <div className="flex items-center gap-3 mb-3">
                 <Icon className="w-4 h-4 text-accent" />
                 <h4>{title}</h4>

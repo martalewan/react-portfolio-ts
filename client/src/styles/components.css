@@ -1,12 +1,54 @@
+/* =========================
+   PRIMITIVES (REUSABLE BASES)
+========================= */
+
 @layer components {
 
+    .ui-surface {
+        @apply border bg-bg-inverse-05 border-border-15 transition-all duration-200 ease-out;
+    }
+
+    .ui-padding {
+        @apply px-4 py-2.5;
+    }
+
+    .ui-hover {
+        @apply hover:text-text hover:bg-bg-inverse-15;
+    }
+
+    .text-large {
+        @apply text-[13px] xl:text-[23px];
+        font-family: "Plus Jakarta Sans", sans-serif;
+    }
+
+    .text-subtitle {
+        @apply text-text-80 text-[13px] xl:text-[14px] tracking-wider;
+    }
+
+    .page-padding {
+        @apply pl-[15%] pr-[15%];
+    }
+
+    .numero-font {
+        font-family: 'JetBrains Mono', monospace;
+    }
+
+
     /* =========================
-       BACKGROUND EFFECTS
+       UI COMPONENTS
     ========================= */
 
-    .grain {
+    .ui-elevated {
+        @apply flex flex-col gap-2 rounded-xs text-text-80 border bg-bg-inverse-05 border-border-15 px-4 py-2.5 hover:text-text hover:bg-bg-inverse-15 transition-all duration-200 ease-out;
+    }
+
+    /* =========================
+       EFFECTS
+    ========================= */
+
+    .effect-grain {
         position: absolute;
-        inset: 0 0 0 0;
+        inset: 0;
         pointer-events: none;
         opacity: 0.9;
         mix-blend-mode: overlay;
@@ -21,83 +63,74 @@
         animation: grainShift 8s steps(6) infinite;
     }
 
-    /* =========================
-       NEON FRAME
-    ========================= */
-
-    .neon-frame {
+    .effect-neon-frame {
         position: relative;
-        pointer-events: auto;
-
+        isolation: isolate;
         padding: 30px;
-        border-radius: 10px 4px 10px 4px;
+        border-radius: 5px;
+        border: 4px solid var(--color-accent);
+    }
+
+    .effect-neon-frame .content {
+        position: relative;
+        z-index: 2;
+    }
+
+    .effect-neon-frame::after {
+        content: "";
+        position: absolute;
+        inset: -2px;
+        border-radius: inherit;
+
         border: 5px solid var(--color-accent);
 
         box-shadow:
-            0 0 10px rgba(0, 255, 255, 0.02),
-            0 0 25px rgba(0, 255, 255, 0.03),
-            inset 0 0 10px rgba(0, 255, 255, 0.01),
-            inset 0 2px 4px rgba(255, 255, 255, 0.05),
-            inset 0 -2px 6px rgba(0, 0, 0, 0.03);
+            0 0 9px rgba(0, 255, 255, 0.6),
+            0 0 20px rgba(0, 255, 255, 0.55);
 
-        opacity: 0.9;
-        transform: perspective(1000px) rotateX(0deg);
-
-        transition: all 0.4s ease;
-    }
-
-    .neon-frame:hover {
-        opacity: 1;
-        transform: translateY(-4px) rotateX(1.5deg);
-
-        box-shadow:
-            0 0 18px rgba(0, 255, 255, 0.18),
-            0 0 40px rgba(0, 255, 255, 0.06),
-            inset 0 0 12px rgba(0, 255, 255, 0.12),
-            inset 0 2px 6px rgba(255, 255, 255, 0.05),
-            inset 0 -2px 8px rgba(0, 0, 0, 0.3);
-    }
-
-    .neon-frame::before {
-        content: "";
-        position: absolute;
-        inset: -7px;
-        border-radius: inherit;
-        border: 9px solid var(--color-accent);
-
-        box-shadow:
-            0 0 6px rgba(0, 255, 255, 0.5),
-            0 0 14px rgba(0, 255, 255, 0.6),
-            0 0 30px rgba(0, 255, 255, 0.8),
-            inset 0 0 50px rgba(0, 255, 255, 0.25),
-            inset 0 0 10px rgba(0, 255, 255, 0.5);
-
-        filter: blur(8px);
-        opacity: 0.7;
+        opacity: 0.85;
         z-index: 1;
         pointer-events: none;
 
-        animation:
-            neon-border-flicker 4s linear infinite,
-            neon-breathe 9s ease-in-out infinite,
-            neon-noise-flicker 2.8s linear infinite;
-
-        transition: filter 120ms linear, opacity 120ms linear;
+        animation: neon-flicker 4.5s linear infinite;
     }
 
-    .neon-frame::after {
-        content: "";
-        position: absolute;
-        top: 65%;
-        left: 0;
-        width: 100%;
-        height: 100%;
-
-        background: var(--color-accent);
-        transform: perspective(900px) rotateX(60deg) scale(1.05, 0.25);
-        filter: blur(100px);
-        opacity: 15%;
+    .effect-neon-frame:hover {
+        transform: translateY(-2px);
     }
+
+
+    /* =========================
+       LAYOUT
+    ========================= */
+
+    .layout-grid-zigzag {
+        @apply grid grid-cols-1 gap-20;
+    }
+
+    @media (min-width: 1024px) {
+        .layout-grid-zigzag {
+            @apply grid-cols-2 gap-28;
+        }
+
+        .layout-item-zigzag:nth-child(odd) {
+            transform: translateY(-4rem);
+        }
+
+        .layout-item-zigzag:nth-child(even) {
+            transform: translateY(4rem);
+        }
+    }
+
+    .layout-hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .layout-hide-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
 
     /* =========================
        ANIMATIONS HELPERS
@@ -107,90 +140,7 @@
         animation: text-neon-flicker 4s linear infinite;
     }
 
-    .pulse-dot {
-        animation: soft-pulse 2.2s ease-in-out infinite;
-    }
-
     .animate-scroll {
         animation: scroll 50s linear infinite;
-    }
-
-    /* =========================
-       UI ELEMENTS
-    ========================= */
-
-    .skill-item {
-        transition: transform 0.2s linear, opacity 0.2s linear;
-    }
-
-    .badge {
-        @apply flex items-center gap-2 px-4 py-2.5 rounded-xs border border-white/10 bg-white/5 text-white/80 transition-all duration-200 ease-out;
-    }
-
-    .badge:hover {
-        @apply text-white border-white/20;
-        transform: translateY(-1px);
-        background-color: rgba(255, 255, 255, 0.08);
-        box-shadow: 0 0 8px rgba(0, 255, 200, 0.1);
-    }
-
-    /* =========================
-       TYPOGRAPHY HELPERS
-    ========================= */
-
-    .page-padding {
-        @apply pl-[15%] pr-[15%];
-    }
-
-    .numero-font {
-        font-family: 'JetBrains Mono', monospace;
-    }
-
-    .p-large {
-        @apply text-[13px] xl:text-[23px];
-        font-family: "Plus Jakarta Sans", sans-serif;
-    }
-
-    .section-subtitle {
-        @apply text-(--color-text-muted) text-[13px] xl:text-[15px];
-    }
-
-    /* =========================
-       ZIGZAG GRID
-    ========================= */
-
-    .zigzag-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 5rem;
-    }
-
-    @media (min-width: 1024px) {
-        .zigzag-grid {
-            grid-template-columns: repeat(2, 1fr);
-            column-gap: 7rem;
-            gap: 10rem;
-
-        }
-
-        .zigzag-item:nth-child(odd) {
-            transform: translateY(-4rem);
-        }
-
-        .zigzag-item:nth-child(even) {
-            transform: translateY(4rem);
-        }
-    }
-
-    /* =========================
-       CAROUSEL HIDE SCROLLBAR
-    ========================= */
-    .hide-scrollbar {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-    }
-
-    .hide-scrollbar::-webkit-scrollbar {
-        display: none;
     }
 }

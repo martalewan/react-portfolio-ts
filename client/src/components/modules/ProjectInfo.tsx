@@ -15,9 +15,9 @@ const ProjectInfo = ({ project }: ProjectInfoProps) => {
                     {project.title}
                 </h3>
 
-                <div className="flex flex-wrap gap-3 md:gap-5">
+                <div className="flex flex-wrap gap-3">
                     {project.techStack.map((t) => (
-                        <span key={t} className="badge text-sm">
+                        <span key={t} className="ui-elevated text-xs">
                             {t}
                         </span>
                     ))}

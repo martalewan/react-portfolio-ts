@@ -16,7 +16,7 @@ const HeroPresentation = () => {
     return (
         <div className="flex flex-col items-center gap-6 xl:items-start text-center xl:text-left order-2 xl:order-0">
             <div>
-                <span className="section-subtitle">
+                <span className="text-subtitle">
                     {subtitle}
                 </span>
 
@@ -30,7 +30,7 @@ const HeroPresentation = () => {
                 </h1>
             </div>
 
-            <p className="max-w-137.5 p-large">
+            <p className="max-w-137.5 text-large">
                 {description}
             </p>
 

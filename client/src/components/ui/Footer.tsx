@@ -33,16 +33,23 @@ const Footer = () => {
                     </p>
 
                     <div className="flex flex-col gap-2">
-                        <div className="badge text-[11px] px-3 py-1.5 flex items-center gap-2">
-                            <FiMapPin className="text-xs text-accent" />
-                            <span>Paris</span>
+                        <div className="ui-elevated text-xs">
+                            <div className="flex items-center gap-1">
+
+                                <FiMapPin className="text-xs text-accent" />
+                                <span>Paris</span>
+                            </div>
                         </div>
 
-                        <div className="badge text-[11px] px-3 py-1.5 flex items-center gap-2">
-                            <FiMail className="text-sm text-accent" />
-                            <span className="break-all">
-                                mlewan.design@gmail.com
-                            </span>
+                        <div className="ui-elevated text-xs">
+                            <div className="flex items-center gap-1">
+
+                                <FiMail className="text-sm text-accent" />
+                                <span className="break-all">
+                                    mlewan.design@gmail.com
+                                </span>
+                            </div>
+
                         </div>
                     </div>
                 </div>

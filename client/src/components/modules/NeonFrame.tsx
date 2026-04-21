@@ -4,7 +4,7 @@ type NeonFrameProps = {
 
 const NeonFrame = ({ children }: NeonFrameProps) => {
     return (
-        <div className="neon-frame">
+        <div className="effect-neon-frame">
 
             <div className="relative">
                 {children}

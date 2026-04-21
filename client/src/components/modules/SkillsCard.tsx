@@ -20,34 +20,34 @@ const getWidth = (level: string) => {
 
 const SkillCard = ({ skill }) => {
     const Icon = skill.icon;
+
     return (
         <motion.div
-            className="flex flex-col gap-2 p-2 border border-border-15 bg-bg-inverse-05 hover:bg-bg-inverse-15 transition rounded-xs group"
+            className="ui-elevated group"
             variants={item}
         >
-            <div className="flex items-center gap-2">
-                <div className="text-text-80">
+            <div className="flex w-full gap-2">
+                <div className="text-text-80 group-hover:text-accent transition-colors">
                     <Icon />
                 </div>
 
-                <span className="text-xs">{skill.name}</span>
+                <span className="text-xs text-text">
+                    {skill.name}
+                </span>
             </div>
-
-            <div>
+            <div className="w-full space-y-2">
                 <div className="w-full h-0.5 bg-bg-inverse-15 rounded-full overflow-hidden">
                     <div
-                        className="h-full bg-accent transition-all duration-500"
-                        style={{
-                            width: getWidth(skill.level),
-                        }}
+                        className="h-full bg-bg-inverse transition-all duration-500"
+                        style={{ width: getWidth(skill.level) }}
                     />
-
                 </div>
-                <div className="flex justify-between text-xs text-text-40 mt-1">
+
+                <div className="flex justify-between w-full text-xs text-text-40">
                     <span>{skill.level}</span>
                     <span>+ {skill.years} years</span>
-                </div></div>
-
+                </div>
+            </div>
 
         </motion.div>
     );
