@@ -1,4 +1,4 @@
-import Socials from "./Socials"
+import Socials from "./Socials";
 import profil from "../../assets/profil.jpeg";
 import { motion } from "framer-motion";
 import { FiMapPin, FiMail } from "react-icons/fi";
@@ -17,31 +17,44 @@ const ContactInfo = () => {
                 <motion.img
                     src={profil}
                     alt="Portrait"
-                    className="rounded-sm w-40 sm:w-52 md:w-88 h-auto object-contain"
+                    className="rounded-sm w-40 sm:w-52 md:w-88 object-contain"
                 />
 
                 <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-                    <div className="ui-elevated text-xs">
-                        <div className="flex items-center gap-1">
-                            <FiMapPin className="text-xs text-accent" />
-                            <span>Paris</span>
-                        </div>
 
+                    <div className="ui-elevated text-xs">
+                        <div className="flex items-center gap-2 whitespace-nowrap">
+                            <FiMapPin className="text-accent text-sm shrink-0" />
+                            <span>Paris, FR</span>
+                        </div>
                     </div>
 
                     <div className="ui-elevated text-xs">
-                        <div className="flex items-center gap-1">
-                            <FiMail className="text-sm text-accent" />
-                            <span className="break-all">
+                        <div className="flex items-center gap-2 whitespace-nowrap">
+                            <FiMail className="text-accent text-sm shrink-0" />
+                            <span className="truncate max-w-[200px]">
                                 mlewan.design@gmail.com
+                            </span>
+                        </div>
+                    </div>
+                    <div className="ui-elevated text-xs">
+                        <div className="flex items-center gap-2 whitespace-nowrap">
+
+                            <span className="relative flex h-2 w-2">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-40"></span>
+                                <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+                            </span>
+
+                            <span className="text-text-80">
+                                Open to work
                             </span>
                         </div>
 
                     </div>
                 </div>
-
             </div>
-        </div>)
-}
+        </div>
+    );
+};
 
-export default ContactInfo
+export default ContactInfo;

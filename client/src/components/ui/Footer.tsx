@@ -37,7 +37,7 @@ const Footer = () => {
                             <div className="flex items-center gap-1">
 
                                 <FiMapPin className="text-xs text-accent" />
-                                <span>Paris</span>
+                                <span>Paris, FR</span>
                             </div>
                         </div>
 

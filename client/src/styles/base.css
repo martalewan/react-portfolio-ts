@@ -41,7 +41,7 @@
     }
 
     p {
-        @apply text-[12px] xl:text-[16px] leading-relaxed;
+        @apply text-[12px] xl:text-[16px] leading-relaxed text-text-80;
     }
 
     /* =========================
