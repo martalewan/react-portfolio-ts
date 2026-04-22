@@ -8,9 +8,10 @@ export default function BackgroundEffects() {
 
             <div className="effect-grain absolute z-0 pointer-events-none" />
 
-            <div className="absolute top-0 left-0 w-full h-[110vh] overflow-hidden">
+            {/* <div className="absolute top-0 left-0 w-full h-[120vh] overflow-hidden">
                 <RadialGrandientBackground />
-            </div>
+            </div> */}
+
         </>
     );
 }   

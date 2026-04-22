@@ -11,7 +11,9 @@ const Hero = () => {
     const { opacity } = useScrollFadeIn(sectionRef);
 
     return (
-        <motion.section id="home" className="page-padding relative"
+        <motion.section
+            id="home"
+            className="page-padding relative"
             variants={staggerContainer({ delay: .5 })}
             initial="hidden"
             animate="show"

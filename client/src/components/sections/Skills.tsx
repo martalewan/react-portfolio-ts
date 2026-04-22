@@ -6,7 +6,7 @@ const Skills = () => {
         <section id="skills" className="page-padding">
             <SectionTitle
                 label="02."
-                title="My Skills"
+                title="My Skills & Expertise"
                 subtitle="Developer Stack"
             />
 

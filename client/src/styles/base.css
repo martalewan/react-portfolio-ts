@@ -25,15 +25,15 @@
     }
 
     h1 {
-        @apply text-[40px] xl:text-[60px] font-semibold;
+        @apply text-[50px] xl:text-[64px] font-semibold;
     }
 
     h2 {
-        @apply text-[30px] xl:text-[48px] font-semibold;
+        @apply text-[30px] xl:text-[56px] font-semibold;
     }
 
     h3 {
-        @apply text-[18px] xl:text-[30px] font-semibold;
+        @apply text-[18px] xl:text-[30px];
     }
 
     h4 {
@@ -53,7 +53,7 @@
     }
 
     section {
-        @apply flex flex-col gap-16 relative;
+        @apply flex flex-col gap-20 relative;
     }
 
     /* =========================

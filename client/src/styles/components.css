@@ -120,24 +120,6 @@
        LAYOUT
     ========================= */
 
-    .layout-grid-zigzag {
-        @apply grid grid-cols-1 gap-20;
-    }
-
-    @media (min-width: 1024px) {
-        .layout-grid-zigzag {
-            @apply grid-cols-2 gap-28;
-        }
-
-        .layout-item-zigzag:nth-child(odd) {
-            transform: translateY(-4rem);
-        }
-
-        .layout-item-zigzag:nth-child(even) {
-            transform: translateY(4rem);
-        }
-    }
-
     .layout-hide-scrollbar {
         -ms-overflow-style: none;
         scrollbar-width: none;
