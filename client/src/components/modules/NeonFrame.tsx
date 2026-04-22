@@ -6,7 +6,7 @@ const NeonFrame = ({ children }: NeonFrameProps) => {
     return (
         <div className="effect-neon-frame">
 
-            <div className="relative">
+            <div className="relative content">
                 {children}
             </div>
         </div>
