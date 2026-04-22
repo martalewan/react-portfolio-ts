@@ -15,7 +15,7 @@ const AboutExperience = () => {
                 "
                 />
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-6 lg:gap-8">
+            <div className="flex flex-col gap-10">
                 {EXPERIENCES_DATA.map((item, index) => (
                     <ExperienceItem key={index} item={item} />
                 ))}

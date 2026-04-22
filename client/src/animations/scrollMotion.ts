@@ -15,8 +15,6 @@ export const useHorizontalParallax = (
     );
 };
 
-
-
 export const useScrollFadeIn = (targetRef: React.RefObject<HTMLElement>) => {
     const { scrollYProgress } = useScroll({
         target: targetRef,

@@ -1,5 +1,4 @@
-import { ABOUT_PARAGRAPHS, INFO_ITEMS } from "../../data/aboutData";
-import AboutInfoBadge from "./AboutInfoBadge";
+import { ABOUT_PARAGRAPHS } from "../../data/aboutData";
 
 const AboutContent = () => {
     return (
@@ -13,13 +12,10 @@ const AboutContent = () => {
                         {item.text}
                     </p>
                 ))}
+
             </div>
 
-            <div className="flex flex-col gap-6">
-                {INFO_ITEMS.map(({ id, icon, title, description }) => (
-                    <AboutInfoBadge key={id} icon={icon} title={title} description={description} />
-                ))}
-            </div>
+
         </div>
 
     );

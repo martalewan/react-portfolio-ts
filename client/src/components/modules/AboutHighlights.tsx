@@ -3,13 +3,13 @@ import NeonFrame from "./NeonFrame";
 
 const AboutHighlights = () => {
     return (
-        <div className="layout-grid-zigzag">
+        <div className="flex flex-col gap-20">
             {ABOUT_HIGHLIGHTS.map((item) => (
-                <div key={item.id} className="layout-item-zigzag">
+                <div key={item.id}>
                     <NeonFrame>
                         <div className="flex items-center gap-3">
-                            <item.icon className="w-4 h-4 text-accent" />
-                            <h4>{item.title}</h4>
+                            <item.icon className="w-7 h-7 text-accent" />
+                            <h3>{item.title}</h3>
                         </div>
 
                         <p className="mt-4">
