@@ -1,3 +1,6 @@
+import { motion } from "framer-motion"
+import { itemReveal } from "../../animations"
+
 type SectionTitle = {
     label: string,
     title: string,
@@ -6,8 +9,7 @@ type SectionTitle = {
 
 const SectionTitle = ({ label, title, subtitle }: SectionTitle) => {
     return (
-
-        <div className="relative flex flex-col items-start gap-2 mt-40 mb-20">
+        <motion.div variants={itemReveal} className="relative flex flex-col items-start gap-2 mt-40 mb-20">
 
             <span className="text-xs tracking-widest text-text-40 uppercase">
                 {subtitle}
@@ -16,7 +18,7 @@ const SectionTitle = ({ label, title, subtitle }: SectionTitle) => {
                 <span className="text-neon-flicker numero-font">{label}</span>
                 {title}
             </h2>
-        </div>
+        </motion.div>
     )
 }
 

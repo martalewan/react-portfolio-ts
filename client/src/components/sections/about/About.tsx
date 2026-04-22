@@ -1,13 +1,15 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useAboutScroll } from "../../../hooks/useAboutScroll";
-import SectionTitle from "../../ui/SectionTitle";
+import SectionTitle from "../../layout/SectionTitle";
 import AboutContent from "./AboutContent";
 import { INFO_ITEMS } from "../../../data/aboutData";
 import AboutHighlights from "./AboutHighlights";
 import AboutInfoBadge from "./AboutInfoBadge";
 import ScrollButton from "../../ui/ScrollButton";
 import AboutExperience from "./AboutExperience";
+import { motion } from "framer-motion";
+import { staggerContainer } from "../../../animations";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,8 +17,13 @@ const About = () => {
     useAboutScroll()
 
     return (
-        <section id="about" className="page-padding relative">
-
+        <motion.section
+            id="about"
+            className="page-padding relative"
+            variants={staggerContainer({ delay: .5 })}
+            initial="hidden"
+            animate="show"
+        >
             <SectionTitle
                 label="01."
                 title="Crafting Digital Experiences That Matter"
@@ -56,7 +63,7 @@ const About = () => {
                 <ScrollButton direction="down" scrollToId="skills" />
             </div>
 
-        </section>
+        </motion.section>
     );
 };
 

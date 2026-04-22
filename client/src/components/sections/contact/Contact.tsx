@@ -1,18 +1,26 @@
 import NeonFrame from "../../effects/NeonFrame";
 import GlassCard from "../../ui/GlassCard";
-import SectionTitle from "../../ui/SectionTitle";
+import SectionTitle from "../../layout/SectionTitle";
 import ContactForm from "./ContactForm";
 import ContactInfo from "./ContactInfo";
-
+import { motion } from "framer-motion";
+import { staggerContainer } from "../../../animations";
 
 const Contact = () => {
     return (
-        <section id="contact" className="page-padding pb-50">
+        <motion.section
+            id="contact"
+            className="page-padding relative"
+            variants={staggerContainer({ delay: .5 })}
+            initial="hidden"
+            animate="show"
+        >
             <SectionTitle
                 label="04."
                 title="Get in touch"
                 subtitle="Let’s build something meaningful together"
             />
+
 
             <NeonFrame>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 relative z-10">
@@ -31,7 +39,7 @@ const Contact = () => {
                     <ContactInfo />
                 </div>
             </NeonFrame>
-        </section>
+        </motion.section>
     );
 };
 

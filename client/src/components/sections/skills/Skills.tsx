@@ -1,4 +1,4 @@
-import SectionTitle from "../../ui/SectionTitle";
+import SectionTitle from "../../layout/SectionTitle";
 import SkillsList from "./SkillsList";
 
 const Skills = () => {
