@@ -11,21 +11,22 @@ export function useCarouselScroll(
 
         const oneSet = el.scrollWidth / 3;
 
-        const handleScroll = () => {
+        let rafId: number;
+
+        const update = () => {
+            if (!el) return;
+
             if (el.scrollLeft <= 0) el.scrollLeft += oneSet;
             if (el.scrollLeft >= oneSet * 2) el.scrollLeft -= oneSet;
 
-            const items = el.querySelectorAll(".carousel-item");
-
+            const items = el.querySelectorAll<HTMLElement>(".carousel-item");
             const center = el.scrollLeft + el.offsetWidth / 2;
 
             let closest = 0;
             let minDist = Infinity;
 
             items.forEach((item, i) => {
-                const rect = item as HTMLElement;
-                const itemCenter = rect.offsetLeft + rect.offsetWidth / 2;
-
+                const itemCenter = item.offsetLeft + item.offsetWidth / 2;
                 const dist = Math.abs(center - itemCenter);
 
                 if (dist < minDist) {
@@ -35,9 +36,12 @@ export function useCarouselScroll(
             });
 
             setActive(closest);
+
+            rafId = requestAnimationFrame(update);
         };
 
-        el.addEventListener("scroll", handleScroll);
-        return () => el.removeEventListener("scroll", handleScroll);
-    }, [imagesLength]);
+        rafId = requestAnimationFrame(update);
+
+        return () => cancelAnimationFrame(rafId);
+    }, [imagesLength, setActive]);
 }
