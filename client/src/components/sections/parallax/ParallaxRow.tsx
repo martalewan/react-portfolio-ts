@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useHorizontalParallax } from "../../animations";
+import { useHorizontalParallax } from "../../../animations";
 
 type PhraseProps = {
     text: string;

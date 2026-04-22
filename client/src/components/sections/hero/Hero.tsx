@@ -1,10 +1,9 @@
-import HeroPresentation from "../modules/HeroPresentation";
-import HeroPortrait from "../modules/HeroPortrait";
-import ScrollButton from "../ui/ScrollButton";
 import { motion } from "framer-motion";
 import { useRef } from "react";
-import { staggerContainer, useScrollFadeIn } from "../../animations";
-import { itemReveal } from "../../animations";
+import { itemReveal, staggerContainer, useScrollFadeIn } from "../../../animations";
+import HeroPresentation from "./HeroPresentation";
+import ScrollButton from "../../ui/ScrollButton";
+import Portrait from "../../ui/Portrait";
 
 const Hero = () => {
     const sectionRef = useRef<HTMLDivElement>(null);
@@ -25,7 +24,7 @@ const Hero = () => {
                     className="absolute top-1/2 right-0 "
                     style={{ opacity }}
                 >
-                    <HeroPortrait />
+                    <Portrait />
                 </motion.div>
 
             </div>

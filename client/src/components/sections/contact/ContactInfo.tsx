@@ -1,6 +1,6 @@
-import Socials from "./Socials";
-import profil from "../../assets/profil.jpeg";
+import profil from "../../../assets/profil.jpeg";
 import { FiMapPin, FiMail } from "react-icons/fi";
+import Socials from "../../ui/Socials";
 
 const ContactInfo = () => {
     return (

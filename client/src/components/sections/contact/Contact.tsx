@@ -1,8 +1,9 @@
-import NeonFrame from "../modules/NeonFrame";
-import SectionTitle from "../modules/SectionTitle";
-import GlassCard from "../ui/GlassCard";
-import ContactForm from "../modules/ContactForm";
-import ContactInfo from "../modules/ContactInfo";
+import NeonFrame from "../../effects/NeonFrame";
+import GlassCard from "../../ui/GlassCard";
+import SectionTitle from "../../ui/SectionTitle";
+import ContactForm from "./ContactForm";
+import ContactInfo from "./ContactInfo";
+
 
 const Contact = () => {
     return (

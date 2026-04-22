@@ -1,5 +1,5 @@
-import { ABOUT_HIGHLIGHTS } from "../../data/aboutData";
-import NeonFrame from "./NeonFrame";
+import { ABOUT_HIGHLIGHTS } from "../../../data/aboutData";
+import NeonFrame from "../../effects/NeonFrame";
 
 const AboutHighlights = () => {
     return (

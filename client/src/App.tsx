@@ -1,19 +1,19 @@
 import Cursor from "./components/ui/Cursor";
-import AmbientDots from "./components/modules/AmbientDots";
 import Navbar from "./components/ui/Navbar";
-import About from "./components/sections/About";
-import Contact from "./components/sections/Contact";
-import Hero from "./components/sections/Hero";
-import ProjectsSection from "./components/sections/ProjectsSection";
-import Skills from "./components/sections/Skills";
-import BackgroundEffects from "./components/ui/BackgroundEffects";
-import BottomBlurFade from "./components/ui/BottomBlurFade";
-import Footer from "./components/ui/Footer";
+import BackgroundEffects from "./components/layout/BackgroundEffects";
+import BottomBlurFade from "./components/layout/BottomBlurFade";
+import Footer from "./components/layout/Footer";
 import { useLenis } from "./hooks/useLenis";
 import { useRef } from "react";
 import { useScroll } from "framer-motion";
-import TextWave from "./components/modules/TextWave";
-import Parallax from "./components/sections/Parallax";
+import Hero from "./components/sections/hero/Hero";
+import Parallax from "./components/sections/parallax/Parallax";
+import About from "./components/sections/about/About";
+import TextWave from "./components/effects/TextWave";
+import Skills from "./components/sections/skills/Skills";
+import AmbientDots from "./components/effects/AmbientDots";
+import Projects from "./components/sections/projects/Projects";
+import Contact from "./components/sections/contact/Contact";
 
 const App = () => {
   useLenis();
@@ -42,7 +42,7 @@ const App = () => {
 
       <AmbientDots />
 
-      <ProjectsSection />
+      <Projects />
       <Contact />
 
       <Footer />

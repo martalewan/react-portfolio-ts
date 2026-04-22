@@ -1,11 +1,11 @@
 import { useState } from "react";
-import Carousel from "../modules/Carousel";
-import CarouselIndicator from "../modules/CarouselIndicator";
-import ProjectInfo from "../modules/ProjectInfo";
-import SectionTitle from "../modules/SectionTitle";
-import { project } from "../../data/projectsData";
+import SectionTitle from "../../ui/SectionTitle";
+import Carousel from "./Carousel";
+import CarouselIndicator from "./CarouselIndicator";
+import ProjectInfo from "./ProjectInfo";
+import { project } from "../../../data/projectsData";
 
-const ProjectsSection = () => {
+const Projects = () => {
     const [active, setActive] = useState(0);
 
     return (
@@ -27,4 +27,4 @@ const ProjectsSection = () => {
     );
 };
 
-export default ProjectsSection;
+export default Projects;

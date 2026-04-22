@@ -1,5 +1,3 @@
-import RadialGrandientBackground from "../modules/RadialGradientBackground";
-
 export default function BackgroundEffects() {
     return (
         <>

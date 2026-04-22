@@ -1,4 +1,4 @@
-import { ABOUT_PARAGRAPHS } from "../../data/aboutData";
+import { ABOUT_PARAGRAPHS } from "../../../data/aboutData";
 
 const AboutContent = () => {
     return (

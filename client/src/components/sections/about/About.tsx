@@ -1,14 +1,13 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-
-import SectionTitle from "../modules/SectionTitle";
-import AboutHighlights from "../modules/AboutHighlights";
-import AboutContent from "../modules/AboutContent";
-import AboutExperience from "../modules/AboutExperience";
-import ScrollButton from "../ui/ScrollButton";
-import { INFO_ITEMS } from "../../data/aboutData";
-import AboutInfoBadge from "../modules/AboutInfoBadge";
-import { useAboutScroll } from "../../hooks/useAboutScroll";
+import { useAboutScroll } from "../../../hooks/useAboutScroll";
+import SectionTitle from "../../ui/SectionTitle";
+import AboutContent from "./AboutContent";
+import { INFO_ITEMS } from "../../../data/aboutData";
+import AboutHighlights from "./AboutHighlights";
+import AboutInfoBadge from "./AboutInfoBadge";
+import ScrollButton from "../../ui/ScrollButton";
+import AboutExperience from "./AboutExperience";
 
 gsap.registerPlugin(ScrollTrigger);
 

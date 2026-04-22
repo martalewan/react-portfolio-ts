@@ -1,5 +1,5 @@
 import { MotionValue } from "framer-motion"
-import ParallaxRow from "../modules/ParallaxRow"
+import ParallaxRow from "./ParallaxRow"
 
 type ParallaxProps = {
     scrollYProgress: MotionValue<number>

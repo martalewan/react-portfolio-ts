@@ -1,5 +1,4 @@
 import SkillCard from "./SkillsCard";
-import HorizontalDivider from "../ui/HorizontalDivider";
 
 const SkillCategory = ({ category }) => {
     return (
@@ -9,8 +8,9 @@ const SkillCategory = ({ category }) => {
                 <h4 className="text-xs uppercase tracking-widest text-text-40 group-hover:text-accent transition">
                     {category.title}
                 </h4>
-                <HorizontalDivider className="flex-1" />
-
+                <div
+                    className="w-6 h-px bg-bg-inverse-15 flex-1"
+                />
             </div>
 
             <div className="space-y-3">

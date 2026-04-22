@@ -1,8 +1,8 @@
 import Logo from "./Logo";
-import Drawer from "../modules/Drawer";
-import DesktopNavigation from "../modules/DesktopNavigation";
-import MobileNavigation from "../modules/MobileNavigation";
+import Drawer from "../ui/Drawer";
 import { navData } from "../../data/navbarData";
+import DesktopNavigation from "./NavigationDesktop";
+import MobileNavigation from "./NavigationMobile";
 
 const Navbar = () => {
     return (

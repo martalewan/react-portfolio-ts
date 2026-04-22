@@ -1,9 +1,9 @@
 import { FiDownload } from "react-icons/fi";
-import Button from "../ui/Button";
 import { Link } from "react-scroll";
-import { HERO_DATA } from "../../data/heroData";
 import { motion } from "framer-motion";
-import { itemReveal } from "../../animations";
+import { HERO_DATA } from "../../../data/heroData";
+import { itemReveal } from "../../../animations";
+import Button from "../../ui/Button";
 
 const HeroPresentation = () => {
     const {

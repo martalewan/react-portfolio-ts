@@ -1,7 +1,7 @@
 import { useRef } from "react";
-import { useCarouselDrag } from "../../hooks/useCarouselDrag";
-import { useCarouselInit } from "../../hooks/useCarouselInit";
-import { useCarouselScroll } from "../../hooks/useCarouselScroll";
+import { useCarouselInit } from "../../../hooks/useCarouselInit";
+import { useCarouselScroll } from "../../../hooks/useCarouselScroll";
+import { useCarouselDrag } from "../../../hooks/useCarouselDrag";
 
 type CarouselTypes = {
     images: string[];

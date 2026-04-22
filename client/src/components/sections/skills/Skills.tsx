@@ -1,5 +1,5 @@
-import SectionTitle from "../modules/SectionTitle";
-import SkillsList from "../modules/SkillsList";
+import SectionTitle from "../../ui/SectionTitle";
+import SkillsList from "./SkillsList";
 
 const Skills = () => {
     return (

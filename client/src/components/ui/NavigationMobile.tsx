@@ -1,6 +1,6 @@
 import { Link } from "react-scroll";
-import type { NavigationProps } from "./DesktopNavigation";
 import Button from "../ui/Button";
+import type { NavigationProps } from "./NavigationDesktop";
 
 const MobileNavigation = ({ navData }: NavigationProps) => {
     return (

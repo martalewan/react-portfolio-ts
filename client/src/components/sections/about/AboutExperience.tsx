@@ -1,6 +1,7 @@
-import { EXPERIENCES_DATA } from "../../data/aboutData";
-import ExperienceItem from "./ExperienceItem";
+
 import { FiArrowRight } from "react-icons/fi";
+import { EXPERIENCES_DATA } from "../../../data/aboutData";
+import ExperienceItem from "./ExperienceItem";
 
 const AboutExperience = () => {
     return (

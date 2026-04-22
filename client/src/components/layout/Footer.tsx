@@ -1,9 +1,8 @@
 import { FOOTER_SECTIONS_DATA, SIGNATURE_DATA } from "../../data/footerData";
-import FooterBrandSection from "../modules/FooterBrandSection";
-import FooterContactSection from "../modules/FooterContactSection";
-import FooterCTASection from "../modules/FooterCTASection";
-import FooterSignature from "../modules/FooterSignatureSection";
-
+import FooterBrandSection from "./FooterBrandSection";
+import FooterContactSection from "./FooterContactSection";
+import FooterCTASection from "./FooterCTASection";
+import FooterSignature from "./FooterSignatureSection";
 
 const Footer = () => {
     const { brand, contact, cta } = FOOTER_SECTIONS_DATA;
@@ -49,3 +48,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
