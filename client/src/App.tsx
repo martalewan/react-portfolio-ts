@@ -10,9 +10,10 @@ import BackgroundEffects from "./components/ui/BackgroundEffects";
 import BottomBlurFade from "./components/ui/BottomBlurFade";
 import Footer from "./components/ui/Footer";
 import { useLenis } from "./hooks/useLenis";
-import ParallaxRow from "./components/modules/ParallaxRow";
 import { useRef } from "react";
 import { useScroll } from "framer-motion";
+import TextWave from "./components/modules/TextWave";
+import Parallax from "./components/sections/Parallax";
 
 const App = () => {
   useLenis();
@@ -22,6 +23,7 @@ const App = () => {
     target: ref,
     offset: ["start end", "end start"],
   });
+
   return (
     <div className="relative min-h-screen overflow-hidden" ref={ref}>
       <BackgroundEffects />
@@ -30,17 +32,19 @@ const App = () => {
 
       <Navbar />
       <Hero />
-      <div className="flex flex-col py-55">
-        <ParallaxRow index={0} progress={scrollYProgress} text="Frontend Developer" />
-        <ParallaxRow index={1} progress={scrollYProgress} text="Based in Paris" />
-        <ParallaxRow index={2} progress={scrollYProgress} text="Open to collaborations" />
 
-      </div>
+      <Parallax scrollYProgress={scrollYProgress} />
+
       <About />
+
+      <TextWave />
       <Skills />
+
       <AmbientDots />
+
       <ProjectsSection />
       <Contact />
+
       <Footer />
 
     </div >
