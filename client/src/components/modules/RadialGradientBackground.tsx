@@ -1,11 +1,11 @@
 type ColorStop = { color: string; stop: string };
 
 const colors: ColorStop[] = [
-    { color: "rgba(141, 255, 105, 0.25)", stop: "100%" },
-    { color: "rgba(141, 255, 105, 0.45)", stop: "100%" },
-    { color: "rgba(141, 255, 105, 0.05)", stop: "100%" },
-    { color: "rgba(141, 255, 105, 0.45)", stop: "100%" },
-    { color: "rgba(141, 255, 105, 0.25)", stop: "100%" },
+    { color: "rgba(235, 245, 255, 0.28)", stop: "45%" },
+    { color: "rgba(235, 245, 255, 0.22)", stop: "55%" },
+    { color: "rgba(235, 245, 255, 0.12)", stop: "65%" },
+    { color: "rgba(235, 245, 255, 0.18)", stop: "75%" },
+    { color: "rgba(235, 245, 255, 0.08)", stop: "85%" },
 ];
 
 const createGradient = (colors: ColorStop[]) => {
@@ -13,18 +13,17 @@ const createGradient = (colors: ColorStop[]) => {
         .map(({ color, stop }) => `${color} ${stop}`)
         .join(", ");
 
-    return `radial-gradient(circle at center,
-    transparent 30%,
-    transparent 50%,    
-    ${colorStops},
-    transparent 60%,
-    transparent 100%)`;
+    return `radial-gradient(circle at 60% 40%,
+        transparent 25%,
+        ${colorStops},
+        transparent 90%
+    )`;
 };
 
 const blobs = [
     "top-0 left-0 -translate-x-1/2 -translate-y-1/2",
-    "top-12 right-10",
-    "bottom-25 right-10",
+    "top-20 right-10",
+    "bottom-20 right-20",
 ];
 
 const RadialGradientBackground = () => {
@@ -36,8 +35,8 @@ const RadialGradientBackground = () => {
                     className={`absolute w-[92vw] h-[92vw] rounded-full ${pos}`}
                     style={{
                         background: createGradient(colors),
-                        filter: "blur(0px)",
-                        opacity: 0.25,
+                        filter: `blur(${80 + i * 40}px)`,
+                        opacity: 0.12 + i * 0.03,
                     }}
                 />
             ))}
