@@ -1,13 +1,22 @@
 import { motionTokens } from "./tokens";
 
-export const staggerContainer = {
+
+type StaggerOptions = {
+    delay?: number;
+};
+
+export const staggerContainer = ({
+    delay = 0,
+}: StaggerOptions = {}) => ({
     hidden: {},
     show: {
         transition: {
+            delayChildren: delay,
             staggerChildren: motionTokens.stagger.normal,
         },
     },
-};
+});
+
 
 export const itemReveal = {
     hidden: {

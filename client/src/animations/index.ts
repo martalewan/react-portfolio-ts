@@ -1,3 +1,3 @@
 export * from "./tokens";
 export * from "./variants";
-export * from "./parallax"
+export * from "./scrollMotion"
