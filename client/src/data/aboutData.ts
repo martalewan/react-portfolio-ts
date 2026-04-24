@@ -45,66 +45,49 @@ export const EXPERIENCES_DATA = [
     },
 ];
 
-export const INFO_ITEMS = [
-    {
-        id: "expertise",
-        icon: FiCode,
-        title: "Expertise",
-        description: "Specialized in building scalable web applications",
-    },
-    {
-        id: "clean-code",
-        icon: FiLayers,
-        title: "Clean Code",
-        description: "Writing maintainable, well-documented code that scales",
-    },
-    {
-        id: "performance",
-        icon: FiZap,
-        title: "Performance",
-        description: "Optimizing for speed and efficiency in every project",
-    },
-];
-
 export const ABOUT_HIGHLIGHTS = [
     {
-        id: "frontend-foundation",
+        id: "architecture-performance",
         icon: FiCode,
-        title: "Strong frontend foundation",
+        prefix: "A",
+        title: "Architecture & Performance",
         text: `
-        I build scalable, high-performance web applications with React and TypeScript.
-        My focus is clean architecture, maintainable code, and interfaces that feel
-        fast, accessible, and reliable in real-world use.
-        `,
+      I design and build scalable, high-performance web applications using React and TypeScript.
+      My focus is on clean architecture, maintainable code, and interfaces that feel fast,
+      accessible, and reliable in real-world use.
+    `,
     },
     {
-        id: "design-first",
-        icon: FiLayers,
-        title: "Design-first engineering",
-        text: `
-        With a background in graphic design, I approach frontend development through
-        structure, hierarchy, and visual clarity. I focus on interfaces that not only
-        look polished but also communicate clearly and intuitively.
-        `,
-    },
-    {
-        id: "creative-discipline",
+        id: "build-refine",
         icon: FiMusic,
-        title: "Creative discipline",
+        prefix: "B",
+        title: "Build & Refine",
         text: `
-        Years as a cellist shaped my discipline, patience, and attention to detail.
-        I bring that same mindset into development, refining UI details and solving
-        complex component challenges with precision and consistency.
-        `,
+      My experience as a cellist shaped my discipline, patience, and attention to detail.
+      I bring that same mindset into development—refining UI details and solving complex
+      component challenges with precision and consistency.
+    `,
     },
     {
-        id: "curiosity-growth",
+        id: "continuous-growth",
         icon: FiZap,
-        title: "Curiosity & growth",
+        prefix: "C",
+        title: "Continuous Growth",
         text: `
-        My path from design to engineering has been intentional and continuous.
-        I enjoy learning, experimenting, and improving with every project, always
-        striving to build better systems and stronger user experiences.
-        `,
+      My transition from design to engineering has been intentional and ongoing.
+      I enjoy learning, experimenting, and improving with every project—always aiming
+      to build better systems and stronger user experiences.
+    `,
+    },
+    {
+        id: "design-foundations",
+        icon: FiLayers,
+        prefix: "D",
+        title: "Design Foundations",
+        text: `
+      With a background in graphic design, I approach frontend development through structure,
+      hierarchy, and visual clarity. I create interfaces that not only look polished, but also
+      communicate clearly and intuitively.
+    `,
     },
 ];
