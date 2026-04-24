@@ -1,26 +1,54 @@
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import { useAboutScroll } from "../../../hooks/useAboutScroll";
+import {
+    motion,
+    useScroll,
+    useSpring,
+    useTransform
+} from "framer-motion";
+
+import { useEffect, useRef, useState } from "react";
+
 import SectionTitle from "../../layout/SectionTitle";
 import AboutContent from "./AboutContent";
-import { INFO_ITEMS } from "../../../data/aboutData";
-import AboutHighlights from "./AboutHighlights";
-import AboutInfoBadge from "./AboutInfoBadge";
-import ScrollButton from "../../ui/ScrollButton";
+import { ABOUT_HIGHLIGHTS } from "../../../data/aboutData";
 import AboutExperience from "./AboutExperience";
-import { motion } from "framer-motion";
+import ScrollButton from "../../ui/ScrollButton";
 import { staggerContainer } from "../../../animations";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const About = () => {
-    useAboutScroll()
+    const sectionRef = useRef(null);
+    const [isDesktop, setIsDesktop] = useState(false);
+
+    useEffect(() => {
+        const mq = window.matchMedia("(min-width: 1024px)");
+
+        const update = () => setIsDesktop(mq.matches);
+
+        update(); // set initial value
+        mq.addEventListener("change", update);
+
+        return () => mq.removeEventListener("change", update);
+    }, []);
+    const { scrollYProgress } = useScroll({
+        target: sectionRef,
+        offset: ["start start", "end end"]
+    });
+
+    const rawY = useTransform(
+        scrollYProgress,
+        [0, 1],
+        [0, 300],
+    );
+
+    const y = useSpring(rawY, {
+        stiffness: 80,
+        damping: 25
+    });
 
     return (
         <motion.section
             id="about"
-            className="page-padding relative"
-            variants={staggerContainer({ delay: .5 })}
+            className="page-padding relative w-full"
+            variants={staggerContainer({ delay: 0.3 })}
             initial="hidden"
             animate="show"
         >
@@ -30,39 +58,60 @@ const About = () => {
                 subtitle="Background"
             />
 
-            <div id="vertical" className="grid grid-cols-1 md:grid-cols-2 gap-20 pt-40 w-full items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 pt-20 items-start" ref={sectionRef}
+            >
+                <div className="relative will-change-transform">
+                    <motion.div
+                        style={isDesktop ? { y } : undefined}
+                        className="w-full"
+                    >
+                        <span className="text-xs tracking-widest text-text-40 uppercase block mb-4">
+                            About
+                        </span>
 
-                <div className="about-left min-w-0">
-                    <AboutContent />
+                        <AboutContent />
+                    </motion.div>
                 </div>
 
-                <div className="about-right min-w-0 flex flex-col gap-20">
-                    <div className="about-panel flex gap-6">
-                        {INFO_ITEMS.map(({ id, icon, title, description }) => (
-                            <AboutInfoBadge
-                                key={id}
-                                icon={icon}
-                                title={title}
-                                description={description}
-                            />
-                        ))}
-                    </div>
 
-                    <div className="flex items-center max-w-full">
-                        <AboutHighlights />
-                    </div>
+                <div className="flex flex-col gap-14">
 
-                    <div className="flex items-center max-w-full">
-                        <AboutExperience />
+                    <div className="flex flex-col gap-3">
+                        <span className="text-xs tracking-widest text-text-40 uppercase">
+                            ABCD of coding
+                        </span>
+
+                        <div className="flex flex-col divide-y divide-white/10">
+                            {ABOUT_HIGHLIGHTS.map((item) => (
+                                <div
+                                    key={item.id}
+                                    className="flex flex-col sm:flex-row gap-6 py-6"
+                                >
+                                    <h1 className="text-[70px] sm:text-[90px] lg:text-[100px] leading-none text-neon-flicker">
+                                        {item.prefix}
+                                    </h1>
+
+                                    <div className="flex flex-col gap-2">
+                                        <h4 className="text-sm text-text-40">
+                                            {item.title}
+                                        </h4>
+                                        <p className="text-sm leading-relaxed">
+                                            {item.text}
+                                        </p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
 
                 </div>
             </div>
 
-            <div className="flex justify-center mt-40">
+            <AboutExperience />
+
+            <div className="flex justify-center mt-28">
                 <ScrollButton direction="down" scrollToId="skills" />
             </div>
-
         </motion.section>
     );
 };
