@@ -1,4 +1,3 @@
-
 import { FiArrowRight } from "react-icons/fi";
 import { EXPERIENCES_DATA } from "../../../data/aboutData";
 import ExperienceItem from "./ExperienceItem";
@@ -11,16 +10,18 @@ const AboutExperience = () => {
                 Experience
                 <FiArrowRight
                     className="
-                    animate-[pulse_3s_ease-in-out_infinite]
-                    group-hover:translate-x-1 group-hover:scale-110
-                "
+                        animate-[pulse_3s_ease-in-out_infinite]
+                        group-hover:translate-x-1 group-hover:scale-110
+                    "
                 />
             </h3>
-            <div className="flex flex-col gap-10">
-                {EXPERIENCES_DATA.map((item, index) => (
-                    <ExperienceItem key={index} item={item} />
-                ))}
 
+            <div className="flex flex-col lg:flex-row gap-6 lg:gap-10">
+                {EXPERIENCES_DATA.map((item, index) => (
+                    <div key={index} className="flex-1">
+                        <ExperienceItem item={item} />
+                    </div>
+                ))}
             </div>
         </div>
     );
