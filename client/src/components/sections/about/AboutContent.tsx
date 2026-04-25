@@ -8,7 +8,7 @@ const AboutContent = () => {
 
             {ABOUT_PARAGRAPHS.map((item) => (
                 <motion.div key={item.id} variants={itemReveal}>
-                    <p className="text-base leading-relaxed text-muted-foreground">
+                    <p className="text-sm leading-relaxed text-muted-foreground">
                         {item.text}
                     </p>
                 </motion.div>

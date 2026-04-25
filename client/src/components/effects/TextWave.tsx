@@ -6,25 +6,27 @@ const TextWave = () => {
     const paths = useRef<SVGTextPathElement[]>([]);
 
     useEffect(() => {
-        const unsubscribe = scrollYProgress.on("change", (e) => {
-
+        const update = (e: number) => {
             paths.current.forEach((path, i) => {
                 if (!path) return;
 
                 path.setAttribute(
                     "startOffset",
-                    `${-40 + (i * 17.5) + (e * 40)}%`
+                    `${-35 + (i * 17.5) + (e * 40)}%`
                 );
             });
+        };
 
-        });
+        update(scrollYProgress.get()); // 👈 run immediately
+
+        const unsubscribe = scrollYProgress.on("change", update);
 
         return () => unsubscribe();
     }, [scrollYProgress]);
 
     return (
-        <div>
-            <svg className="w-full mb-40" viewBox="0 0 170 100">
+        <div className="w-full h-170 overflow-hidden flex items-end justify-center">
+            <svg className="w-full" viewBox="0 0 170 100">
 
                 <path
                     id="curve"

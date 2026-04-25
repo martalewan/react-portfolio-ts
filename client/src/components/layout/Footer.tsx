@@ -14,11 +14,12 @@ const Footer = () => {
                 flex flex-col
                 gap-28
                 page-padding
-                pt-40 md:pt-48
-                pb-24
+                pt-20 md:pt-38
+                pb-10
                 text-text
                 border-t border-border-15
                 overflow-hidden
+                mt-15
             "
         >
             <div
