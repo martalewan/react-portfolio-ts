@@ -158,8 +158,8 @@
        ANIMATIONS HELPERS
     ========================= */
 
-    .text-neon-flicker {
-        animation: text-neon-flicker 4s linear infinite;
+    .text-neon {
+        animation: text-neon 4s linear infinite;
     }
 
     .animate-scroll {

@@ -26,7 +26,7 @@ const HeroPresentation = () => {
                 <h1>
                     <motion.span
                         variants={itemReveal}
-                        className="text-neon-flicker block">
+                        className="text-neon block">
                         {name}
                     </motion.span>
                 </h1>

@@ -15,7 +15,7 @@ const SectionTitle = ({ label, title, subtitle }: SectionTitle) => {
                 {subtitle}
             </span>
             <h2 className="tracking-tight">
-                <span className="text-neon-flicker numero-font">{label}</span>
+                <span className="text-neon numero-font">{label}</span>
                 {title}
             </h2>
         </motion.div>

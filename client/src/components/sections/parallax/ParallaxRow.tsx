@@ -36,7 +36,7 @@ const Phrase = ({ text, highlights = [], className = "" }: PhraseProps) => {
                         key={i}
                         className={
                             isHighlighted
-                                ? "text-accent"
+                                ? "text-neon"
                                 : "text-text"
                         }
                     >
@@ -54,6 +54,21 @@ const Separator = () => (
     </span>
 );
 
+const parallaxConfig = [
+    {
+        start: 300,
+        end: -800,
+    },
+    {
+        start: -650,
+        end: 40,
+    },
+    {
+        start: 200,
+        end: -600,
+    },
+];
+
 const ParallaxRow = ({
     progress,
     index,
@@ -61,14 +76,13 @@ const ParallaxRow = ({
     highlights = [],
     left,
 }: ParallaxRowProps) => {
-    const direction = index % 2 === 0 ? "right" : "left";
-    const speeds = [1, 2.2, 0.5];
+
+    const config = parallaxConfig[index % 3];
 
     const x = useHorizontalParallax(
         progress,
-        direction,
-        300,
-        speeds[index] ?? 1
+        config.start,
+        config.end
     );
 
     return (
