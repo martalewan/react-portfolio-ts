@@ -1,4 +1,29 @@
 import { FiCode, FiLayers, FiZap, FiMusic } from "react-icons/fi";
+import {
+    SiRedux,
+    SiTypescript,
+    SiVitest,
+} from "react-icons/si";
+
+import {
+    FaAngular,
+    FaReact,
+} from "react-icons/fa";
+
+import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
+import { GiMaterialsScience } from "react-icons/gi";
+
+import {
+    SiFigma,
+} from "react-icons/si";
+
+import {
+    DiPhotoshop,
+    DiIllustrator,
+} from "react-icons/di";
+
+import { TbBrandAdobeIndesign } from "react-icons/tb";
+
 
 export const ABOUT_PARAGRAPHS = [
     {
@@ -17,35 +42,6 @@ export const ABOUT_PARAGRAPHS = [
     },
 ];
 
-export const EXPERIENCES_DATA = [
-    {
-        role: "Frontend Engineer",
-        company: "Digiexam",
-        location: "Stockholm",
-        period: "2022 — 2025",
-        type: "Full-time",
-        description:
-            "Built scalable React/TypeScript applications with focus on performance, accessibility, and design systems.",
-    },
-    {
-        role: "Graphic Designer",
-        company: "Demant",
-        location: "Warsaw",
-        period: "2019 — 2022",
-        type: "Full-time",
-        description:
-            "Designed visual systems, brand assets, and UI layouts with strong focus on consistency and hierarchy.",
-    },
-    {
-        role: "Graphic Designer",
-        company: "Freelance",
-        location: "Paris",
-        period: "2010 — 2022",
-        type: "Freelance",
-        description:
-            "Worked with multiple clients on branding, typography, and digital design projects, delivering creative solutions.",
-    },
-];
 
 export const ABOUT_HIGHLIGHTS = [
     {
@@ -91,5 +87,56 @@ export const ABOUT_HIGHLIGHTS = [
       hierarchy, and visual clarity. I create interfaces that not only look polished, but also
       communicate clearly and intuitively.
     `,
+    },
+];
+
+export const EXPERIENCES_DATA = [
+    {
+        role: "Frontend Engineer",
+        company: "Digiexam",
+        location: "Stockholm",
+        period: "2022 — 2025",
+        type: "Full-time",
+        description: "Developed and maintained large-scale React and TypeScript applications for a high-stakes digital examination platform used by schools and universities. Focused on performance optimization, accessibility (WCAG compliance), and building reusable component systems within a structured design system.",
+        tech: [
+            { icon: FaReact, name: "React" },
+            { icon: SiTypescript, name: "TypeScript" },
+            { icon: SiRedux, name: "Redux" },
+            { icon: RiNextjsFill, name: "Next.js" },
+            { icon: RiTailwindCssFill, name: "Tailwind" },
+            { icon: GiMaterialsScience, name: "Material UI" },
+            { icon: FaAngular, name: "Angular" },
+            { icon: SiVitest, name: "Vitest" },
+        ],
+    },
+    {
+        role: "Graphic Designer",
+        company: "Demant",
+        location: "Warsaw",
+        period: "2019 — 2022",
+        type: "Full-time",
+        description:
+            "Designed visual systems and UI layouts for a global healthcare company specializing in hearing solutions. Focused on creating consistent design language across digital and print assets, improving usability through clear hierarchy, typography, and accessible interface patterns for international audiences.",
+        tech: [
+            { icon: SiFigma, name: "Figma" },
+            { icon: DiIllustrator, name: "Illustrator" },
+            { icon: DiPhotoshop, name: "Photoshop" },
+            { icon: TbBrandAdobeIndesign, name: "InDesign" },
+        ],
+    },
+    {
+        role: "Graphic Designer",
+        company: "Freelance",
+        location: "Paris",
+        period: "2010 — 2022",
+        type: "Freelance",
+        description:
+            "Collaborated with startups, agencies, and independent clients on branding, typography, and digital design projects. Delivered end-to-end visual identities and web interfaces, focusing on clarity, consistency, and translating abstract ideas into functional and visually coherent design systems.",
+        tech: [
+            { icon: SiFigma, name: "Figma" },
+            { icon: DiIllustrator, name: "Illustrator" },
+            { icon: DiPhotoshop, name: "Photoshop" },
+            { icon: TbBrandAdobeIndesign, name: "InDesign" },
+        ],
     },
 ];

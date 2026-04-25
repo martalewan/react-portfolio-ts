@@ -1,46 +1,31 @@
-import { useEffect } from "react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import Lenis from "lenis";
+import { useEffect, useState, type RefObject } from "react";
+import { useScroll, useSpring, useTransform } from "framer-motion";
 
-gsap.registerPlugin(ScrollTrigger);
+export const useAboutScroll = (ref: RefObject<HTMLElement>) => {
+    const [isDesktop, setIsDesktop] = useState(
+        typeof window !== "undefined" && window.innerWidth >= 1024
+    );
 
-export const useAboutScroll = () => {
     useEffect(() => {
-
-        const lenis = new Lenis({
-            duration: 1.2,
-            smoothWheel: true,
-        });
-
-        const raf = (time: number) => {
-            lenis.raf(time);
-            ScrollTrigger.update();
-            requestAnimationFrame(raf);
+        const handleResize = () => {
+            setIsDesktop(window.innerWidth >= 1024);
         };
 
-        requestAnimationFrame(raf);
-
-        const ctx = gsap.context(() => {
-
-            requestAnimationFrame(() => {
-                ScrollTrigger.refresh(true);
-            });
-
-            ScrollTrigger.create({
-                trigger: "#vertical",
-                start: "top top",
-                end: "+=1500",
-                pin: ".about-left",
-                pinSpacing: true,
-            });
-
-        });
-
-        return () => {
-            lenis.destroy();
-            ctx.revert();
-        };
-
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
     }, []);
+
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["start start", "end end"],
+    });
+
+    const y = useSpring(
+        useTransform(scrollYProgress, [0, 1], [0, 260]),
+        { stiffness: 80, damping: 25 }
+    );
+
+    return {
+        motionStyle: isDesktop ? { y } : {},
+    };
 };
