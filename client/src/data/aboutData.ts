@@ -2,16 +2,18 @@ import { FiCode, FiLayers, FiZap, FiMusic } from "react-icons/fi";
 
 export const ABOUT_PARAGRAPHS = [
     {
-        id: "intro",
-        text: "I’m a Frontend Engineer with 4+ years of experience building scalable, accessible web applications using React and TypeScript.",
+        id: 1,
+        text: "I’m a Frontend Engineer with over +5 years of experience building scalable, accessible web applications using React and TypeScript."
     },
     {
-        id: "focus",
-        text: "I focus on crafting clean, modular architectures and thoughtful UI systems that balance performance, maintainability, and user experience.",
+        id: 2,
+        title: "Engineering Approach",
+        text: "My work focuses on designing clean, modular architectures that support long-term growth. I prioritize readability, reusability, and consistency across codebases, whether I’m building component libraries, refining state management, or improving application performance."
     },
     {
-        id: "personal",
-        text: "Outside of engineering, I’m a former cellist and graphic designer, which shapes my attention to detail and design sensibility. I also enjoy tennis, chess, and learning new languages.",
+        id: 3,
+        title: "Beyond Work",
+        text: "Before transitioning fully into engineering, I worked as a graphic designer and trained as a cellist. These experiences shape how I think about structure, balance, and detail, influencing how I craft UI systems and user experiences. Outside of engineering, I enjoy playing tennis, studying chess, and learning new languages. These interests help me stay curious, disciplined, and continuously improving."
     },
 ];
 

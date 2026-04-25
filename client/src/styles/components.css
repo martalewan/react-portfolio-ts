@@ -17,8 +17,7 @@
     }
 
     .text-large {
-        @apply text-[13px] xl:text-[23px];
-        font-family: "Plus Jakarta Sans", sans-serif;
+        @apply text-[13px] xl:text-[22px] leading-snug;
     }
 
     .text-subtitle {
@@ -26,7 +25,7 @@
     }
 
     .page-padding {
-        @apply pl-[15%] pr-[15%];
+        @apply pl-[12%] pr-[12%];
     }
 
     .numero-font {
@@ -45,6 +44,31 @@
     /* =========================
        EFFECTS
     ========================= */
+    @keyframes waveMove {
+        0% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(6px);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    .neon-wave-line {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 3px;
+        height: 100%;
+        background: var(--color-accent);
+        box-shadow: 0 0 12px var(--color-accent);
+        filter: blur(0.5px);
+        animation: waveMove 2.5s ease-in-out infinite;
+    }
 
     .effect-grain {
         position: absolute;

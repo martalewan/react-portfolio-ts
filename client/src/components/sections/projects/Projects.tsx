@@ -14,7 +14,7 @@ const Projects = () => {
 
         <motion.section
             id="projects"
-            className="page-padding relative"
+            className="relative"
             variants={staggerContainer({ delay: .5 })}
             initial="hidden"
             animate="show"

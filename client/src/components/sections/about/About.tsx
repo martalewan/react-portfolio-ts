@@ -12,7 +12,7 @@ import AboutContent from "./AboutContent";
 import { ABOUT_HIGHLIGHTS } from "../../../data/aboutData";
 import AboutExperience from "./AboutExperience";
 import ScrollButton from "../../ui/ScrollButton";
-import { staggerContainer } from "../../../animations";
+import { itemReveal, staggerContainer } from "../../../animations";
 
 const About = () => {
     const sectionRef = useRef(null);
@@ -60,31 +60,30 @@ const About = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 pt-20 items-start" ref={sectionRef}
             >
-                <div className="relative will-change-transform">
-                    <motion.div
-                        style={isDesktop ? { y } : undefined}
-                        className="w-full"
-                    >
-                        <span className="text-xs tracking-widest text-text-40 uppercase block mb-4">
-                            About
-                        </span>
+                <motion.div
+                    style={isDesktop ? { y } : undefined}
+                    className="w-full"
+                >
+                    <motion.span variants={itemReveal} className="text-xs tracking-widest text-text-40 uppercase block mb-4">
+                        About
+                    </motion.span>
 
-                        <AboutContent />
-                    </motion.div>
-                </div>
+                    <AboutContent />
+                </motion.div>
 
 
                 <div className="flex flex-col gap-14">
 
                     <div className="flex flex-col gap-3">
-                        <span className="text-xs tracking-widest text-text-40 uppercase">
+                        <motion.span variants={itemReveal} className="text-xs tracking-widest text-text-40 uppercase">
                             ABCD of coding
-                        </span>
+                        </motion.span>
 
                         <div className="flex flex-col divide-y divide-white/10">
                             {ABOUT_HIGHLIGHTS.map((item) => (
-                                <div
+                                <motion.div
                                     key={item.id}
+                                    variants={itemReveal}
                                     className="flex flex-col sm:flex-row gap-6 py-6"
                                 >
                                     <h1 className="text-[70px] sm:text-[90px] lg:text-[100px] leading-none text-neon-flicker">
@@ -99,7 +98,7 @@ const About = () => {
                                             {item.text}
                                         </p>
                                     </div>
-                                </div>
+                                </motion.div>
                             ))}
                         </div>
                     </div>
