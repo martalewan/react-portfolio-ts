@@ -1,7 +1,10 @@
 import { useRef } from "react";
+import { motion } from "framer-motion";
+
 import { useCarouselInit } from "../../../hooks/useCarouselInit";
 import { useCarouselScroll } from "../../../hooks/useCarouselScroll";
 import { useCarouselDrag } from "../../../hooks/useCarouselDrag";
+import { imageReveal } from "../../../animations";
 
 type CarouselTypes = {
     images: string[];
@@ -13,13 +16,17 @@ const Carousel = ({ images, active, setActive }: CarouselTypes) => {
     const ref = useRef<HTMLDivElement>(null);
 
     const data = [...images, ...images, ...images];
+
     useCarouselInit(ref, images);
     useCarouselScroll(ref, images.length, setActive);
     useCarouselDrag(ref);
 
     return (
-        <div
+        <motion.div
             ref={ref}
+            variants={imageReveal}
+            initial="hidden"
+            animate="show"
             className="
                 flex overflow-x-auto
                 cursor-grab select-none
@@ -30,13 +37,18 @@ const Carousel = ({ images, active, setActive }: CarouselTypes) => {
                 const isActive = active === i % images.length;
 
                 return (
-                    <div
+                    <motion.div
                         key={i}
+
                         className={`
                             carousel-item
                             min-w-[73%]
                             transition-all duration-500
-                            ${isActive ? "scale-100 opacity-100" : "scale-99 opacity-50"}
+                            will-change-transform
+                            ${isActive
+                                ? "scale-100 opacity-100"
+                                : "scale-[0.98] opacity-50"
+                            }
                         `}
                     >
                         <div className="overflow-hidden">
@@ -46,10 +58,10 @@ const Carousel = ({ images, active, setActive }: CarouselTypes) => {
                                 draggable={false}
                             />
                         </div>
-                    </div>
+                    </motion.div>
                 );
             })}
-        </div>
+        </motion.div>
     );
 };
 

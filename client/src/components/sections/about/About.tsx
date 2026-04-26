@@ -1,12 +1,9 @@
 import { motion } from "framer-motion";
 import { useRef } from "react";
-
 import SectionTitle from "../../layout/SectionTitle";
 import AboutContent from "./AboutContent";
 import AboutExperience from "./AboutExperience";
-import ScrollButton from "../../ui/ScrollButton";
 import HighlightItem from "./HighlightItem";
-
 import { ABOUT_HIGHLIGHTS } from "../../../data/aboutData";
 import { staggerContainer, itemReveal } from "../../../animations";
 import { useAboutScroll } from "../../../hooks/useAboutScroll";
@@ -37,7 +34,7 @@ const About = () => {
                 <motion.div style={motionStyle} className="w-full">
                     <motion.span
                         variants={itemReveal}
-                        className="text-xs tracking-widest text-text-40 uppercase block mb-6"
+                        className="text-xs tracking-widest text-text-40 uppercase block mb-7"
                     >
                         About
                     </motion.span>
@@ -45,7 +42,7 @@ const About = () => {
                     <AboutContent />
                 </motion.div>
 
-                <div className="flex flex-col gap-14">
+                <div className="flex flex-col">
                     <motion.span
                         variants={itemReveal}
                         className="text-xs tracking-widest text-text-40 uppercase mb-6"
@@ -60,11 +57,9 @@ const About = () => {
                     </div>
                 </div>
             </div>
+            <div className="mt-10">
+                <AboutExperience />
 
-            <AboutExperience />
-
-            <div className="flex justify-center mt-28">
-                <ScrollButton direction="down" scrollToId="skills" />
             </div>
         </motion.section>
     );

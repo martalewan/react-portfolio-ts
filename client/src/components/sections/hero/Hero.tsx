@@ -7,7 +7,7 @@ import Portrait from "../../ui/Portrait";
 
 const Hero = () => {
     const sectionRef = useRef<HTMLDivElement>(null);
-    const { opacity } = useScrollFadeIn(sectionRef);
+    const { y, opacity, scale } = useScrollFadeIn(sectionRef);
 
     return (
         <motion.section
@@ -18,11 +18,15 @@ const Hero = () => {
             animate="show"
         >
 
-            <div className="min-h-[93vh] w-full flex items-center justify-start relative">
+            <div className="min-h-[93vh] w-full flex items-center justify-start space-between relative">
                 <HeroPresentation />
                 <motion.div
                     className="absolute top-1/2 right-0 "
-                    style={{ opacity }}
+                    style={{
+                        opacity,
+                        y,
+                        scale,
+                    }}
                 >
                     <Portrait />
                 </motion.div>

@@ -4,7 +4,7 @@ import SectionTitle from "../../layout/SectionTitle";
 import ContactForm from "./ContactForm";
 import ContactInfo from "./ContactInfo";
 import { motion } from "framer-motion";
-import { staggerContainer } from "../../../animations";
+import { itemReveal, staggerContainer } from "../../../animations";
 
 const Contact = () => {
     return (
@@ -22,23 +22,28 @@ const Contact = () => {
             />
 
 
-            <NeonFrame>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 relative z-10">
+            <motion.div
+                variants={itemReveal}
+                className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 relative ">
+                <NeonFrame>
 
                     <GlassCard>
-                        <div className="flex flex-col gap-2 mb-10">
+                        <motion.div
+                            variants={itemReveal}
+                            className="flex flex-col gap-2 mb-10"
+                        >
                             <h3 className="text-text">Let’s work together</h3>
                             <p className="text-text-80 text-sm leading-relaxed">
                                 I usually respond within a day. Open to freelance, collaborations, or new ideas.
                             </p>
-                        </div>
+                        </motion.div>
 
                         <ContactForm />
                     </GlassCard>
+                </NeonFrame>
 
-                    <ContactInfo />
-                </div>
-            </NeonFrame>
+                <ContactInfo />
+            </motion.div>
         </motion.section>
     );
 };

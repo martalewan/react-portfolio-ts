@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { itemReveal } from "../../../animations";
+
 const getWidth = (level: string) => {
     switch (level) {
         case "Expert":
@@ -15,7 +18,9 @@ const SkillCard = ({ skill }) => {
     const Icon = skill.icon;
 
     return (
-        <div className="ui-elevated group">
+        <motion.div
+            variants={itemReveal}
+            className="ui-elevated group">
             <div className="flex w-full gap-2">
                 <div className="text-text-80 group-hover:text-accent transition-colors">
                     <Icon />
@@ -39,7 +44,7 @@ const SkillCard = ({ skill }) => {
                 </div>
             </div>
 
-        </div>
+        </motion.div>
     );
 };
 

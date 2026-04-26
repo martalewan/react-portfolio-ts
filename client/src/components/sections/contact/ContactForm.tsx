@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useState, type SyntheticEvent } from "react";
 import Button from "../../ui/Button";
 import EmailSuccessMessage from "../../ui/EmailSuccessMessage";
 import emailjs from "@emailjs/browser";
+import { itemReveal } from "../../../animations";
+import { motion } from "framer-motion";
 
 const inputClass =
     "w-full px-4 py-3 rounded-xs bg-bg-inverse-05 border border-border-15 text-text-80 placeholder-text-faint focus:outline-none focus:border-accent transition-colors";
@@ -13,7 +15,7 @@ const ContactForm = () => {
     const validateEmail = (email: string) =>
         /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
-    const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    const onSubmit = async (e: SyntheticEvent<HTMLFormElement>) => {
         e.preventDefault();
         setError(null);
 
@@ -59,7 +61,9 @@ const ContactForm = () => {
                 className="flex flex-col gap-5"
                 onSubmit={onSubmit}
             >
-                <div className="flex flex-col gap-4">
+                <motion.div
+                    variants={itemReveal}
+                    className="flex flex-col gap-4">
                     <input
                         name="name"
                         type="text"
@@ -79,7 +83,7 @@ const ContactForm = () => {
                         className={`${inputClass} resize-none`}
                         required
                     />
-                </div>
+                </motion.div>
 
 
                 {

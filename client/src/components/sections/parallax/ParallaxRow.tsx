@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useHorizontalParallax } from "../../../animations";
+import { itemReveal, useHorizontalParallax } from "../../../animations";
 
 type PhraseProps = {
     text: string;
@@ -88,6 +88,7 @@ const ParallaxRow = ({
     return (
         <motion.div
             style={{ x, left }}
+            variants={itemReveal}
             className="relative flex items-center whitespace-nowrap p-4"
         >
             <Phrase text={text} highlights={highlights} />

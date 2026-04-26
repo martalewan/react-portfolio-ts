@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { itemReveal } from "../../animations";
+
 type SectionShellProps = {
     data: {
         title?: string;
@@ -10,7 +13,10 @@ const FooterSectionShell = ({ data, children }: SectionShellProps) => {
     const { title, description } = data;
 
     return (
-        <div className="flex flex-col gap-6">
+        <motion.div
+            className="flex flex-col gap-6"
+            variants={itemReveal}
+        >
             {title && (
                 <h3 className="text-base md:text-lg tracking-tight">
                     {title}
@@ -24,7 +30,7 @@ const FooterSectionShell = ({ data, children }: SectionShellProps) => {
             )}
 
             {children}
-        </div>)
+        </motion.div>)
 }
 
 export default FooterSectionShell

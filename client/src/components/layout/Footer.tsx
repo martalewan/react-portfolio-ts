@@ -1,14 +1,19 @@
+import { motion } from "framer-motion";
 import { FOOTER_SECTIONS_DATA, SIGNATURE_DATA } from "../../data/footerData";
 import FooterBrandSection from "./FooterBrandSection";
 import FooterContactSection from "./FooterContactSection";
 import FooterCTASection from "./FooterCTASection";
 import FooterSignature from "./FooterSignatureSection";
+import { staggerContainer } from "../../animations";
 
 const Footer = () => {
     const { brand, contact, cta } = FOOTER_SECTIONS_DATA;
 
     return (
-        <footer
+        <motion.footer
+            variants={staggerContainer({ delay: .5 })}
+            initial="hidden"
+            animate="show"
             className="
                 relative w-full
                 flex flex-col
@@ -44,7 +49,7 @@ const Footer = () => {
             </div>
 
             <FooterSignature {...SIGNATURE_DATA} />
-        </footer>
+        </motion.footer>
     );
 };
 

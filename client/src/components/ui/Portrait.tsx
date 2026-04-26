@@ -2,7 +2,7 @@ import portrait from "../../assets/portrait.svg";
 
 const Portrait = () => {
     return (
-        <div className="relative flex justify-center items-center w-[clamp(4rem,8vw,16rem)] xl:w-[clamp(12rem,16vw,16rem)] group">
+        <div className="relative flex justify-center items-center group w-50 h-auto">
 
             <img
                 src={portrait}

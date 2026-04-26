@@ -1,4 +1,6 @@
+import { motion } from "framer-motion";
 import { socialsData } from "../../data/socialsData";
+import { itemReveal } from "../../animations";
 
 type SocialsProps = {
     wrapperStyles: string;
@@ -7,13 +9,14 @@ type SocialsProps = {
 
 const Socials = ({ wrapperStyles, iconsStyles }: SocialsProps) => {
     return (
-        <div className={wrapperStyles}>
+        <motion.div className={wrapperStyles} variants={itemReveal}
+        >
             {socialsData.map((social, index) => (
                 <a key={index} href={social.url} target="_blank" rel="noopener noreferrer" className={iconsStyles}>
                     {social.icon}
                 </a>
             ))}
-        </div>
+        </motion.div>
     )
 }
 
