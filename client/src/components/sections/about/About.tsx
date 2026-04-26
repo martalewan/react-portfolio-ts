@@ -29,7 +29,7 @@ const About = () => {
 
             <div
                 ref={sectionRef}
-                className="grid grid-cols-1 lg:grid-cols-2 gap-14 pt-20 items-start"
+                className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start"
             >
                 <motion.div style={motionStyle} className="w-full">
                     <motion.span

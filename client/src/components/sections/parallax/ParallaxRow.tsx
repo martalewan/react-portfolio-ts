@@ -22,7 +22,8 @@ const Phrase = ({ text, highlights = [], className = "" }: PhraseProps) => {
                 inline-flex 
                 items-center
                 px-3
-                text-[130px]
+                text-[80px]
+                xl:text-[130px]
                 leading-none
                 whitespace-pre
                 ${className}

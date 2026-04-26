@@ -18,10 +18,10 @@ const Hero = () => {
             animate="show"
         >
 
-            <div className="min-h-[93vh] w-full flex items-center justify-start space-between relative">
+            <div className="min-h-[93vh] w-full flex items-center justify-center xl:justify-start relative">
                 <HeroPresentation />
                 <motion.div
-                    className="absolute top-1/2 right-0 "
+                    className="absolute top-1/2 right-0 hidden lg:block"
                     style={{
                         opacity,
                         y,
