@@ -1,5 +1,6 @@
 import { Link } from "react-scroll";
 import Button from "../ui/Button";
+import { Link as RouterLink } from "react-router-dom";
 
 export type NavigationProps = {
     navData: { id: string; label: string }[];
@@ -20,6 +21,12 @@ const DesktopNavigation = ({ navData }: NavigationProps) => {
                     </Link>
                 ))
             }
+            <RouterLink
+                to="/design"
+                className="text-[13px] text-text-40 uppercase transition hover:text-text"
+            >
+                Design Archive
+            </RouterLink>
             <Link to="contact" smooth={true} duration={500}>
                 <Button text="Start a project" />
             </Link>

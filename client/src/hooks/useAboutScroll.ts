@@ -17,11 +17,11 @@ export const useAboutScroll = (ref: RefObject<HTMLElement>) => {
 
     const { scrollYProgress } = useScroll({
         target: ref,
-        offset: ["start start", "end end"],
+        offset: ["start 20%", "end 100%"],
     });
 
     const y = useSpring(
-        useTransform(scrollYProgress, [0, 1], [0, 260]),
+        useTransform(scrollYProgress, [0, 1], [0, 300]),
         { stiffness: 80, damping: 25 }
     );
 
