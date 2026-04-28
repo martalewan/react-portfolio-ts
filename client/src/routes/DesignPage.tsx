@@ -4,7 +4,7 @@ import ArchiveNavbar from "../archive/components/ArchiveNavbar";
 import ArchiveAbout from "../archive/components/ArchiveAbout";
 import ArchiveContact from "../archive/components/ArchiveContact";
 import ArchiveProjectShowcase from "../archive/components/ArchiveProjectShowcase";
-import { projectsData } from "../archive/data/archive";
+import { projectsData } from "../archive/data/archiveData";
 
 export default function DesignArchive() {
 

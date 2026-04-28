@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import eyeBlinkGif from "../../assets/designArchive/eye-blink.gif"
+import eyeBlinkGif from "../../assets/designArchive/icons/eye-blink.gif"
 
 export default function ProjectShowcase({ id, title, tags, images }) {
     const ref = useRef(null);

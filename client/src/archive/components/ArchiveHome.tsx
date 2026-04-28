@@ -1,5 +1,5 @@
 import portrait from "../../assets/portrait.svg";
-import godownIcon from "../../assets/designArchive/godown.svg";
+import godownIcon from "../../assets/designArchive/icons/godown.svg";
 import { useScrollTo } from "../hooks/useScrollTo";
 
 export default function Home() {

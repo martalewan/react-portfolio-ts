@@ -1,41 +1,41 @@
-import moonCover from "../../assets/designArchive/covers/the moon cover.jpg";
-import cevCover from "../../assets/designArchive/covers/CeV Cover.jpg";
-import nototCover from "../../assets/designArchive/covers/Notot Cover.jpg";
-import posterCover from "../../assets/designArchive/covers/postercolor.jpg";
-import szczescieCover from "../../assets/designArchive/covers/szczescie cover.jpg";
-import demantCover from "../../assets/designArchive/covers/Demant Cover.jpg";
+import moonCover from "../../assets/designArchive/covers/moon.jpg";
+import cevCover from "../../assets/designArchive/covers/cev.jpg";
+import nototCover from "../../assets/designArchive/covers/notot.jpg";
+import posterCover from "../../assets/designArchive/covers/illustrations.jpg";
+import szczescieCover from "../../assets/designArchive/covers/szczescie.jpg";
+import demantCover from "../../assets/designArchive/covers/demant.jpg";
 
-import mpaCover from "../../assets/designArchive/covers/mpa COVER.jpg";
-import porCover from "../../assets/designArchive/covers/POR cover.jpg";
-import illustrationsCover from "../../assets/designArchive/covers/ill min cover.jpg";
-import plannerCover from "../../assets/designArchive/covers/planner cover.jpg";
-import antoninaCover from "../../assets/designArchive/covers/atoninA COVER.jpg";
+import mpaCover from "../../assets/designArchive/covers/mpa.jpg";
+import porCover from "../../assets/designArchive/covers/por.jpg";
+import illustrationsCover from "../../assets/designArchive/covers/min-illustrations.jpg";
+import plannerCover from "../../assets/designArchive/covers/planner.jpg";
+import antoninaCover from "../../assets/designArchive/covers/antonina.jpg";
 
-import atmoCover from "../../assets/designArchive/covers/A like Cover.jpg";
-import balenciagaCover from "../../assets/designArchive/covers/Balenciaga cover.jpg";
-import restoCover from "../../assets/designArchive/covers/RESTO Cover.jpg";
-import lulaCover from "../../assets/designArchive/covers/LULA cover.jpg";
-import beeCover from "../../assets/designArchive/covers/team bee cover.jpg";
+import atmoCover from "../../assets/designArchive/covers/atmo.jpg";
+import balenciagaCover from "../../assets/designArchive/covers/posters.jpg";
+import restoCover from "../../assets/designArchive/covers/marche.jpg";
+import lulaCover from "../../assets/designArchive/covers/lula.jpg";
+import beeCover from "../../assets/designArchive/covers/bee-team.jpg";
 import antonina1 from "../../assets/designArchive/antonina/antonina1.jpg";
 import antonina2 from "../../assets/designArchive/antonina/antonina2.jpg";
 import antonina3 from "../../assets/designArchive/antonina/antonina3.jpg";
 import antonina4 from "../../assets/designArchive/antonina/antonina4.jpg";
 import antonina5 from "../../assets/designArchive/antonina/antonina5.jpg";
-import atmo1 from "../../assets/designArchive/ATMO/ATMO1.jpg"
-import atmo2 from "../../assets/designArchive/ATMO/ATMO2.jpg"
-import atmo3 from "../../assets/designArchive/ATMO/ATMO3.jpg"
-import atmo4 from "../../assets/designArchive/ATMO/ATMO4.jpg"
-import atmo5 from "../../assets/designArchive/ATMO/ATMO5.jpg"
-import atmo6 from "../../assets/designArchive/ATMO/ATMO6.jpg"
-import atmo7 from "../../assets/designArchive/ATMO/ATMO7.jpg"
-import atmo8 from "../../assets/designArchive/ATMO/ATMO8.jpg"
-import atmo9 from "../../assets/designArchive/ATMO/ATMO9.jpg"
-import atmo10 from "../../assets/designArchive/ATMO/ATMO10.jpg"
-import atmo11 from "../../assets/designArchive/ATMO/ATMO11.jpg"
+import atmo1 from "../../assets/designArchive/atmo/atmo1.jpg"
+import atmo2 from "../../assets/designArchive/atmo/atmo2.jpg"
+import atmo3 from "../../assets/designArchive/atmo/atmo3.jpg"
+import atmo4 from "../../assets/designArchive/atmo/atmo4.jpg"
+import atmo5 from "../../assets/designArchive/atmo/atmo5.jpg"
+import atmo6 from "../../assets/designArchive/atmo/atmo6.jpg"
+import atmo7 from "../../assets/designArchive/atmo/atmo7.jpg"
+import atmo8 from "../../assets/designArchive/atmo/atmo8.jpg"
+import atmo9 from "../../assets/designArchive/atmo/atmo9.jpg"
+import atmo10 from "../../assets/designArchive/atmo/atmo10.jpg"
+import atmo11 from "../../assets/designArchive/atmo/atmo11.jpg"
 
-import beeteam1 from "../../assets/designArchive/teambee/beeteam1.jpg"
-import beeteam2 from "../../assets/designArchive/teambee/beeteam2.png"
-import beeteam3 from "../../assets/designArchive/teambee/beeteam3.png"
+import beeteam1 from "../../assets/designArchive/beeteam/beeteam1.jpg"
+import beeteam2 from "../../assets/designArchive/beeteam/beeteam2.png"
+import beeteam3 from "../../assets/designArchive/beeteam/beeteam3.png"
 import demant1 from "../../assets/designArchive/demant/demant1.png"
 import demant2 from "../../assets/designArchive/demant/demant2.png"
 import demant3 from "../../assets/designArchive/demant/demant3.png"
@@ -43,47 +43,47 @@ import demant4 from "../../assets/designArchive/demant/demant4.jpg"
 import demant5 from "../../assets/designArchive/demant/demant5.gif"
 import demant6 from "../../assets/designArchive/demant/demant6.gif"
 import demant7 from "../../assets/designArchive/demant/demant7.jpg"
-import cuisine1 from "../../assets/designArchive/CEV/CUISINE1.jpg"
-import cuisine2 from "../../assets/designArchive/CEV/CUISINE2.jpg"
-import cuisine3 from "../../assets/designArchive/CEV/CUISINE3.jpg"
-import cuisine4 from "../../assets/designArchive/CEV/CUISINE4.jpg"
-import cuisine5 from "../../assets/designArchive/CEV/CUISINE5.jpg"
-import mpa1 from "../../assets/designArchive/MPA/mpa1.jpg";
-import mpa2 from "../../assets/designArchive/MPA/mpa2.jpg";
-import mpa3 from "../../assets/designArchive/MPA/mpa3.jpg";
-import mpa4 from "../../assets/designArchive/MPA/mpa4.jpg";
-import mpa5 from "../../assets/designArchive/MPA/mpa5.jpg";
-import mpa6 from "../../assets/designArchive/MPA/mpa6.jpg";
-import mpa7 from "../../assets/designArchive/MPA/mpa7.jpg";
-import mpa8 from "../../assets/designArchive/MPA/mpa8.jpg";
-import mpa9 from "../../assets/designArchive/MPA/mpa9.jpg";
-import mpa10 from "../../assets/designArchive/MPA/mpa10.jpg";
-import mpa11 from "../../assets/designArchive/MPA/mpa11.jpg";
-import mpa12 from "../../assets/designArchive/MPA/mpa12.jpg";
-import mpa13 from "../../assets/designArchive/MPA/mpa13.jpg";
-import mpa14 from "../../assets/designArchive/MPA/mpa14.jpg";
+import cuisine1 from "../../assets/designArchive/cev/cev1.jpg"
+import cuisine2 from "../../assets/designArchive/cev/cev2.jpg"
+import cuisine3 from "../../assets/designArchive/cev/cev3.jpg"
+import cuisine4 from "../../assets/designArchive/cev/cev4.jpg"
+import cuisine5 from "../../assets/designArchive/cev/cev5.jpg"
+import mpa1 from "../../assets/designArchive/mpa/mpa1.jpg";
+import mpa2 from "../../assets/designArchive/mpa/mpa2.jpg";
+import mpa3 from "../../assets/designArchive/mpa/mpa3.jpg";
+import mpa4 from "../../assets/designArchive/mpa/mpa4.jpg";
+import mpa5 from "../../assets/designArchive/mpa/mpa5.jpg";
+import mpa6 from "../../assets/designArchive/mpa/mpa6.jpg";
+import mpa7 from "../../assets/designArchive/mpa/mpa7.jpg";
+import mpa8 from "../../assets/designArchive/mpa/mpa8.jpg";
+import mpa9 from "../../assets/designArchive/mpa/mpa9.jpg";
+import mpa10 from "../../assets/designArchive/mpa/mpa10.jpg";
+import mpa11 from "../../assets/designArchive/mpa/mpa11.jpg";
+import mpa12 from "../../assets/designArchive/mpa/mpa12.jpg";
+import mpa13 from "../../assets/designArchive/mpa/mpa13.jpg";
+import mpa14 from "../../assets/designArchive/mpa/mpa14.jpg";
 import szczescie1 from "../../assets/designArchive/szczescie/szczescie1.jpg";
 import szczescie2 from "../../assets/designArchive/szczescie/szczescie2.jpg";
 import szczescie3 from "../../assets/designArchive/szczescie/szczescie3.jpg";
 import szczescie4 from "../../assets/designArchive/szczescie/szczescie4.jpg";
 import szczescie5 from "../../assets/designArchive/szczescie/szczescie5.jpg";
 import szczescie6 from "../../assets/designArchive/szczescie/szczescie6.jpg";
-import lula1 from "../../assets/designArchive/LULA/LULA1.jpg";
-import lula2 from "../../assets/designArchive/LULA/LULA2.jpg";
-import lula3 from "../../assets/designArchive/LULA/LULA3.jpg";
-import lula4 from "../../assets/designArchive/LULA/LULA4.jpg";
-import lula5 from "../../assets/designArchive/LULA/LULA5.jpg";
-import lula6 from "../../assets/designArchive/LULA/LULA6.jpg";
-import lula7 from "../../assets/designArchive/LULA/LULA7.jpg";
-import planner1 from "../../assets/designArchive/PLANNER/planner1.jpg";
-import planner2 from "../../assets/designArchive/PLANNER/planner2.jpg";
-import planner3 from "../../assets/designArchive/PLANNER/planner3.jpg";
-import planner4 from "../../assets/designArchive/PLANNER/planner4.jpg";
-import planner5 from "../../assets/designArchive/PLANNER/planner5.jpg";
-import planner6 from "../../assets/designArchive/PLANNER/planner6.jpg";
-import planner7 from "../../assets/designArchive/PLANNER/planner7.jpg";
-import planner8 from "../../assets/designArchive/PLANNER/planner8.jpg";
-import planner9 from "../../assets/designArchive/PLANNER/planner9.jpg";
+import lula1 from "../../assets/designArchive/lula/lula1.jpg";
+import lula2 from "../../assets/designArchive/lula/lula2.jpg";
+import lula3 from "../../assets/designArchive/lula/lula3.jpg";
+import lula4 from "../../assets/designArchive/lula/lula4.jpg";
+import lula5 from "../../assets/designArchive/lula/lula5.jpg";
+import lula6 from "../../assets/designArchive/lula/lula6.jpg";
+import lula7 from "../../assets/designArchive/lula/lula7.jpg";
+import planner1 from "../../assets/designArchive/planner/planner1.jpg";
+import planner2 from "../../assets/designArchive/planner/planner2.jpg";
+import planner3 from "../../assets/designArchive/planner/planner3.jpg";
+import planner4 from "../../assets/designArchive/planner/planner4.jpg";
+import planner5 from "../../assets/designArchive/planner/planner5.jpg";
+import planner6 from "../../assets/designArchive/planner/planner6.jpg";
+import planner7 from "../../assets/designArchive/planner/planner7.jpg";
+import planner8 from "../../assets/designArchive/planner/planner8.jpg";
+import planner9 from "../../assets/designArchive/planner/planner9.jpg";
 import por1 from "../../assets/designArchive/por/por1.jpg";
 import por2 from "../../assets/designArchive/por/por2.jpg";
 import por3 from "../../assets/designArchive/por/por3.jpg";
@@ -92,30 +92,30 @@ import por5 from "../../assets/designArchive/por/por5.jpg";
 import notot1 from "../../assets/designArchive/notot/notot1.jpg";
 import notot2 from "../../assets/designArchive/notot/notot4.gif";
 import notot3 from "../../assets/designArchive/notot/notot7.png";
-import moon1 from "../../assets/designArchive/Themoon/moon1.jpg";
-import moon2 from "../../assets/designArchive/Themoon/moon2.jpg";
-import moon3 from "../../assets/designArchive/Themoon/moon3.jpg";
-import moon4 from "../../assets/designArchive/Themoon/moon4.jpg";
-import moon5 from "../../assets/designArchive/Themoon/moon5.jpg";
-import ill1 from "../../assets/designArchive/poster/postor min/poster1.jpg";
-import ill2 from "../../assets/designArchive/poster/postor min/poster2.jpg";
-import ill3 from "../../assets/designArchive/poster/postor min/poster3.jpg";
-import ill4 from "../../assets/designArchive/poster/postor min/poster4.jpg";
-import ill5 from "../../assets/designArchive/poster/postor min/poster5.jpg";
-import ill6 from "../../assets/designArchive/poster/postor min/poster6.jpg";
+import moon1 from "../../assets/designArchive/moon/moon1.jpg";
+import moon2 from "../../assets/designArchive/moon/moon2.jpg";
+import moon3 from "../../assets/designArchive/moon/moon3.jpg";
+import moon4 from "../../assets/designArchive/moon/moon4.jpg";
+import moon5 from "../../assets/designArchive/moon/moon5.jpg";
+import ill1 from "../../assets/designArchive/min-illustrations/min-illustrations1.jpg";
+import ill2 from "../../assets/designArchive/min-illustrations/min-illustrations2.jpg";
+import ill3 from "../../assets/designArchive/min-illustrations/min-illustrations3.jpg";
+import ill4 from "../../assets/designArchive/min-illustrations/min-illustrations4.jpg";
+import ill5 from "../../assets/designArchive/min-illustrations/min-illustrations5.jpg";
+import ill6 from "../../assets/designArchive/min-illustrations/min-illustrations6.jpg";
 import poster1 from "../../assets/designArchive/poster/poster1.jpg";
 import poster2 from "../../assets/designArchive/poster/poster2.jpg";
 import poster3 from "../../assets/designArchive/poster/poster3.jpg";
 import poster4 from "../../assets/designArchive/poster/poster4.jpg";
-import posterColor1 from "../../assets/designArchive/poster/poster color/poster1.jpg";
-import posterColor2 from "../../assets/designArchive/poster/poster color/poster2.jpg";
-import posterColor3 from "../../assets/designArchive/poster/poster color/poster3.jpg";
-import posterColor4 from "../../assets/designArchive/poster/poster color/poster4.jpg";
-import posterColor5 from "../../assets/designArchive/poster/poster color/poster5.jpg";
-import posterColor6 from "../../assets/designArchive/poster/poster color/poster6.jpg";
-import posterColor7 from "../../assets/designArchive/poster/poster color/poster7.jpg";
-import posterColor8 from "../../assets/designArchive/poster/poster color/poster8.jpg";
-import posterColor9 from "../../assets/designArchive/poster/poster color/poster9.jpg";
+import posterColor1 from "../../assets/designArchive/illustrations/poster1.jpg";
+import posterColor2 from "../../assets/designArchive/illustrations/poster2.jpg";
+import posterColor3 from "../../assets/designArchive/illustrations/poster3.jpg";
+import posterColor4 from "../../assets/designArchive/illustrations/poster4.jpg";
+import posterColor5 from "../../assets/designArchive/illustrations/poster5.jpg";
+import posterColor6 from "../../assets/designArchive/illustrations/poster6.jpg";
+import posterColor7 from "../../assets/designArchive/illustrations/poster7.jpg";
+import posterColor8 from "../../assets/designArchive/illustrations/poster8.jpg";
+import posterColor9 from "../../assets/designArchive/illustrations/poster9.jpg";
 
 import resto1 from "../../assets/designArchive/marche/marche1.jpg";
 import resto2 from "../../assets/designArchive/marche/marche2.jpg";

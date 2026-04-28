@@ -1,5 +1,5 @@
-import lemon from "../../assets/designArchive/lemon.svg";
-import halfLemon from "../../assets/designArchive/half lemon.svg";
+import lemon from "../../assets/designArchive/icons/lemon.svg";
+import halfLemon from "../../assets/designArchive/icons/half-lemon.svg";
 
 export default function About() {
     return (
