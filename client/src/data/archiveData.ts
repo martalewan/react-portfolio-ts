@@ -148,23 +148,27 @@ export const portfolioData = [
 ];
 
 export const projectsData = [
-
     {
-        id: "moon",
-        title: "The Moon Project",
-        tags: "Editorial Design, Concept",
-        cover: moonCover,
-        images: [moon1, moon2, moon3, moon4, moon5],
+        id: "resto",
+        title: "RESTO",
+        tags: "Restaurant Branding",
+        cover: restoCover,
+        images: [resto1, resto2, resto3, resto4],
     },
-
     {
-        id: "cev",
-        title: "CeV Studio",
-        tags: "Branding, Visual Identity",
-        cover: cevCover,
-        images: [cuisine1, cuisine2, cuisine3, cuisine4, cuisine5],
+        id: "antonina",
+        title: "Antonina Poppy",
+        tags: "Branding, Print Design, Lettering",
+        cover: antoninaCover,
+        images: [
+            antoninaCover,
+            antonina1,
+            antonina2,
+            antonina3,
+            antonina4,
+            antonina5,
+        ],
     },
-
     {
         id: "notot",
         title: "NOTOT",
@@ -172,7 +176,30 @@ export const projectsData = [
         cover: nototCover,
         images: [notot1, notot2, notot3],
     },
-
+    {
+        id: "por",
+        title: "POR",
+        tags: "Editorial Design",
+        cover: porCover,
+        images: [por1, por2, por3, por4, por5],
+    },
+    {
+        id: "moon",
+        title: "The Moon Project",
+        tags: "Editorial Design, Concept",
+        cover: moonCover,
+        images: [moon1, moon2, moon3, moon4, moon5],
+    },
+    {
+        id: "demant",
+        title: "Demant",
+        tags: "Illustrations, Print & Web Design",
+        cover: demantCover,
+        images: [
+            demant1, demant2, demant3, demant4,
+            demant5, demant6, demant7,
+        ],
+    },
     {
         id: "color-posters",
         title: "Poster Works",
@@ -190,31 +217,12 @@ export const projectsData = [
             posterColor9,
         ],
     },
-
     {
-        id: "szczescie",
-        title: "Szczęście",
-        tags: "Graphic Design",
-        cover: szczescieCover,
-        images: [
-            szczescie1,
-            szczescie2,
-            szczescie3,
-            szczescie4,
-            szczescie5,
-            szczescie6,
-        ],
-    },
-
-    {
-        id: "demant",
-        title: "Demant",
-        tags: "Illustrations, Print & Web Design",
-        cover: demantCover,
-        images: [
-            demant1, demant2, demant3, demant4,
-            demant5, demant6, demant7,
-        ],
+        id: "illustrations",
+        title: "Illustrations",
+        tags: "Illustration Work",
+        cover: illustrationsCover,
+        images: [ill1, ill2, ill3, ill4, ill5, ill6],
     },
 
     {
@@ -227,22 +235,6 @@ export const projectsData = [
             mpa6, mpa7, mpa8, mpa9, mpa10,
             mpa11, mpa12, mpa13, mpa14,
         ],
-    },
-
-    {
-        id: "por",
-        title: "POR",
-        tags: "Editorial Design",
-        cover: porCover,
-        images: [por1, por2, por3, por4, por5],
-    },
-
-    {
-        id: "illustrations",
-        title: "Illustrations",
-        tags: "Illustration Work",
-        cover: illustrationsCover,
-        images: [ill1, ill2, ill3, ill4, ill5, ill6],
     },
 
     {
@@ -263,19 +255,31 @@ export const projectsData = [
         ],
     },
 
+
+
     {
-        id: "antonina",
-        title: "Antonina Poppy",
-        tags: "Branding, Print Design, Lettering",
-        cover: antoninaCover,
+        id: "szczescie",
+        title: "Szczęście",
+        tags: "Graphic Design",
+        cover: szczescieCover,
         images: [
-            antoninaCover,
-            antonina1,
-            antonina2,
-            antonina3,
-            antonina4,
-            antonina5,
+            szczescie1,
+            szczescie2,
+            szczescie3,
+            szczescie4,
+            szczescie5,
+            szczescie6,
         ],
+    },
+
+
+
+    {
+        id: "poster",
+        title: "Poster Works",
+        tags: "Graphic Design, Posters",
+        cover: posterCover,
+        images: [poster1, poster2, poster3, poster4],
     },
 
     {
@@ -288,36 +292,25 @@ export const projectsData = [
             atmo6, atmo7, atmo8, atmo9, atmo10, atmo11,
         ],
     },
-
-    {
-        id: "teambee",
-        title: "Marketing Demant's Team",
-        tags: "Branding, Print Materials",
-        cover: beeCover,
-        images: [beeteam1, beeteam2, beeteam3],
-    },
-
-    {
-        id: "poster",
-        title: "Poster Works",
-        tags: "Graphic Design, Posters",
-        cover: posterCover,
-        images: [poster1, poster2, poster3, poster4],
-    },
-
-    {
-        id: "resto",
-        title: "RESTO",
-        tags: "Restaurant Branding",
-        cover: restoCover,
-        images: [resto1, resto2, resto3, resto4],
-    },
-
     {
         id: "lula",
         title: "LULA",
         tags: "Editorial, Magazine Design",
         cover: lulaCover,
         images: [lula1, lula2, lula3, lula4, lula5, lula6, lula7],
+    },
+    {
+        id: "cev",
+        title: "CeV Studio",
+        tags: "Branding, Visual Identity",
+        cover: cevCover,
+        images: [cuisine1, cuisine2, cuisine3, cuisine4, cuisine5],
+    },
+    {
+        id: "teambee",
+        title: "Marketing Demant's Team",
+        tags: "Branding, Print Materials",
+        cover: beeCover,
+        images: [beeteam1, beeteam2, beeteam3],
     },
 ];

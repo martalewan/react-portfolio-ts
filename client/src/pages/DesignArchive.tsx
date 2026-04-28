@@ -22,8 +22,8 @@ export default function DesignArchive() {
                 <Contact />
 
                 <section id="projects">
-                    <h2 className="font-[Playfair_Display] text-[57px] mt-30">
-                        Projects Details
+                    <h2 className="font-[Playfair_Display] text-[57px] mt-20">
+                        Selected Design Case Studies
                     </h2>
                     {projectsData.map((p) => (
                         <ProjectShowcase key={p.id} {...p} />

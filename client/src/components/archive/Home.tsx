@@ -13,7 +13,7 @@ export default function Home() {
                 <img src={godownIcon} className="w-3.75" />
                 <button
                     onClick={() => scrollTo("about")}
-                    className="text-left hover:opacity-60 transition"
+                    className="text-left hover:opacity-60 transition cursor-pointer"
                 >
                     Go down
                 </button>

@@ -33,7 +33,7 @@ export default function Navbar({ navOpen, setNavOpen }) {
 
     return (
         <header className="fixed top-0 left-0 w-full z-50 bg-archive-bg">
-            <nav className="h-18 flex justify-between items-center px-[10vw]">
+            <nav className="h-16 flex justify-between items-center px-[10vw]">
 
                 <Link
                     to="/"

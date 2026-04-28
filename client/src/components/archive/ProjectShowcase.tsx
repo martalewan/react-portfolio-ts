@@ -34,14 +34,29 @@ export default function ProjectShowcase({ id, title, tags, images }) {
 
                 <button
                     onClick={() => scroll("left")}
-                    className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 px-3 py-2"
+                    className="
+                absolute -left-15 top-1/2 -translate-y-1/2 z-10
+                px-3 py-2
+                bg-white/70
+                border border-black/80
+                text-black
+                rounded-full
+                shadow-sm
+                hover:bg-white/90 transition cursor-pointer"
                 >
                     ←
                 </button>
 
                 <button
                     onClick={() => scroll("right")}
-                    className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 px-3 py-2"
+                    className="
+                absolute -right-15 top-1/2 -translate-y-1/2 z-10 bg-white/80 
+                px-3 py-2
+                border border-black/80
+                text-black
+                rounded-full
+                shadow-sm
+                hover:bg-white/90 transition cursor-pointer"
                 >
                     →
                 </button>
