@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import { FOOTER_SECTIONS_DATA, SIGNATURE_DATA } from "../../data/footerData";
+import { FOOTER_SECTIONS_DATA, SIGNATURE_DATA } from "../../../data/footer";
 import FooterBrandSection from "./FooterBrandSection";
 import FooterContactSection from "./FooterContactSection";
 import FooterCTASection from "./FooterCTASection";
 import FooterSignature from "./FooterSignatureSection";
-import { staggerContainer } from "../../animations";
+import { staggerContainer } from "../../../animations";
 
 const Footer = () => {
     const { brand, contact, cta } = FOOTER_SECTIONS_DATA;

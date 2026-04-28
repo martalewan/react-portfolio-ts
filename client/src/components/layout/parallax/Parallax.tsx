@@ -1,15 +1,17 @@
-import { motion, MotionValue } from "framer-motion"
+import { motion, useScroll } from "framer-motion"
 import ParallaxRow from "./ParallaxRow"
-import { PARALLAX_ROWS } from "../../../data/parallaxData";
 import { staggerContainer } from "../../../animations";
+import { PARALLAX_ROWS } from "../../../data/parallax";
 
-type ParallaxProps = {
-    scrollYProgress: MotionValue<number>
-}
+const Parallax = () => {
 
-const Parallax = ({ scrollYProgress }: ParallaxProps) => {
+    const { scrollYProgress } = useScroll({
+        offset: ["start end", "end start"],
+    });
+
     return (
         <motion.div
+            id="parallax"
             variants={staggerContainer({ delay: .5 })}
             className="flex flex-col py-55"
             initial="hidden"

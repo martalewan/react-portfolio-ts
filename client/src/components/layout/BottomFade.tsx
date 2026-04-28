@@ -1,8 +1,8 @@
-type BottomBlurFadeProps = {
+type BottomFadeProps = {
     height?: string;
 };
 
-export default function BottomBlurFade({ height = "h-18" }: BottomBlurFadeProps) {
+export default function BottomFade({ height = "h-18" }: BottomFadeProps) {
     return (
         <div className={`fixed bottom-0 left-0 w-full ${height} pointer-events-none z-2`}>
 

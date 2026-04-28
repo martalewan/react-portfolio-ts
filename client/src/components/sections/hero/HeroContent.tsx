@@ -1,11 +1,11 @@
 import { FiDownload } from "react-icons/fi";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
-import { HERO_DATA } from "../../../data/heroData";
+import { HERO_DATA } from "../../../data/hero";
 import { itemReveal } from "../../../animations";
 import Button from "../../ui/Button";
 
-const HeroPresentation = () => {
+const HeroContent = () => {
     const {
         subtitle,
         name,
@@ -13,6 +13,7 @@ const HeroPresentation = () => {
         cvFile,
         actions: { downloadLabel, contactLabel }
     } = HERO_DATA;
+
     const lines = description.split("\n");
     return (
         <div
@@ -33,7 +34,7 @@ const HeroPresentation = () => {
 
             </motion.div>
 
-            <h3 className="max-w-200">
+            <h3>
                 {lines.map((line, i) => (
                     <motion.span
                         key={i}
@@ -47,7 +48,7 @@ const HeroPresentation = () => {
 
             <motion.div
                 variants={itemReveal}
-                className="grid grid-cols-1 sm:grid-cols-2 gap-6 block"
+                className="grid grid-cols-1 sm:grid-cols-2 gap-6"
             >
 
                 <Link to="contact" smooth duration={500}>
@@ -62,4 +63,4 @@ const HeroPresentation = () => {
     );
 };
 
-export default HeroPresentation;
+export default HeroContent;

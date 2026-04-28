@@ -1,8 +1,8 @@
 import { Link } from "react-scroll";
-import Button from "../ui/Button";
 import FooterSectionShell from "./FooterSectionShell";
-import type { FooterSectionsData } from "../../data/footerData";
-import Socials from "../ui/Socials";
+import type { FooterSectionsData } from "../../../data/footer";
+import Socials from "../../ui/Socials";
+import Button from "../../ui/Button";
 
 type FooterCTAProps = {
     data: FooterSectionsData["cta"];

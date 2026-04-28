@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { itemReveal } from "../../../animations";
-import { ABOUT_PARAGRAPHS } from "../../../data/aboutData";
+import { ABOUT_PARAGRAPHS } from "../../../data/about";
 
-const AboutContent = () => {
+export const AboutContent = () => {
     return (
         <div className="flex flex-col gap-6">
 
@@ -16,5 +16,3 @@ const AboutContent = () => {
         </div>
     );
 };
-
-export default AboutContent;

@@ -1,17 +1,17 @@
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import SectionTitle from "../../layout/SectionTitle";
-import AboutContent from "./AboutContent";
 import AboutExperience from "./AboutExperience";
-import HighlightItem from "./HighlightItem";
-import { ABOUT_HIGHLIGHTS } from "../../../data/aboutData";
+import { ABOUT_HIGHLIGHTS } from "../../../data/about";
 import { staggerContainer, itemReveal } from "../../../animations";
 import { useAboutScroll } from "../../../hooks/useAboutScroll";
+import { AboutContent } from "./AboutContent";
+import Parallax from "../../layout/parallax/Parallax";
+import HighlightItem from "./HighlightItem";
 
 const About = () => {
-    const sectionRef = useRef(null);
-
-    const { motionStyle } = useAboutScroll(sectionRef);
+    const aboutSectionRef = useRef(null);
+    const { motionStyle } = useAboutScroll(aboutSectionRef);
 
     return (
         <motion.section
@@ -21,6 +21,7 @@ const About = () => {
             initial="hidden"
             animate="show"
         >
+            <Parallax />
             <SectionTitle
                 label="01."
                 title="Crafting Digital Experiences That Matter"
@@ -28,7 +29,7 @@ const About = () => {
             />
 
             <div
-                ref={sectionRef}
+                ref={aboutSectionRef}
                 className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start"
             >
                 <motion.div style={motionStyle} className="w-full">

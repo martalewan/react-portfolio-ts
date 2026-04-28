@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { socialsData } from "../../data/socialsData";
+import { socialsData } from "../../data/socials";
 import { itemReveal } from "../../animations";
 
 type SocialsProps = {

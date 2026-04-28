@@ -1,8 +1,8 @@
 import { FiMapPin, FiMail } from "react-icons/fi";
-import { useCopyEmail } from "../../hooks/useCopyEmail";
 import FooterSectionShell from "./FooterSectionShell";
-import { GLOBAL_DATA } from "../../data/globalData";
-import type { FooterSectionsData } from "../../data/footerData";
+import type { FooterSectionsData } from "../../../data/footer";
+import { GLOBAL_DATA } from "../../../data/global";
+import { useCopyEmail } from "../../../hooks/useCopyEmail";
 
 type FooterContactProps = {
     data: FooterSectionsData["contact"];

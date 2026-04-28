@@ -3,7 +3,7 @@ import SectionTitle from "../../layout/SectionTitle";
 import Carousel from "./Carousel";
 import CarouselIndicator from "./CarouselIndicator";
 import ProjectInfo from "./ProjectInfo";
-import { project } from "../../../data/projectsData";
+import { project } from "../../../data/projects";
 import { staggerContainer } from "../../../animations";
 import { motion } from "framer-motion";
 

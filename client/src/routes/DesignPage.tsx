@@ -1,32 +1,32 @@
-import Footer from "../archive/components/Footer";
-import Home from "../archive/components/Home";
-import Navbar from "../archive/components/Navbar";
-import About from "../archive/components/About";
-import Contact from "../archive/components/Contact";
-import ProjectShowcase from "../archive/components/ProjectShowcase";
-import { projectsData } from "../archive/data/archiveData";
+import ArchiveFooter from "../archive/components/ArchiveFooter";
+import ArchiveHome from "../archive/components/ArchiveHome";
+import ArchiveNavbar from "../archive/components/ArchiveNavbar";
+import ArchiveAbout from "../archive/components/ArchiveAbout";
+import ArchiveContact from "../archive/components/ArchiveContact";
+import ArchiveProjectShowcase from "../archive/components/ArchiveProjectShowcase";
+import { projectsData } from "../archive/data/archive";
 
 export default function DesignArchive() {
 
     return (
         <div className="bg-archive-bg text-archive-text font-[Montserrat] px-[10vw]">
 
-            <Navbar navOpen={undefined} setNavOpen={undefined} />
+            <ArchiveNavbar navOpen={undefined} setNavOpen={undefined} />
 
             <main>
 
-                <Home />
+                <ArchiveHome />
 
-                <About />
+                <ArchiveAbout />
 
-                <Contact />
+                <ArchiveContact />
 
                 <section id="projects">
                     <h2 className="font-[Playfair_Display] text-[57px] mt-20">
                         Selected Design Case Studies
                     </h2>
                     {projectsData.map((p) => (
-                        <ProjectShowcase key={p.id} {...p} />
+                        <ArchiveProjectShowcase key={p.id} {...p} />
                     ))}
                 </section>
 
@@ -44,7 +44,7 @@ export default function DesignArchive() {
                         ))}
                     </div>
                 </section> */}
-                <Footer />
+                <ArchiveFooter />
 
             </main>
         </div>

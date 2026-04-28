@@ -1,6 +1,6 @@
 import Logo from "./Logo";
 import Drawer from "../ui/Drawer";
-import { navData } from "../../data/navbarData";
+import { navData } from "../../data/navbar";
 import DesktopNavigation from "./NavigationDesktop";
 import MobileNavigation from "./NavigationMobile";
 

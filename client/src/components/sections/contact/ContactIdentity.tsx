@@ -4,7 +4,7 @@ import Socials from "../../ui/Socials";
 import { motion } from "framer-motion";
 import { itemReveal } from "../../../animations";
 
-const ContactInfo = () => {
+const ContactIdentity = () => {
     return (
         <div>
             <motion.span
@@ -72,4 +72,4 @@ const ContactInfo = () => {
     );
 };
 
-export default ContactInfo;
+export default ContactIdentity;

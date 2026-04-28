@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { itemReveal } from "../../animations";
+import { itemReveal } from "../../../animations";
 
 type SectionShellProps = {
     data: {

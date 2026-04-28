@@ -1,6 +1,6 @@
 import portrait from "../../assets/portrait.svg";
 
-const Portrait = () => {
+const PortraitIllustration = () => {
     return (
         <div className="relative flex justify-center items-center group w-50 h-auto">
 
@@ -31,4 +31,4 @@ const Portrait = () => {
     )
 }
 
-export default Portrait
+export default PortraitIllustration

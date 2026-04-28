@@ -2,7 +2,7 @@ import NeonFrame from "../../effects/NeonFrame";
 import GlassCard from "../../ui/GlassCard";
 import SectionTitle from "../../layout/SectionTitle";
 import ContactForm from "./ContactForm";
-import ContactInfo from "./ContactInfo";
+import ContactIdentity from "./ContactIdentity";
 import { motion } from "framer-motion";
 import { itemReveal, staggerContainer } from "../../../animations";
 
@@ -42,7 +42,7 @@ const Contact = () => {
                     </GlassCard>
                 </NeonFrame>
 
-                <ContactInfo />
+                <ContactIdentity />
             </motion.div>
         </motion.section>
     );

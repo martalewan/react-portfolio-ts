@@ -1,5 +1,5 @@
 import { FiArrowRight } from "react-icons/fi";
-import { EXPERIENCES_DATA } from "../../../data/aboutData";
+import { EXPERIENCES_DATA } from "../../../data/about";
 import ExperienceItem from "./ExperienceItem";
 import { motion } from "framer-motion";
 import { itemReveal } from "../../../animations";

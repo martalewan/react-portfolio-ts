@@ -1,4 +1,4 @@
-import { SKILLS_LAYOUT_COLUMNS } from "../../../data/skillsData";
+import { SKILLS_LAYOUT_COLUMNS } from "../../../data/skills";
 import SkillCategory from "./SkillsCategory";
 
 const SkillsList = () => {

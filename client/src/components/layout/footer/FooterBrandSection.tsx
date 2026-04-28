@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { itemReveal } from "../../animations";
-import logo from "../../assets/logo-white.svg";
-import type { FooterSectionsData } from "../../data/footerData";
+import logo from "../../../assets/logo-white.svg";
+import type { FooterSectionsData } from "../../../data/footer";
+import { itemReveal } from "../../../animations";
 
 export type FooterBrandProps = {
     data: FooterSectionsData["brand"];
