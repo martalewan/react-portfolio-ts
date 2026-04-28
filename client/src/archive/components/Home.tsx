@@ -1,6 +1,6 @@
 import portrait from "../../assets/portrait.svg";
 import godownIcon from "../../assets/designArchive/godown.svg";
-import { useScrollTo } from "./useScrollTo";
+import { useScrollTo } from "../hooks/useScrollTo";
 
 export default function Home() {
     const scrollTo = useScrollTo();

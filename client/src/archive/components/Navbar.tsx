@@ -1,5 +1,5 @@
-import { useScrollTo } from "./useScrollTo";
 import { Link } from "react-router-dom";
+import { useScrollTo } from "../hooks/useScrollTo";
 
 export default function Navbar({ navOpen, setNavOpen }) {
 

@@ -1,10 +1,10 @@
-import { projectsData } from "../data/archiveData";
-import ProjectShowcase from "../components/archive/ProjectShowcase";
-import Footer from "../components/archive/Footer";
-import Home from "../components/archive/Home";
-import About from "../components/archive/About";
-import Contact from "../components/archive/Contact";
-import Navbar from "../components/archive/Navbar";
+import Footer from "../archive/components/Footer";
+import Home from "../archive/components/Home";
+import Navbar from "../archive/components/Navbar";
+import About from "../archive/components/About";
+import Contact from "../archive/components/Contact";
+import ProjectShowcase from "../archive/components/ProjectShowcase";
+import { projectsData } from "../archive/data/archiveData";
 
 export default function DesignArchive() {
 

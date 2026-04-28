@@ -1,8 +1,8 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import Home from "./pages/Home";
-import DesignArchive from "./pages/DesignArchive";
 import { pageVariants } from "./animations";
+import FrontendPage from "./pages/FrontendPage";
+import DesignPage from "./pages/DesignPage";
 
 const Page = ({ children }) => (
   <motion.div
@@ -25,7 +25,7 @@ export default function App() {
           path="/"
           element={
             <Page>
-              <Home />
+              <FrontendPage />
             </Page>
           }
         />
@@ -33,7 +33,7 @@ export default function App() {
           path="/design"
           element={
             <Page>
-              <DesignArchive />
+              <DesignPage />
             </Page>
           }
         />
