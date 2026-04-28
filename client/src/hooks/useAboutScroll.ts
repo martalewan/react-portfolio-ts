@@ -17,7 +17,7 @@ export const useAboutScroll = (ref: RefObject<HTMLElement>) => {
 
     const { scrollYProgress } = useScroll({
         target: ref,
-        offset: ["start 20%", "end 100%"],
+        offset: ["start 20%", "end 50%"],
     });
 
     const y = useSpring(

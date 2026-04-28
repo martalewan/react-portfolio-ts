@@ -21,4 +21,20 @@
     /* BORDER SYSTEM */
     --color-border-80: rgba(255, 255, 255, 0.8);
     --color-border-15: rgba(255, 255, 255, 0.15);
+
+
+    /* ARCHIVE (original light design) */
+    --color-archive-bg: rgb(248, 247, 237);
+    --color-archive-bg-80: rgba(248, 247, 237, 0.8);
+
+    --color-archive-text: rgb(94, 104, 107);
+    --color-archive-text-80: rgba(94, 104, 107, 0.8);
+    --color-archive-text-40: rgba(94, 104, 107, 0.4);
+    --color-archive-text-inverse: rgb(47, 62, 73);
+
+    --color-archive-accent: #5db2b8;
+    --color-archive-accent-20: rgba(93, 178, 184, 0.2);
+
+    --color-archive-border-80: rgba(47, 62, 73, 0.8);
+    --color-archive-border-15: rgba(47, 62, 73, 0.15);
 }
