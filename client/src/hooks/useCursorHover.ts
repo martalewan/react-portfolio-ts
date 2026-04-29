@@ -2,11 +2,24 @@ import { useEffect, useState } from "react";
 
 export const useCursorHover = () => {
     const [hovered, setHovered] = useState(false);
-
+    const [label, setLabel] = useState<string | null>(null);
 
     useEffect(() => {
-        const handleEnter = () => setHovered(true);
-        const handleLeave = () => setHovered(false);
+        const handleEnter = (e: Event) => {
+            const target = e.currentTarget as HTMLElement;
+
+            setHovered(true);
+
+            if (target.classList.contains("portfolio-image")) {
+                setLabel("Explore Project");
+            }
+        };
+
+        const handleLeave = () => {
+            setHovered(false);
+            setLabel(null);
+        };
+
         const hoverables = document.querySelectorAll(
             "a, [data-hover], button, .portfolio-image"
         );
@@ -21,8 +34,8 @@ export const useCursorHover = () => {
                 el.removeEventListener("mouseenter", handleEnter);
                 el.removeEventListener("mouseleave", handleLeave);
             });
-        }
+        };
     }, []);
 
-    return hovered;
-}
+    return { hovered, label };
+};

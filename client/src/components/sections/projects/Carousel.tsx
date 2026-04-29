@@ -39,22 +39,21 @@ const Carousel = ({ images, active, setActive }: CarouselTypes) => {
                 return (
                     <motion.div
                         key={i}
-
                         className={`
                             carousel-item
-                            min-w-[73%]
+                            min-w-[77%]
                             transition-all duration-500
                             will-change-transform
                             ${isActive
                                 ? "scale-100 opacity-100"
-                                : "scale-[0.98] opacity-50"
+                                : "scale-[0.99] opacity-50"
                             }
                         `}
                     >
                         <div className="overflow-hidden">
                             <img
                                 src={src}
-                                className="w-full h-150 object-cover portfolio-image"
+                                className="w-full h-190 object-cover portfolio-image"
                                 draggable={false}
                             />
                         </div>

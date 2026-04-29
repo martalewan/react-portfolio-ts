@@ -3,20 +3,27 @@ import { useCursorPosition } from "../../hooks/useCursorPosition";
 
 const Cursor = () => {
     const pos = useCursorPosition();
-    const hovered = useCursorHover();
+    const { hovered, label } = useCursorHover();
 
     return (
         <div className="pointer-events-none fixed inset-0 z-12 mix-blend-difference">
 
             <div
-                className="absolute w-4 h-4 rounded-full bg-bg-inverse transition-transform duration-300 ease-out"
+                className="absolute w-4 h-4 rounded-full bg-bg-inverse transition-transform duration-300 ease-out flex items-center justify-center"
                 style={{
                     transform: `
-                    translate(${pos.x - 4}px, ${pos.y - 4}px)
-                    scale(${hovered ? 5 : 0.5})
-                `,
+                        translate(${pos.x + 12}px, ${pos.y + 12}px)
+                        scale(${hovered ? 6 : 0.5})
+                    `,
                 }}
-            />
+            >
+                {hovered && label && (
+                    <span className="text-[2px] font-bold mix-blend-difference p-3">
+                        {label}
+                    </span>
+                )}
+            </div>
+
         </div>
     );
 };
