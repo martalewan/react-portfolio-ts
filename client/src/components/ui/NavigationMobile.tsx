@@ -20,7 +20,7 @@ const MobileNavigation = ({ navData }: NavigationProps) => {
             }
             <RouterLink
                 to="/design"
-                className="text-[13px] text-text-40 uppercase transition hover:text-text"
+                className="text-text-40 uppercase transition hover:text-text"
             >
                 Design Archive
             </RouterLink>

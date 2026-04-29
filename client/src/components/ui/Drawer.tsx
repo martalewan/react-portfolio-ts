@@ -41,7 +41,7 @@ const Drawer = ({ children }: DrawerProps) => {
 
                         </div>
 
-                        <div className="flex h-full flex-col items-center overflow-y-auto bg-bg-80 py-6 shadow-xl">
+                        <div className="flex h-full flex-col items-center overflow-y-auto bg-bg py-6 shadow-xl">
                             <div className="mt-20 sm:px-6">
                                 <Logo />
                             </div>

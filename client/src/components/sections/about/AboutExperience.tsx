@@ -48,24 +48,24 @@ const AboutExperience = () => {
                     </motion.div>
                 ))}
             </div>
-            <motion.div variants={itemReveal} className="pt-4 border-t border-border-15 max-w-md self-end">
-                <p className="text-xs tracking-widest text-text-40 uppercase mb-3">
+            <motion.div variants={itemReveal} className="pt-4 border-t border-border-15 max-w-md self-end group">
+                <p className="text-xs tracking-widest text-text-40 uppercase mb-3 group-hover:text-accent">
                     Achievements
                 </p>
 
                 <div className="flex flex-col gap-2">
 
-                    <div className="flex items-start justify-between gap-4">
+                    <div className="flex items-center justify-between gap-4">
                         <span className="text-sm text-text leading-snug">
                             HackYeah — 1st place
                         </span>
 
-                        <span className="text-xs text-text-40 whitespace-nowrap">
+                        <span className="text-xs text-text-40 whitespace-nowrap ">
                             2019
                         </span>
                     </div>
 
-                    <p className="text-xs text-text-40 leading-relaxed">
+                    <p className="text-xs text-text-40 leading-relaxed group-hover:text-accent">
                         Orlen Mobile — First Aid Module
                     </p>
 

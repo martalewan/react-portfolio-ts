@@ -6,14 +6,14 @@ const Cursor = () => {
     const { hovered, label } = useCursorHover();
 
     return (
-        <div className="pointer-events-none fixed inset-0 z-12 mix-blend-difference">
+        <div className="pointer-events-none fixed inset-0 mix-blend-difference z-20">
 
             <div
                 className="absolute w-4 h-4 rounded-full bg-bg-inverse transition-transform duration-300 ease-out flex items-center justify-center"
                 style={{
                     transform: `
                         translate(${pos.x + 12}px, ${pos.y + 12}px)
-                        scale(${hovered ? 6 : 0.5})
+                        scale(${hovered ? (label ? 7 : 5) : 0.5})
                     `,
                 }}
             >
