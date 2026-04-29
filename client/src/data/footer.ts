@@ -19,7 +19,7 @@ export const FOOTER_SECTIONS_DATA: FooterSectionsData = {
 
     contact: {
         title: "Contact",
-        description: "Crafting digital experiences with modern web technologies",
+        description: "Available for collaborations, freelance projects, and new opportunities.",
     },
 
     cta: {

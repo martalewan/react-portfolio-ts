@@ -4,13 +4,11 @@ import nototCover from "../../assets/designArchive/covers/notot.jpg";
 import posterCover from "../../assets/designArchive/covers/illustrations.jpg";
 import szczescieCover from "../../assets/designArchive/covers/szczescie.jpg";
 import demantCover from "../../assets/designArchive/covers/demant.jpg";
-
 import mpaCover from "../../assets/designArchive/covers/mpa.jpg";
 import porCover from "../../assets/designArchive/covers/por.jpg";
 import illustrationsCover from "../../assets/designArchive/covers/min-illustrations.jpg";
 import plannerCover from "../../assets/designArchive/covers/planner.jpg";
 import antoninaCover from "../../assets/designArchive/covers/antonina.jpg";
-
 import atmoCover from "../../assets/designArchive/covers/atmo.jpg";
 import balenciagaCover from "../../assets/designArchive/covers/posters.jpg";
 import restoCover from "../../assets/designArchive/covers/marche.jpg";
@@ -32,7 +30,6 @@ import atmo8 from "../../assets/designArchive/atmo/atmo8.jpg"
 import atmo9 from "../../assets/designArchive/atmo/atmo9.jpg"
 import atmo10 from "../../assets/designArchive/atmo/atmo10.jpg"
 import atmo11 from "../../assets/designArchive/atmo/atmo11.jpg"
-
 import beeteam1 from "../../assets/designArchive/beeteam/beeteam1.jpg"
 import beeteam2 from "../../assets/designArchive/beeteam/beeteam2.png"
 import beeteam3 from "../../assets/designArchive/beeteam/beeteam3.png"
@@ -116,7 +113,6 @@ import posterColor6 from "../../assets/designArchive/illustrations/poster6.jpg";
 import posterColor7 from "../../assets/designArchive/illustrations/poster7.jpg";
 import posterColor8 from "../../assets/designArchive/illustrations/poster8.jpg";
 import posterColor9 from "../../assets/designArchive/illustrations/poster9.jpg";
-
 import resto1 from "../../assets/designArchive/marche/marche1.jpg";
 import resto2 from "../../assets/designArchive/marche/marche2.jpg";
 import resto3 from "../../assets/designArchive/marche/marche3.jpg";

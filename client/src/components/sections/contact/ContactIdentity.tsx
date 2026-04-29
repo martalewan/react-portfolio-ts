@@ -3,6 +3,7 @@ import { FiMapPin, FiMail } from "react-icons/fi";
 import Socials from "../../ui/Socials";
 import { motion } from "framer-motion";
 import { itemReveal } from "../../../animations";
+import { FaTelegramPlane } from "react-icons/fa";
 
 const ContactIdentity = () => {
     return (
@@ -11,7 +12,7 @@ const ContactIdentity = () => {
                 variants={itemReveal}
                 className="text-xs tracking-widest text-text-40 uppercase block mb-7"
             >
-                About
+                Where you can find me
             </motion.span>
             <div className="flex flex-col md:flex-row md:ml-auto gap-6 md:gap-4">
 
@@ -40,16 +41,6 @@ const ContactIdentity = () => {
                             </motion.div>
                         </div>
 
-                        <div className="ui-elevated text-xs">
-                            <motion.div
-                                variants={itemReveal}
-                                className="flex items-center gap-2 whitespace-nowrap">
-                                <FiMail className="text-accent text-sm shrink-0" />
-                                <span className="truncate max-w-[200px]">
-                                    mlewan.design@gmail.com
-                                </span>
-                            </motion.div>
-                        </div>
                         <motion.div
                             variants={itemReveal} className="ui-elevated text-xs">
                             <div className="flex items-center gap-2 whitespace-nowrap">
@@ -66,8 +57,51 @@ const ContactIdentity = () => {
                         </motion.div>
 
                     </div>
+                    <motion.span
+                        variants={itemReveal}
+                        className="text-xs tracking-widest text-text-40 uppercase block"
+                    >
+                        Quick contact
+                    </motion.span>
+
+                    <motion.div
+                        variants={itemReveal}
+                        className="flex items-center whitespace-nowrap"
+                    >
+                        <div className="flex flex-col gap-3">
+                            <motion.a
+                                href="mailto:mlewan.design@gmail.com"
+                                className="text-xs"
+                                variants={itemReveal}
+                            >
+                                <div
+                                    className="flex items-center gap-2 whitespace-nowrap"
+                                >
+                                    <FiMail className="text-accent text-sm shrink-0" />
+                                    <span>mlewan.design@gmail.com</span>
+                                </div>
+                            </motion.a>
+                            <motion.a
+                                href="https://t.me/martalewan"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-xs cursor-pointer"
+                                variants={itemReveal}
+                            >
+                                <div
+                                    className="flex items-center gap-2 whitespace-nowrap"
+                                >
+                                    <FaTelegramPlane className="text-accent text-sm shrink-0" />
+                                    <span>telegram</span>
+                                </div>
+                            </motion.a>
+                        </div>
+
+                    </motion.div>
                 </div>
+
             </div>
+
         </div >
     );
 };

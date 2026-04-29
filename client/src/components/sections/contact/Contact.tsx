@@ -32,7 +32,7 @@ const Contact = () => {
                             variants={itemReveal}
                             className="flex flex-col gap-2 mb-10"
                         >
-                            <h3 className="text-text">Let’s work together</h3>
+                            <h3 className="text-text">Let’s talk about your project and the next steps</h3>
                             <p className="text-text-80 text-sm leading-relaxed">
                                 I usually respond within a day. Open to freelance, collaborations, or new ideas.
                             </p>
