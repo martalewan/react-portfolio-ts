@@ -58,6 +58,7 @@ export const projects = [
             "UI Design",
             "Frontend Development",
         ],
+        link: "real-estate-webside.pages.dev"
     },
 
     {
@@ -94,5 +95,6 @@ export const projects = [
             "Game Logic",
             "Animations",
         ],
+        link: "https://asteroid-game-ez2.pages.dev"
     },
 ];
