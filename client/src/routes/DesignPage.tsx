@@ -29,21 +29,6 @@ export default function DesignArchive() {
                         <ArchiveProjectShowcase key={p.id} {...p} />
                     ))}
                 </section>
-
-                {/* <section className="min-h-screen">
-                    <h2 className="font-[Playfair_Display] text-[36px] mb-8.25">
-                        Projects Quick Overview
-                    </h2>
-                    <div className="grid grid-cols-3 gap-5">
-                        {portfolioData.map((col, i) => (
-                            <div key={i} className="flex flex-col gap-5">
-                                {col.map((item, j) => (
-                                    <PortfolioItem key={j} {...item} />
-                                ))}
-                            </div>
-                        ))}
-                    </div>
-                </section> */}
                 <ArchiveFooter />
 
             </main>
