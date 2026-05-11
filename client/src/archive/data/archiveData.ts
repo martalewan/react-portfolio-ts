@@ -14,11 +14,11 @@ import balenciagaCover from "../../assets/designArchive/covers/posters.jpg";
 import restoCover from "../../assets/designArchive/covers/marche.jpg";
 import lulaCover from "../../assets/designArchive/covers/lula.jpg";
 import beeCover from "../../assets/designArchive/covers/bee-team.jpg";
-import antonina1 from "../../assets/designArchive/antonina/antonina1.jpg";
-import antonina2 from "../../assets/designArchive/antonina/antonina2.jpg";
-import antonina3 from "../../assets/designArchive/antonina/antonina3.jpg";
-import antonina4 from "../../assets/designArchive/antonina/antonina4.jpg";
-import antonina5 from "../../assets/designArchive/antonina/antonina5.jpg";
+import antonina1 from "../../assets/designArchive/antoninaBrand/antoninaBrand1.jpg";
+import antonina2 from "../../assets/designArchive/antoninaBrand/antoninaBrand2.jpg";
+import antonina3 from "../../assets/designArchive/antoninaBrand/antoninaBrand3.jpg";
+import antonina4 from "../../assets/designArchive/antoninaBrand/antoninaBrand4.jpg";
+import antonina5 from "../../assets/designArchive/antoninaBrand/antoninaBrand5.jpg";
 import atmo1 from "../../assets/designArchive/atmoMag/atmoMag1.jpg"
 import atmo2 from "../../assets/designArchive/atmoMag/atmoMag2.jpg"
 import atmo3 from "../../assets/designArchive/atmoMag/atmoMag3.jpg"
