@@ -41,7 +41,7 @@ const Carousel = ({ images, active, setActive }: CarouselTypes) => {
                         key={i}
                         className={`
                             carousel-item
-                            min-w-[77%]
+                            min-w-[60%]
                             transition-all duration-500
                             will-change-transform
                             ${isActive
@@ -50,10 +50,15 @@ const Carousel = ({ images, active, setActive }: CarouselTypes) => {
                             }
                         `}
                     >
-                        <div className="overflow-hidden">
+                        <div className="overflow-hidden aspect-18/11">
                             <img
                                 src={src}
-                                className="w-full h-190 object-cover portfolio-image"
+                                className="
+                                w-full
+                                h-full
+                                object-cover
+                                portfolio-image
+                            "
                                 draggable={false}
                             />
                         </div>

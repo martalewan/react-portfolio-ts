@@ -3,7 +3,19 @@ import Carousel from "./Carousel";
 import CarouselIndicator from "./CarouselIndicator";
 import ProjectInfo from "./ProjectInfo";
 
-const ProjectCard = ({ project }) => {
+type Project = {
+    id: string;
+    title: string;
+    description: string;
+    images: string[];
+    techStack: string[];
+};
+
+type ProjectCardProps = {
+    project: Project;
+};
+
+const ProjectCard = ({ project }: ProjectCardProps) => {
     const [active, setActive] = useState(0);
 
     return (
@@ -17,7 +29,7 @@ const ProjectCard = ({ project }) => {
                 images={project.images}
                 active={active}
             />
-            <div className="page-padding">
+            <div className="w-[60%] mx-auto">
                 <ProjectInfo project={project} />
             </div>
         </div>
