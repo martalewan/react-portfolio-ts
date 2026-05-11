@@ -1,7 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, type RefObject } from "react";
 
 export function useCarouselInit(
-    ref: React.RefObject<HTMLDivElement>,
+    ref: RefObject<HTMLDivElement | null>,
     images: string[]
 ) {
     useEffect(() => {

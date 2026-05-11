@@ -1,7 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, type RefObject } from "react";
 
 export function useCarouselScroll(
-    ref: React.RefObject<HTMLDivElement>,
+    ref: RefObject<HTMLDivElement | null>,
     imagesLength: number,
     setActive: (i: number) => void
 ) {

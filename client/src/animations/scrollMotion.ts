@@ -1,7 +1,8 @@
-import { useTransform, useScroll } from "framer-motion";
+import { useTransform, useScroll, MotionValue } from "framer-motion";
+import type { RefObject } from "react";
 
 export const useHorizontalParallax = (
-    progress,
+    progress: MotionValue<number>,
     start: number,
     end: number
 ) => {
@@ -9,7 +10,7 @@ export const useHorizontalParallax = (
 };
 
 
-export const useScrollFadeIn = (targetRef: React.RefObject<HTMLElement>) => {
+export const useScrollFadeIn = (targetRef: RefObject<HTMLElement | null>) => {
     const { scrollYProgress } = useScroll({
         target: targetRef,
         offset: ["start start", "end start"],

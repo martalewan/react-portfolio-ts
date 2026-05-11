@@ -5,13 +5,15 @@ import ArchiveAbout from "../archive/components/ArchiveAbout";
 import ArchiveContact from "../archive/components/ArchiveContact";
 import ArchiveProjectShowcase from "../archive/components/ArchiveProjectShowcase";
 import { projectsData } from "../archive/data/archiveData";
+import { useState } from "react";
 
 export default function DesignArchive() {
+    const [navOpen, setNavOpen] = useState<boolean>(false);
 
     return (
         <div className="bg-archive-bg text-archive-text font-[Montserrat] px-[10vw]">
 
-            <ArchiveNavbar navOpen={undefined} setNavOpen={undefined} />
+            <ArchiveNavbar navOpen={navOpen} setNavOpen={setNavOpen} />
 
             <main>
 

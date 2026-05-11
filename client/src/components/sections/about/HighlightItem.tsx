@@ -1,7 +1,19 @@
 import { motion } from "framer-motion";
 import { itemReveal } from "../../../animations";
 
-const HighlightItem = ({ item }) => (
+type HighlightItemData = {
+    prefix: string;
+    title: string;
+    text: string;
+};
+
+type HighlightItemProps = {
+    item: HighlightItemData;
+};
+
+const HighlightItem = ({
+    item,
+}: HighlightItemProps) => (
     <motion.div
         variants={itemReveal}
         className="flex flex-row gap-2"
@@ -14,6 +26,7 @@ const HighlightItem = ({ item }) => (
             <h4 className="text-sm text-text-40">
                 {item.title}
             </h4>
+
             <p className="text-sm leading-relaxed">
                 {item.text}
             </p>

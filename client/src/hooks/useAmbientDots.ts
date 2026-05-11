@@ -1,6 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, type RefObject } from "react";
 
-export function useAmbientDots(containerRef: React.RefObject<HTMLDivElement>) {
+export function useAmbientDots(containerRef: RefObject<HTMLDivElement | null>) {
     useEffect(() => {
         const container = containerRef.current;
         if (!container) return;

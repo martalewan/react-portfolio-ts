@@ -1,11 +1,26 @@
+import type { Dispatch, SetStateAction } from "react";
 import { Link } from "react-router-dom";
 import { useScrollTo } from "../hooks/useScrollTo";
 
-export default function Navbar({ navOpen, setNavOpen }) {
+type NavbarProps = {
+    navOpen: boolean;
+    setNavOpen: Dispatch<SetStateAction<boolean>>;
+};
 
+type NavButtonProps = {
+    id: string;
+    label: string;
+};
+
+type RouteButtonProps = {
+    to: string;
+    label: string;
+};
+
+export default function Navbar({ navOpen, setNavOpen }: NavbarProps) {
     const scrollTo = useScrollTo();
 
-    const NavButton = ({ id, label }) => (
+    const NavButton = ({ id, label }: NavButtonProps) => (
         <button
             onClick={() => scrollTo(id)}
             className="hover:opacity-60 transition cursor-pointer"
@@ -14,7 +29,7 @@ export default function Navbar({ navOpen, setNavOpen }) {
         </button>
     );
 
-    const RouteButton = ({ to, label }) => (
+    const RouteButton = ({ to, label }: RouteButtonProps) => (
         <Link
             to={to}
             className="
@@ -34,7 +49,6 @@ export default function Navbar({ navOpen, setNavOpen }) {
     return (
         <header className="fixed top-0 left-0 w-full z-50 bg-archive-bg">
             <nav className="h-16 flex justify-between items-center px-[10vw]">
-
                 <Link
                     to="/"
                     className="font-semibold tracking-wide cursor-pointer"
@@ -43,7 +57,6 @@ export default function Navbar({ navOpen, setNavOpen }) {
                 </Link>
 
                 <div className="hidden md:flex gap-8 tracking-wide items-center">
-
                     <NavButton id="home" label="Home" />
                     <NavButton id="about" label="About" />
                     <NavButton id="projects" label="Projects" />

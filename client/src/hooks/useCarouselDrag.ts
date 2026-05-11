@@ -1,6 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, type RefObject } from "react";
 
-export function useCarouselDrag(ref: React.RefObject<HTMLDivElement>) {
+export function useCarouselDrag(ref: RefObject<HTMLDivElement | null>) {
     useEffect(() => {
         const el = ref.current;
         if (!el) return;
@@ -29,15 +29,17 @@ export function useCarouselDrag(ref: React.RefObject<HTMLDivElement>) {
                 }
             });
 
-            if (closest) {
-                el.scrollTo({
-                    left:
-                        closest.offsetLeft -
-                        el.offsetWidth / 2 +
-                        closest.offsetWidth / 2,
-                    behavior: "smooth",
-                });
-            }
+            const closestItem = closest as HTMLElement | null;
+
+            if (!closestItem) return;
+
+            el.scrollTo({
+                left:
+                    closestItem.offsetLeft -
+                    el.offsetWidth / 2 +
+                    closestItem.offsetWidth / 2,
+                behavior: "smooth",
+            });
         };
 
         const onMouseDown = (e: MouseEvent) => {

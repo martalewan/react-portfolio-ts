@@ -1,10 +1,10 @@
-import { motion } from "framer-motion";
+import { motion, MotionValue } from "framer-motion";
 import { itemReveal, useHorizontalParallax } from "../../../animations";
 import ParallaxPhrase from "./ParallaxPhrase";
 
 type ParallaxRowProps = {
-    progress,
-    index: number,
+    progress: MotionValue<number>;
+    index: number;
     text: string;
     left?: number | string;
     highlights?: number[];

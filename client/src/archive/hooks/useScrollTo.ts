@@ -1,10 +1,13 @@
-export function useScrollTo(offset = 80) {
-    const scrollTo = (id) => {
+export function useScrollTo(offset: number = 80) {
+    const scrollTo = (id: string): void => {
         const el = document.getElementById(id);
+
         if (!el) return;
 
         const top =
-            el.getBoundingClientRect().top + window.scrollY - offset;
+            el.getBoundingClientRect().top +
+            window.scrollY -
+            offset;
 
         window.scrollTo({
             top,

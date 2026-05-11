@@ -1,7 +1,7 @@
 import { useEffect, useState, type RefObject } from "react";
 import { useScroll, useSpring, useTransform } from "framer-motion";
 
-export const useAboutScroll = (ref: RefObject<HTMLElement>) => {
+export const useAboutScroll = (ref: RefObject<HTMLElement | null>) => {
     const [isDesktop, setIsDesktop] = useState(
         typeof window !== "undefined" && window.innerWidth >= 1024
     );
