@@ -1,73 +1,134 @@
-# React + TypeScript + Vite
+# Marta Lewandowska — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern interactive portfolio built with React, TypeScript, Vite, Framer Motion, and Tailwind CSS.
 
-Currently, two official plugins are available:
+Live website: https://martalewan.com
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Framer Motion
+- GSAP
+- React Router
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Features
 
-```js
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
+- Responsive modern UI
+- Smooth scroll animations
+- Interactive project galleries
+- Lightbox image viewer
+- Custom carousel interactions
+- Animated transitions
+- Game experiment section
+- Design archive section
+- Fully typed TypeScript setup
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+## Getting Started
+
+### Clone the repository
+
+```bash
+git clone https://github.com/your-username/your-repo.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Install dependencies
 
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
-
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs["recommended-typescript"],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+```bash
+npm install
 ```
+
+### Run development server
+
+```bash
+npm run dev
+```
+
+---
+
+## Available Scripts
+
+### Start development server
+
+```bash
+npm run dev
+```
+
+### Build production app
+
+```bash
+npm run build
+```
+
+### Preview production build
+
+```bash
+npm run preview
+```
+
+### Run ESLint
+
+```bash
+npm run lint
+```
+
+### Run TypeScript checks
+
+```bash
+npx tsc -b
+```
+
+---
+
+## Project Structure
+
+```txt
+src/
+├── animations/
+├── assets/
+├── components/
+├── data/
+├── game/
+├── hooks/
+├── layouts/
+├── pages/
+├── styles/
+└── utils/
+```
+
+---
+
+## Design Goals
+
+This portfolio focuses on:
+
+- clean motion design
+- immersive interactions
+- performant frontend architecture
+- responsive layouts
+- modern UI systems
+- strong visual storytelling
+
+---
+
+## Deployment
+
+Deployed with Cloudflare Pages.
+
+---
+
+## Author
+
+### Marta Lewandowska
+
+- Portfolio: https://martalewan.com
+- GitHub: https://github.com/martalewan
+- LinkedIn: https://www.linkedin.com/in/marta-lewandowska/
