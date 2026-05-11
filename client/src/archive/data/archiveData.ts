@@ -146,8 +146,8 @@ export const portfolioData = [
 export const projectsData = [
     {
         id: "resto",
-        title: "RESTO",
-        tags: "Restaurant Branding",
+        title: "Marche",
+        tags: "Restaurant Branding, Print Design, Lettering.",
         cover: restoCover,
         images: [resto1, resto2, resto3, resto4],
     },
@@ -167,22 +167,22 @@ export const projectsData = [
     },
     {
         id: "notot",
-        title: "NOTOT",
-        tags: "Branding",
+        title: "Notot App",
+        tags: "Design, Branding & Front End Development (HTML, CSS & Javascript).",
         cover: nototCover,
         images: [notot1, notot2, notot3],
     },
     {
         id: "por",
-        title: "POR",
-        tags: "Editorial Design",
+        title: "Pani od rodzinnego",
+        tags: "Branding, Print Design, Lettering.",
         cover: porCover,
         images: [por1, por2, por3, por4, por5],
     },
     {
         id: "moon",
         title: "The Moon Project",
-        tags: "Editorial Design, Concept",
+        tags: "Branding, Print Design, Lettering.",
         cover: moonCover,
         images: [moon1, moon2, moon3, moon4, moon5],
     },
@@ -224,7 +224,7 @@ export const projectsData = [
     {
         id: "mpa",
         title: "MPA Magazine",
-        tags: "Editorial Design",
+        tags: "Art Direction, Layout, Print & Digital Files, Marketing Materials.",
         cover: mpaCover,
         images: [
             mpa1, mpa2, mpa3, mpa4, mpa5,
@@ -235,8 +235,8 @@ export const projectsData = [
 
     {
         id: "planner",
-        title: "Planner Design",
-        tags: "Print Design",
+        title: "Uvibe planner",
+        tags: "Art Direction, Layout, Illustrations, Marketing Materials.",
         cover: plannerCover,
         images: [
             planner1,
@@ -251,12 +251,10 @@ export const projectsData = [
         ],
     },
 
-
-
     {
         id: "szczescie",
         title: "Szczęście",
-        tags: "Graphic Design",
+        tags: "Illustrations, Web Design, Marketing Materials.",
         cover: szczescieCover,
         images: [
             szczescie1,
@@ -267,8 +265,6 @@ export const projectsData = [
             szczescie6,
         ],
     },
-
-
 
     {
         id: "poster",
@@ -290,20 +286,20 @@ export const projectsData = [
     },
     {
         id: "lula",
-        title: "LULA",
-        tags: "Editorial, Magazine Design",
+        title: "Lula Mag for Yves Saint Laurent",
+        tags: "Photo Retouche, Layout, Cover Design.",
         cover: lulaCover,
         images: [lula1, lula2, lula3, lula4, lula5, lula6, lula7],
     },
     {
         id: "cev",
-        title: "CeV Studio",
-        tags: "Branding, Visual Identity",
+        title: "Cuisine et vin de France, Special edition 2018",
+        tags: "Art Direction, Layout",
         cover: cevCover,
         images: [cuisine1, cuisine2, cuisine3, cuisine4, cuisine5],
     },
     {
-        id: "teambee",
+        id: "Marketing Demant's team",
         title: "Marketing Demant's Team",
         tags: "Branding, Print Materials",
         cover: beeCover,
