@@ -33,6 +33,7 @@ export const projects = [
             "react-i18next / i18n",
             "SEO optimization",
         ],
+        link: "https://lokaltank-gatsby.pages.dev/"
     },
 
     {

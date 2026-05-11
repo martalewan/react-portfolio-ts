@@ -3,6 +3,7 @@ type ProjectInfoProps = {
         title: string;
         techStack: string[];
         description: string;
+        link?: string;
     };
 };
 
@@ -28,7 +29,18 @@ const ProjectInfo = ({ project }: ProjectInfoProps) => {
                 <p className="text-text-80">
                     {project.description}
                 </p>
+                {project.link && (
+                    <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block mt-5 text-sm underline underline-offset-4 hover:opacity-60 transition cursor-pointer"
+                    >
+                        View project
+                    </a>
+                )}
             </div>
+
 
         </div>
     );

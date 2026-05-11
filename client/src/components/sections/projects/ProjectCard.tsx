@@ -9,6 +9,7 @@ type Project = {
     description: string;
     images: string[];
     techStack: string[];
+    link?: string;
 };
 
 type ProjectCardProps = {
