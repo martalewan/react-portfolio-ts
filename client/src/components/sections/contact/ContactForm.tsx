@@ -37,14 +37,14 @@ const ContactForm = () => {
 
         try {
             await emailjs.send(
-                "YOUR_SERVICE_ID",
-                "YOUR_TEMPLATE_ID",
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
                 {
-                    name: name,
-                    email: email,
-                    message: message,
+                    name,
+                    email,
+                    message,
                 },
-                "YOUR_PUBLIC_KEY"
+                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
             );
 
             setSent(true);
