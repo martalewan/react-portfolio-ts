@@ -19,7 +19,7 @@ const AboutExperience = () => {
                 <span
                     className="text-xs tracking-widest text-text-40 uppercase"
                 >
-                    Experience
+                    My Professional Experience
                 </span>
 
                 <motion.span

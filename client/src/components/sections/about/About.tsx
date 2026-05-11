@@ -37,7 +37,7 @@ const About = () => {
                         variants={itemReveal}
                         className="text-xs tracking-widest text-text-40 uppercase block mb-7"
                     >
-                        About
+                        About me
                     </motion.span>
 
                     <AboutContent />
@@ -58,7 +58,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <div className="mt-10">
+            <div className="mt-30">
                 <AboutExperience />
 
             </div>

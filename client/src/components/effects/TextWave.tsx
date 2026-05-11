@@ -25,7 +25,7 @@ const TextWave = () => {
     }, [scrollYProgress]);
 
     return (
-        <div className="w-full h-170 overflow-hidden flex items-end justify-center">
+        <div className="w-full h-200 overflow-hidden flex items-end justify-center">
             <svg className="w-full" viewBox="0 0 170 100">
 
                 <path
