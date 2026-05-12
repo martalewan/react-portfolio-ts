@@ -5,7 +5,7 @@ import { Link as RouterLink } from "react-router-dom";
 
 const MobileNavigation = ({ navData }: NavigationProps) => {
     return (
-        <div className="flex flex-col items-center gap-5">
+        <div className="flex flex-col items-center gap-6">
             {
                 navData.map((item) => (
                     <Link
@@ -13,14 +13,14 @@ const MobileNavigation = ({ navData }: NavigationProps) => {
                         to={item.id}
                         smooth={true}
                         duration={500}
-                        className="text-text-80 uppercase cursor-pointer transition-all duration-600 ease-in-out hover:text-text"
+                        className="text-text-80 text-[13px] uppercase cursor-pointer transition-all duration-600 ease-in-out hover:text-text"
                     >{item.label}
                     </Link>
                 ))
             }
             <RouterLink
                 to="/design"
-                className="text-text-40 uppercase transition hover:text-text"
+                className="text-text-40 text-[13px] uppercase transition hover:text-text"
             >
                 Design Archive
             </RouterLink>

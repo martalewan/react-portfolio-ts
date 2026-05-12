@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { CiMenuFries } from "react-icons/ci";
 import { MdClose } from "react-icons/md";
 import Logo from "../ui/Logo";
+import { GoArrowDownLeft } from "react-icons/go";
 
 type DrawerProps = {
     children: React.ReactNode;
@@ -13,14 +13,13 @@ const Drawer = ({ children }: DrawerProps) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const drawer = (
-        <AnimatePresence mode="wait">
+        <AnimatePresence>
             {isOpen && (
                 <motion.div
-                    className="fixed inset-0 z-9999"
-                    initial={{ opacity: 0 }}
+                    className="fixed inset-0 z-[9999]"
+                    initial={false}
                     animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.4 }}
+                    exit={{ opacity: 1 }}
                 >
                     <motion.button
                         type="button"
@@ -32,14 +31,13 @@ const Drawer = ({ children }: DrawerProps) => {
                         exit={{
                             opacity: 0,
                             transition: {
-                                delay: 0.25,
-                                duration: 0.35,
+                                delay: 0.45,
+                                duration: 0.25,
                             },
                         }}
                     />
 
-                    <div className="absolute right-0 top-0 h-dvh w-[85vw] max-w-md">
-
+                    <div className="absolute right-5 top-3 h-[81vh] w-[80vw] max-w-md rounded-xl overflow-hidden">
                         <motion.div
                             initial={{
                                 clipPath: "circle(0% at 100% 0%)",
@@ -54,22 +52,18 @@ const Drawer = ({ children }: DrawerProps) => {
                             exit={{
                                 clipPath: "circle(0% at 100% 0%)",
                                 transition: {
-                                    delay: 0.12,
-                                    duration: 0.7,
+                                    duration: 0.75,
                                     ease: [0.83, 0, 0.17, 1],
                                 },
                             }}
                             className="
                                 absolute inset-0
-                                bg-bg shadow-xl
+                                bg-bg/80 backdrop-blur-xl shadow-xl
                             "
                         />
 
                         <motion.div
-                            initial={{
-                                opacity: 0,
-                                y: 20,
-                            }}
+                            initial={{ opacity: 0, y: 20 }}
                             animate={{
                                 opacity: 1,
                                 y: 0,
@@ -80,7 +74,7 @@ const Drawer = ({ children }: DrawerProps) => {
                             }}
                             exit={{
                                 opacity: 0,
-                                y: -8,
+                                y: 10,
                                 transition: {
                                     duration: 0.18,
                                     ease: "easeOut",
@@ -92,7 +86,7 @@ const Drawer = ({ children }: DrawerProps) => {
                                 items-center overflow-y-auto py-6
                             "
                         >
-                            <div className="absolute top-4 right-7">
+                            <div className="absolute top-3 right-3">
                                 <button
                                     type="button"
                                     onClick={() => setIsOpen(false)}
@@ -122,10 +116,10 @@ const Drawer = ({ children }: DrawerProps) => {
             <button
                 type="button"
                 onClick={() => setIsOpen(true)}
-                className="rounded-md px-2 py-1 text-sm font-semibold cursor-pointer"
+                className="rounded-md py-1 text-sm font-semibold cursor-pointer"
                 aria-label="Open menu"
             >
-                <CiMenuFries className="size-6" />
+                <GoArrowDownLeft className="size-9" />
             </button>
 
             {typeof document !== "undefined" &&

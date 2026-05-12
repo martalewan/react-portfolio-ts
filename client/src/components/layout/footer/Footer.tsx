@@ -30,7 +30,6 @@ const Footer = () => {
             <div
                 className="
                     absolute inset-1
-                    z-0
                     backdrop-blur-xs
                 "
             />
@@ -40,7 +39,7 @@ const Footer = () => {
                 md:grid-cols-3
                 gap-16 md:gap-24
                 items-start
-                relative z-10
+                relative
             ">
 
                 <FooterBrandSection data={brand} />
