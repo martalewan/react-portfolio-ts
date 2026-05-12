@@ -119,7 +119,7 @@ const Drawer = ({ children }: DrawerProps) => {
                 className="rounded-md py-1 text-sm font-semibold cursor-pointer"
                 aria-label="Open menu"
             >
-                <GoArrowDownLeft className="size-9" />
+                <GoArrowDownLeft className="size-8.5" />
             </button>
 
             {typeof document !== "undefined" &&
