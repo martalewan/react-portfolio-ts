@@ -6,17 +6,16 @@ export default function ContactSection() {
             id="contact"
             className="relative min-h-screen flex flex-col justify-center text-archive-text"
         >
-            <div className="flex gap-10 items-start">
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 items-start">
 
                 <img
                     src={profilPicture}
-                    className="max-w-100 object-cover"
+                    className="w-full max-w-80 sm:max-w-100 object-cover"
                     alt="Profile"
                 />
 
                 <div>
 
-                    {/* FULL TEXT */}
                     <p className="text-archive-text leading-relaxed">
                         My creative journey began in Paris, where I studied general art and Graphic Design. I had the
                         opportunity to work with talented people all over the world. At first I worked as a freelancer
@@ -35,7 +34,7 @@ export default function ContactSection() {
                         where I am looking for new inspirations and challenges.
                     </p>
 
-                    <h1 className="text-[56px] mt-10 font-[Playfair_Display] text-archive-text-inverse">
+                    <h1 className="text-[36px] sm:text-[44px] lg:text-[56px] mt-8 lg:mt-10 font-[Playfair_Display] text-archive-text-inverse leading-tight">
                         Let's work together!
                     </h1>
 
@@ -43,11 +42,10 @@ export default function ContactSection() {
                         Feel free to reach out if you wanna collaborate with me or simply have a chat.
                     </p>
 
-                    {/* SOCIALS */}
-                    <div className="flex justify-between mt-10 text-archive-text">
+                    <div className="flex flex-col sm:flex-row sm:justify-between gap-8 sm:gap-10 mt-8 lg:mt-10 text-archive-text">
 
                         <div>
-                            <h4 className="mb-6 font-medium">You can find me on</h4>
+                            <h4 className="mb-4 lg:mb-6 font-medium">You can find me on</h4>
                             <a href="https://instagram.com" target="_blank" className="block hover:underline">
                                 Instagram
                             </a>
@@ -57,10 +55,10 @@ export default function ContactSection() {
                         </div>
 
                         <div>
-                            <h4 className="mb-6 font-medium">I am available at</h4>
+                            <h4 className="mb-4 lg:mb-6 font-medium">I am available at</h4>
                             <a
                                 href="mailto:mlewan.design@gmail.com"
-                                className="hover:underline"
+                                className="hover:underline break-all"
                             >
                                 mlewan.design@gmail.com
                             </a>

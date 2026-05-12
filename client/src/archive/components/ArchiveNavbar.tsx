@@ -33,14 +33,15 @@ export default function Navbar({ navOpen, setNavOpen }: NavbarProps) {
         <Link
             to={to}
             className="
-                px-4 py-1.5
-                border border-black
-                rounded-full
-                text-sm
-                hover:bg-black hover:text-white
-                transition
-                cursor-pointer
-            "
+            inline-flex items-center justify-center
+            px-4 py-1.5
+            border border-black
+            rounded-full
+            text-sm
+            hover:bg-black hover:text-white
+            transition
+            cursor-pointer
+        "
         >
             {label}
         </Link>

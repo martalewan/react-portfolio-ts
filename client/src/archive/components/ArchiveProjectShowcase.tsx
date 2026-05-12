@@ -23,7 +23,7 @@ export default function ProjectShowcase({
         if (!ref.current) return;
 
         ref.current.scrollBy({
-            left: dir === "left" ? -600 : 600,
+            left: dir === "left" ? -300 : 300,
             behavior: "smooth",
         });
     };
@@ -31,23 +31,23 @@ export default function ProjectShowcase({
     return (
         <section
             id={id}
-            className="min-h-screen scroll-mt-24"
+            className="scroll-mt-24"
         >
-            <div className="w-full h-px bg-black mt-15 mb-15" />
+            <div className="w-full h-px bg-black mt-10 md:mt-15 mb-10 md:mb-15" />
 
-            <div className="flex justify-between items-center">
-                <div className="text-4xl md:text-6xl font-[Playfair_Display] pb-5">
+            <div className="flex justify-between items-center gap-4">
+                <div className="text-3xl sm:text-4xl md:text-6xl font-[Playfair_Display] pb-5 leading-tight">
                     {title}
                 </div>
 
                 <img
                     src={eyeBlinkGif}
-                    className="h-15 w-15"
+                    className="h-10 w-10 md:h-15 md:w-15 shrink-0"
                     alt=""
                 />
             </div>
 
-            <div className="uppercase tracking-wide text-sm opacity-60 pb-5 text-black">
+            <div className="uppercase tracking-wide text-xs md:text-sm opacity-60 pb-5 text-black">
                 {tags}
             </div>
 
@@ -55,6 +55,7 @@ export default function ProjectShowcase({
                 <button
                     onClick={() => scroll("left")}
                     className="
+                        hidden md:block
                         absolute -left-15 top-1/2 -translate-y-1/2 z-10
                         px-3 py-2
                         bg-white/70
@@ -71,6 +72,7 @@ export default function ProjectShowcase({
                 <button
                     onClick={() => scroll("right")}
                     className="
+                        hidden md:block
                         absolute -right-15 top-1/2 -translate-y-1/2 z-10
                         bg-white/80 
                         px-3 py-2
@@ -87,7 +89,7 @@ export default function ProjectShowcase({
                 <div
                     ref={ref}
                     className="
-                        flex gap-6 overflow-x-auto
+                        flex gap-4 md:gap-6 overflow-x-auto
                         snap-x snap-mandatory
                         pb-6 scroll-smooth
                     "
@@ -96,7 +98,7 @@ export default function ProjectShowcase({
                         <img
                             key={i}
                             src={img}
-                            className="h-[70vh] flex-shrink-0 snap-center"
+                            className="h-[45vh] sm:h-[55vh] md:h-[70vh] max-w-[85vw] object-contain shrink-0 snap-center"
                             alt=""
                         />
                     ))}
