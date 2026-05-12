@@ -41,7 +41,7 @@ const Carousel = ({ images, active, setActive }: CarouselTypes) => {
                         key={i}
                         className={`
                             carousel-item
-                            min-w-[60%]
+                            min-w-[86%] sm:min-w-[72%] lg:min-w-[60%]
                             transition-all duration-500
                             will-change-transform
                             ${isActive
