@@ -20,6 +20,7 @@ const FooterSignature = ({ credit, madeWith, year, copyright }: FooterSignatureP
                 text-xs text-text-80
                 uppercase
                 z-10 text-relaxed
+                text-center md:text-left
             "
         >
             <span>{credit}</span>

@@ -32,7 +32,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                 images={project.images}
                 active={active}
             />
-            <motion.div className="ml-[12%] mr-[12%] md:ml-[20%] md:mr-[20%]" variants={itemReveal}>
+            <motion.div className="ml-[7%] mr-[7%] md:ml-[20%] md:mr-[20%]" variants={itemReveal}>
                 <ProjectInfo project={project} />
             </motion.div>
         </div >

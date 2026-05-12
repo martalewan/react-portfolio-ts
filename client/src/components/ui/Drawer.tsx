@@ -92,7 +92,7 @@ const Drawer = ({ children }: DrawerProps) => {
                                 items-center overflow-y-auto py-6
                             "
                         >
-                            <div className="absolute top-4 right-11">
+                            <div className="absolute top-4 right-7">
                                 <button
                                     type="button"
                                     onClick={() => setIsOpen(false)}
