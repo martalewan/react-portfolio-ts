@@ -18,12 +18,21 @@ export const useScrollFadeIn = (targetRef: RefObject<HTMLElement | null>) => {
 
     const opacity = useTransform(
         scrollYProgress,
-        [0, 0.03, 0.06],
-        [0, 0.8, 1]
+        [0, 0.012, 0.025],
+        [0, 0.9, 1]
     );
 
-    const y = useTransform(scrollYProgress, [0, 0.02], [-60, 0]);
-    const scale = useTransform(scrollYProgress, [0, 0.02], [0.98, 1]);
+    const y = useTransform(
+        scrollYProgress,
+        [0, 0.025],
+        [-28, 0]
+    );
+
+    const scale = useTransform(
+        scrollYProgress,
+        [0, 0.025],
+        [0.99, 1]
+    );
 
     return { opacity, y, scale };
 };

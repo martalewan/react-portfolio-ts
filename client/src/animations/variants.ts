@@ -12,7 +12,7 @@ export const staggerContainer = ({
     show: {
         transition: {
             delayChildren: delay,
-            staggerChildren: motionTokens.stagger.normal,
+            staggerChildren: motionTokens.stagger.fast,
         },
     },
 });
@@ -21,14 +21,14 @@ export const staggerContainer = ({
 export const itemReveal = {
     hidden: {
         opacity: 0,
-        y: motionTokens.distance.md,
+        y: 10,
     },
     show: {
         opacity: 1,
         y: 0,
         transition: {
-            duration: motionTokens.duration.slow,
-            ease: motionTokens.ease.primary,
+            duration: 0.5,
+            ease: motionTokens.ease.soft,
         },
     },
 };
@@ -36,16 +36,20 @@ export const itemReveal = {
 export const imageReveal = {
     hidden: {
         opacity: 0,
-        y: -10,
-        scale: 1.03,
+        y: 8,
+        scale: 0.985,
+        filter: "blur(6px)",
     },
+
     show: {
         opacity: 1,
         y: 0,
         scale: 1,
+        filter: "blur(0px)",
+
         transition: {
-            duration: 0.6,
-            ease: [0.22, 1, 0.36, 1] as const,
+            duration: 0.7,
+            ease: motionTokens.ease.smooth,
         },
     },
 };

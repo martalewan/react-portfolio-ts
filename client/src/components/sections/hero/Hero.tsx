@@ -25,7 +25,6 @@ const Hero = () => {
                     className="absolute top-1/2 right-0 hidden lg:block"
                     style={{
                         opacity,
-                        y,
                         scale,
                     }}
                 >
