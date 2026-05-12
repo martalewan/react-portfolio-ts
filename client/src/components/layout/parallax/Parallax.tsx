@@ -13,7 +13,7 @@ const Parallax = () => {
         <motion.div
             id="parallax"
             variants={staggerContainer({ delay: .5 })}
-            className="flex flex-col py-55"
+            className="flex flex-col py-10 md:py-44 xl:py-55"
             initial="hidden"
             animate="show"
         >

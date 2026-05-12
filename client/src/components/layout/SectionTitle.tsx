@@ -9,7 +9,7 @@ type SectionTitle = {
 
 const SectionTitle = ({ label, title, subtitle }: SectionTitle) => {
     return (
-        <motion.div variants={itemReveal} className="relative flex flex-col items-start gap-2 mt-40 mb-25">
+        <motion.div variants={itemReveal} className="relative flex flex-col items-start gap-2 mt-30 md:mt-40 mb-15 md:mb-25">
 
             <span className="text-xs tracking-widest text-text-40 uppercase">
                 {subtitle}

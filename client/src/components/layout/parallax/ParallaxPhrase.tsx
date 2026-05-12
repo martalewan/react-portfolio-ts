@@ -13,10 +13,9 @@ const ParallaxPhrase = ({ text, highlights = [], className = "" }: ParallaxPhras
                 inline-flex 
                 items-center
                 px-3
-                text-[80px]
-                xl:text-[130px]
                 leading-none
                 whitespace-pre
+                text-inherit
                 ${className}
             `}
         >
