@@ -2,6 +2,8 @@ import { useState } from "react";
 import Carousel from "./Carousel";
 import CarouselIndicator from "./CarouselIndicator";
 import ProjectInfo from "./ProjectInfo";
+import { motion } from "framer-motion";
+import { itemReveal } from "../../../animations";
 
 type Project = {
     id: string;
@@ -20,7 +22,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
     const [active, setActive] = useState(0);
 
     return (
-        <div className="flex flex-col gap-6 overflow-hidden">
+        <div className="flex flex-col gap-8 overflow-hidden">
             <Carousel
                 images={project.images}
                 active={active}
@@ -30,10 +32,10 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                 images={project.images}
                 active={active}
             />
-            <div className="w-[60%] mx-auto">
+            <motion.div className="w-[60%] mx-auto" variants={itemReveal}>
                 <ProjectInfo project={project} />
-            </div>
-        </div>
+            </motion.div>
+        </div >
     );
 };
 

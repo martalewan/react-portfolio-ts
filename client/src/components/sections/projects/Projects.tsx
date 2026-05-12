@@ -19,7 +19,7 @@ const Projects = () => {
                 <SectionTitle label="03." title="Selected Work" subtitle="Engineering-focused projects" />
             </div>
 
-            <div className="flex flex-col gap-40">
+            <div className="flex flex-col gap-40" >
                 {projects.map((project) => (
                     <ProjectCard key={project.id} project={project} />
                 ))}
