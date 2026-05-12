@@ -1,9 +1,9 @@
 import { useState, type SyntheticEvent } from "react";
 import Button from "../../ui/Button";
-import EmailSuccessMessage from "../../ui/EmailSuccessMessage";
 import emailjs from "@emailjs/browser";
 import { itemReveal } from "../../../animations";
 import { motion } from "framer-motion";
+import ToastMessage from "../../ui/ToastMessage";
 
 const inputClass =
     "w-full px-4 py-3 rounded-xs bg-bg-inverse-05 border border-border-15 text-text-80 placeholder-text-faint focus:outline-none focus:border-accent transition-colors";
@@ -85,19 +85,22 @@ const ContactForm = () => {
                     />
                 </motion.div>
 
-
-                {
-                    error && (
-                        <p className="text-red-400 text-sm">{error}</p>
-                    )
-                }
-
                 <div className="pt-2">
                     <Button type="submit" text="Send message" />
                 </div>
 
+                <ToastMessage
+                    visible={sent}
+                    message="Message sent successfully"
+                    type="success"
+                />
+
+                <ToastMessage
+                    visible={!!error}
+                    message={error || ""}
+                    type="error"
+                />
             </form >
-            <EmailSuccessMessage visible={sent} />
 
         </>
     );
