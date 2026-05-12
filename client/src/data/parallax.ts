@@ -1,14 +1,16 @@
 export const PARALLAX_ROWS = [
     {
-        text: "Frontend Developer",
-        highlights: [0, 9], // F + D
-    },
-    {
         text: "Based in Paris",
-        highlights: [9], // P
+        highlights: [12, 13],
     },
+
     {
         text: "Open to collaborations",
-        highlights: [0], // O
+        highlights: [],
+    },
+
+    {
+        text: "Frontend Developer",
+        highlights: [2, 3],
     },
 ];
