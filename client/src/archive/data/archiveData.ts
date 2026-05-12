@@ -170,7 +170,7 @@ export const projectsData = [
         title: "Notot App",
         tags: "Design, Branding & Front End Development (HTML, CSS & Javascript).",
         cover: nototCover,
-        images: [notot1, notot2, notot3],
+        images: [nototCover, notot1, notot2, notot3],
     },
     {
         id: "por",
@@ -227,7 +227,7 @@ export const projectsData = [
         tags: "Art Direction, Layout, Print & Digital Files, Marketing Materials.",
         cover: mpaCover,
         images: [
-            mpa1, mpa2, mpa3, mpa4, mpa5,
+            mpaCover, mpa1, mpa2, mpa3, mpa4, mpa5,
             mpa6, mpa7, mpa8, mpa9, mpa10,
             mpa11, mpa12, mpa13, mpa14,
         ],
