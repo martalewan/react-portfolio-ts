@@ -58,7 +58,7 @@ export const projects = [
             "UI Design",
             "Frontend Development",
         ],
-        link: "real-estate-webside.pages.dev"
+        link: "https://real-estate-webside.pages.dev"
     },
 
     {
