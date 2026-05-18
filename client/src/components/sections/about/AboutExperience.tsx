@@ -41,9 +41,9 @@ const AboutExperience = () => {
             </motion.div>
 
 
-            <div className="flex flex-col lg:flex-row gap-6 lg:gap-10">
+            <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 items-stretch">
                 {EXPERIENCES_DATA.map((item, index) => (
-                    <motion.div key={index} variants={itemReveal} className="flex-1">
+                    <motion.div key={index} variants={itemReveal} className="flex flex-1">
                         <ExperienceItem item={item} />
                     </motion.div>
                 ))}

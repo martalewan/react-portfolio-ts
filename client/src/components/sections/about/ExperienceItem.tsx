@@ -19,9 +19,7 @@ type Props = {
 
 const ExperienceItem = ({ item }: Props) => {
     return (
-        <div className="ui-elevated flex flex-col gap-6 p-5 transition duration-300 group">
-
-            {/* TOP SECTION */}
+        <div className="ui-elevated flex flex-col gap-6 p-5 transition duration-300 group h-full w-full justify-between">
             <div className="flex justify-between w-full gap-2">
                 <div className="space-y-1">
 
