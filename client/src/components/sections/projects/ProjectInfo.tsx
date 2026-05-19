@@ -1,5 +1,6 @@
 type ProjectInfoProps = {
     project: {
+        id: string;
         title: string;
         techStack: string[];
         description: string;
@@ -34,7 +35,10 @@ const ProjectInfo = ({ project }: ProjectInfoProps) => {
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block mt-5 text-sm underline underline-offset-4 hover:opacity-60 transition cursor-pointer"
+                        className={`inline-block mt-5 text-sm underline underline-offset-4 hover:opacity-60 transition cursor-pointer ${project.id === "asteroid-game"
+                                ? "hidden md:inline-block"
+                                : ""
+                            }`}
                     >
                         View project
                     </a>
