@@ -5,11 +5,6 @@ export default function BackgroundEffects() {
                       bg-size-[64px_64px] bg-position-[0_0] inset-0 pointer-events-none" />
 
             <div className="effect-grain absolute pointer-events-none" />
-
-            {/* <div className="absolute top-0 left-0 w-full h-[120vh] overflow-hidden">
-                <RadialGrandientBackground />
-            </div> */}
-
         </>
     );
 }   
