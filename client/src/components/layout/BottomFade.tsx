@@ -4,7 +4,7 @@ type BottomFadeProps = {
 
 export default function BottomFade({ height = "h-18" }: BottomFadeProps) {
     return (
-        <div className={`fixed bottom-0 left-0 w-full ${height} pointer-events-none z-10`}>
+        <div className={`hidden md:block fixed bottom-0 left-0 w-full ${height} pointer-events-none z-10`}>
 
             <div className="absolute inset-0
             backdrop-blur-sm
