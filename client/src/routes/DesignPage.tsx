@@ -4,6 +4,7 @@ import ArchiveNavbar from "../archive/components/ArchiveNavbar";
 import ArchiveAbout from "../archive/components/ArchiveAbout";
 import ArchiveContact from "../archive/components/ArchiveContact";
 import ArchiveProjects from "../archive/components/ArchiveProjects";
+import DeferredSection from "../archive/components/DeferredSection";
 import { useState } from "react";
 
 export default function DesignArchive() {
@@ -20,7 +21,9 @@ export default function DesignArchive() {
 
                 <ArchiveAbout />
 
-                <ArchiveContact />
+                <DeferredSection>
+                    <ArchiveContact />
+                </DeferredSection>
 
                 <ArchiveProjects />
                 <ArchiveFooter />

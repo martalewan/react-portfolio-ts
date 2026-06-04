@@ -1,4 +1,3 @@
-import { Link } from "react-scroll";
 import Button from "../ui/Button";
 import { Link as RouterLink } from "react-router-dom";
 
@@ -11,15 +10,13 @@ const DesktopNavigation = ({ navData }: NavigationProps) => {
         <div className="hidden xl:flex items-center gap-7">
             {
                 navData.map((item) => (
-                    <Link
+                    <a
                         key={item.id}
-                        to={item.id}
-                        smooth={true}
-                        duration={500}
+                        href={`#${item.id}`}
                         aria-label={`Open ${item.label} section`}
                         className="text-[13px] text-text-80 uppercase cursor-pointer transition-all duration-600 ease-in-out hover:text-text">
                         {item.label}
-                    </Link>
+                    </a>
                 ))
             }
             <RouterLink
@@ -28,10 +25,10 @@ const DesktopNavigation = ({ navData }: NavigationProps) => {
             >
                 Design Archive
             </RouterLink>
-            <Link to="contact" smooth={true} duration={500} aria-label="Open contact section"
+            <a href="#contact" aria-label="Open contact section"
             >
                 <Button text="Start a project" />
-            </Link>
+            </a>
         </div >
     )
 }

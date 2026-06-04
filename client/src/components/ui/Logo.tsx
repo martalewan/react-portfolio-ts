@@ -1,10 +1,9 @@
-import { Link } from "react-scroll"
 import logo from "../../assets/logo-white.svg";
 
 const Logo = () => {
     return (
         <header>
-            <Link className="cursor-pointer" to="home" smooth={true} duration={500} aria-label="Open homepage"
+            <a className="cursor-pointer" href="#home" aria-label="Open homepage"
             >
                 <div className="w-8 h-8">
                     <img
@@ -15,7 +14,7 @@ const Logo = () => {
                         loading="lazy"
                     />
                 </div>
-            </Link>
+            </a>
         </header>
     )
 }

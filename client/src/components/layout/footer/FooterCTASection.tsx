@@ -1,4 +1,3 @@
-import { Link } from "react-scroll";
 import FooterSectionShell from "./FooterSectionShell";
 import type { FooterSectionsData } from "../../../data/footer";
 import Socials from "../../ui/Socials";
@@ -23,10 +22,10 @@ const FooterCTASection = ({ data }: FooterCTAProps) => {
                 "
             />
 
-            <Link to="contact" smooth={true} duration={500} aria-label="Open contact section"
+            <a href="#contact" aria-label="Open contact section"
             >
                 <Button text="Start a project" />
-            </Link>
+            </a>
         </FooterSectionShell>
     );
 };

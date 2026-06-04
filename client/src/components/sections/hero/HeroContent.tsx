@@ -1,5 +1,4 @@
 import { FiDownload } from "react-icons/fi";
-import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import { HERO_DATA } from "../../../data/hero";
 import { itemReveal } from "../../../animations";
@@ -51,9 +50,9 @@ const HeroContent = () => {
                 className="grid grid-cols-1 sm:grid-cols-2 gap-6"
             >
 
-                <Link to="contact" smooth duration={500} aria-label="Open contact section">
+                <a href="#contact" aria-label="Open contact section">
                     <Button text={contactLabel} />
-                </Link>
+                </a>
 
                 <a href={cvFile} download aria-label="Download CV">
                     <Button text={downloadLabel} icon={FiDownload} variant="secondary" />
