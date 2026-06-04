@@ -15,9 +15,8 @@ import Footer from "../components/layout/footer/Footer";
 const Home = () => {
     useLenis();
 
-
     return (
-        <div className="relative min-h-screen overflow-hidden">
+        <main className="relative min-h-screen overflow-hidden">
             <BackgroundEffects />
             <BottomFade height={"h-17"} />
             <Cursor />
@@ -34,7 +33,7 @@ const Home = () => {
 
             <Footer />
 
-        </div >
+        </main >
     );
 }
 

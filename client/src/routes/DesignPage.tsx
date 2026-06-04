@@ -11,11 +11,11 @@ export default function DesignArchive() {
     const [navOpen, setNavOpen] = useState<boolean>(false);
 
     return (
-        <div className="bg-archive-bg text-archive-text font-[Montserrat] px-[10vw]">
+        <main className="bg-archive-bg text-archive-text font-[Montserrat] px-[10vw]">
 
             <ArchiveNavbar navOpen={navOpen} setNavOpen={setNavOpen} />
 
-            <main>
+            <div>
 
                 <ArchiveHome />
 
@@ -33,7 +33,7 @@ export default function DesignArchive() {
                 </section>
                 <ArchiveFooter />
 
-            </main>
-        </div>
+            </div>
+        </main>
     );
 }

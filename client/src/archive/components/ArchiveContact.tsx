@@ -11,7 +11,8 @@ export default function ContactSection() {
                 <img
                     src={profilPicture}
                     className="w-full max-w-80 sm:max-w-100 object-cover"
-                    alt="Profile"
+                    alt="Profile illustration"
+                    loading="lazy"
                 />
 
                 <div>

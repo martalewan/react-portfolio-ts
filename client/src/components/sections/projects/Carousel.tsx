@@ -60,6 +60,8 @@ const Carousel = ({ images, active, setActive }: CarouselTypes) => {
                                 portfolio-image
                             "
                                 draggable={false}
+                                alt="Portfolio Image"
+
                             />
                         </div>
                     </motion.div>

@@ -23,7 +23,8 @@ const FooterCTASection = ({ data }: FooterCTAProps) => {
                 "
             />
 
-            <Link to="contact" smooth={true} duration={500}>
+            <Link to="contact" smooth={true} duration={500} aria-label="Open contact section"
+            >
                 <Button text="Start a project" />
             </Link>
         </FooterSectionShell>

@@ -12,7 +12,7 @@ const Cursor = () => {
                 style={{
                     transform: `
                         translate(${pos.x + 12}px, ${pos.y + 12}px)
-                        scale(${hovered ? (label ? 7 : 5) : 0.5})
+                        scale(${hovered ? (label ? 7 : 5) : 0})
                     `,
                 }}
             >

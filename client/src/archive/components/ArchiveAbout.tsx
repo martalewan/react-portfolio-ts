@@ -47,11 +47,16 @@ export default function About() {
                 <img
                     src={lemon}
                     className="hidden lg:block lg:absolute h-50 top-30 right-45"
+                    alt="Lemon illustration"
+                    loading="lazy"
                 />
 
                 <img
                     src={halfLemon}
                     className="hidden lg:block lg:absolute h-50 top-80 right-6"
+                    alt="Lemon illustration"
+                    loading="lazy"
+
                 />
 
             </div>

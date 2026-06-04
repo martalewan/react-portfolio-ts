@@ -16,6 +16,7 @@ const DesktopNavigation = ({ navData }: NavigationProps) => {
                         to={item.id}
                         smooth={true}
                         duration={500}
+                        aria-label={`Open ${item.label} section`}
                         className="text-[13px] text-text-80 uppercase cursor-pointer transition-all duration-600 ease-in-out hover:text-text">
                         {item.label}
                     </Link>
@@ -27,7 +28,8 @@ const DesktopNavigation = ({ navData }: NavigationProps) => {
             >
                 Design Archive
             </RouterLink>
-            <Link to="contact" smooth={true} duration={500}>
+            <Link to="contact" smooth={true} duration={500} aria-label="Open contact section"
+            >
                 <Button text="Start a project" />
             </Link>
         </div >

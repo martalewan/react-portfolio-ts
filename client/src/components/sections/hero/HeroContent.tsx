@@ -51,7 +51,7 @@ const HeroContent = () => {
                 className="grid grid-cols-1 sm:grid-cols-2 gap-6"
             >
 
-                <Link to="contact" smooth duration={500}>
+                <Link to="contact" smooth duration={500} aria-label="Open contact section">
                     <Button text={contactLabel} />
                 </Link>
 

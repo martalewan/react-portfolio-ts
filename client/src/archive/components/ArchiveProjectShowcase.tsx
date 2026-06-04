@@ -43,7 +43,8 @@ export default function ProjectShowcase({
                 <img
                     src={eyeBlinkGif}
                     className="h-10 w-10 md:h-15 md:w-15 shrink-0"
-                    alt=""
+                    alt="Portfolio image item"
+                    loading="lazy"
                 />
             </div>
 
@@ -99,7 +100,8 @@ export default function ProjectShowcase({
                             key={i}
                             src={img}
                             className="h-[45vh] sm:h-[55vh] md:h-[70vh] max-w-[85vw] object-contain shrink-0 snap-center"
-                            alt=""
+                            alt="Portfolio image item"
+                            loading="lazy"
                         />
                     ))}
                 </div>

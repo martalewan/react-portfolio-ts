@@ -19,6 +19,8 @@ const FooterBrandSection = ({ data }: FooterBrandProps) => {
                     src={logo}
                     draggable={false}
                     className="w-full h-full object-contain opacity-90 hover:opacity-100 transition"
+                    alt="Main Logo"
+                    loading="lazy"
                 />
             </div>
 

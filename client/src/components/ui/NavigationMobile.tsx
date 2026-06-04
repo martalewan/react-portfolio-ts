@@ -14,6 +14,7 @@ const MobileNavigation = ({ navData }: NavigationProps) => {
                         smooth={true}
                         duration={500}
                         className="text-text-80 text-[13px] uppercase cursor-pointer transition-all duration-600 ease-in-out hover:text-text"
+                        aria-label={`Open ${item.label} section`}
                     >{item.label}
                     </Link>
                 ))
@@ -24,7 +25,7 @@ const MobileNavigation = ({ navData }: NavigationProps) => {
             >
                 Design Archive
             </RouterLink>
-            <Link to="contact" smooth={true} duration={500}>
+            <Link to="contact" smooth={true} duration={500} aria-label="Open contact section">
                 <Button text="Start a project" />
             </Link>
         </div >

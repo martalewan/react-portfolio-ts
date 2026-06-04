@@ -33,7 +33,8 @@ export default function PortfolioItem({
             <img
                 src={img}
                 className="w-full"
-                alt=""
+                alt="Portfolio Image"
+                loading="lazy"
             />
 
             <div className="absolute inset-0 bg-white/0 group-hover:bg-white/50 transition duration-300 flex items-center justify-center">

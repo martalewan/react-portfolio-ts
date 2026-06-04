@@ -7,10 +7,12 @@ export default function Home() {
 
     return (
         <section className="relative flex items-center justify-center min-h-screen" id="home">
-            <img src={portrait} className="h-82.5" />
+            <img src={portrait} className="h-82.5" alt="Portrait Illustration" loading="lazy"
+            />
 
             <div className="absolute bottom-5 flex flex-col items-start w-full">
-                <img src={godownIcon} className="w-3.75" />
+                <img src={godownIcon} className="w-3.75" alt="Go down icon" loading="lazy"
+                />
                 <button
                     onClick={() => scrollTo("about")}
                     className="text-left hover:opacity-60 transition cursor-pointer"

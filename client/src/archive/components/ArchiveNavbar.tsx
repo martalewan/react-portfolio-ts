@@ -32,6 +32,7 @@ export default function Navbar({ navOpen, setNavOpen }: NavbarProps) {
     const RouteButton = ({ to, label }: RouteButtonProps) => (
         <Link
             to={to}
+            aria-label={`Open ${label} page`}
             className="
             inline-flex items-center justify-center
             px-4 py-1.5
@@ -53,6 +54,7 @@ export default function Navbar({ navOpen, setNavOpen }: NavbarProps) {
                 <Link
                     to="/"
                     className="font-semibold tracking-wide cursor-pointer"
+                    aria-label="Open homepage"
                 >
                     marta.lewan
                 </Link>
@@ -68,6 +70,7 @@ export default function Navbar({ navOpen, setNavOpen }: NavbarProps) {
                 <button
                     onClick={() => setNavOpen(!navOpen)}
                     className="md:hidden flex flex-col gap-1 cursor-pointer"
+                    aria-label="Toggle navigation"
                 >
                     <span className="w-5 h-0.5 bg-black" />
                     <span className="w-5 h-0.5 bg-black" />
