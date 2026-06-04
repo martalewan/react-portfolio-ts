@@ -7,7 +7,7 @@ export default function Home() {
 
     return (
         <section className="relative flex items-center justify-center min-h-screen" id="home">
-            <img src={portrait} className="h-82.5" alt="Portrait Illustration" loading="lazy"
+            <img src={portrait} className="h-82.5" alt="Portrait Illustration"
             />
 
             <div className="absolute bottom-5 flex flex-col items-start w-full">
