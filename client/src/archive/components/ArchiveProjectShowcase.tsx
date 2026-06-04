@@ -45,6 +45,7 @@ export default function ProjectShowcase({
                     className="h-10 w-10 md:h-15 md:w-15 shrink-0"
                     alt="Portfolio image item"
                     loading="lazy"
+
                 />
             </div>
 
@@ -100,8 +101,9 @@ export default function ProjectShowcase({
                             key={i}
                             src={img}
                             className="h-[45vh] sm:h-[55vh] md:h-[70vh] max-w-[85vw] object-contain shrink-0 snap-center"
-                            alt="Portfolio image item"
+                            alt={`${title} portfolio image ${i + 1}`}
                             loading="lazy"
+                            height={800}
                         />
                     ))}
                 </div>

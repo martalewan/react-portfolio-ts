@@ -11,8 +11,8 @@ const PortraitIllustration = () => {
                    transition duration-500 ease-out
                    group-hover:scale-110 group-hover:opacity-40 group-hover:blur-xl"
                 alt="Portrait Illustration"
-                loading="lazy"
-            />
+                decoding="async"
+                fetchPriority="high" />
 
             <img
                 src={portrait}
@@ -21,16 +21,16 @@ const PortraitIllustration = () => {
                    transition duration-500 ease-out
                    group-hover:scale-105 group-hover:opacity-50 group-hover:blur-md"
                 alt="Portrait Illustration"
-                loading="lazy"
-            />
+                decoding="async"
+                fetchPriority="high" />
 
             <img
                 src={portrait}
                 draggable={false}
                 className="invert brightness-0 relative"
                 alt="Portrait Illustration"
-                loading="lazy"
-            />
+                decoding="async"
+                fetchPriority="high" />
         </div>
     )
 }

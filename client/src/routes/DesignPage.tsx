@@ -3,8 +3,7 @@ import ArchiveHome from "../archive/components/ArchiveHome";
 import ArchiveNavbar from "../archive/components/ArchiveNavbar";
 import ArchiveAbout from "../archive/components/ArchiveAbout";
 import ArchiveContact from "../archive/components/ArchiveContact";
-import ArchiveProjectShowcase from "../archive/components/ArchiveProjectShowcase";
-import { projectsData } from "../archive/data/archiveData";
+import ArchiveProjects from "../archive/components/ArchiveProjects";
 import { useState } from "react";
 
 export default function DesignArchive() {
@@ -23,14 +22,7 @@ export default function DesignArchive() {
 
                 <ArchiveContact />
 
-                <section id="projects">
-                    <h2 className="font-[Playfair_Display] text-[36px] md:text-[56px] mt-20">
-                        Selected Design Case Studies
-                    </h2>
-                    {projectsData.map((p) => (
-                        <ArchiveProjectShowcase key={p.id} {...p} />
-                    ))}
-                </section>
+                <ArchiveProjects />
                 <ArchiveFooter />
 
             </div>

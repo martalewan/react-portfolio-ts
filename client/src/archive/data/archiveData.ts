@@ -10,7 +10,6 @@ const illustrationsCover = "/designArchive/covers/min-illustrations.jpg";
 const plannerCover = "/designArchive/covers/planner.jpg";
 const antoninaCover = "/designArchive/covers/antonina.jpg";
 const atmoCover = "/designArchive/covers/atmo.jpg";
-const balenciagaCover = "/designArchive/covers/posters.jpg";
 const restoCover = "/designArchive/covers/marche.jpg";
 const lulaCover = "/designArchive/covers/lula.jpg";
 const beeCover = "/designArchive/covers/bee-team.jpg";
@@ -117,31 +116,6 @@ const resto1 = "/designArchive/marche/marche1.jpg";
 const resto2 = "/designArchive/marche/marche2.jpg";
 const resto3 = "/designArchive/marche/marche3.jpg";
 const resto4 = "/designArchive/marche/marche4.jpg";
-export const portfolioData = [
-    [
-        { img: moonCover, id: "moon" },
-        { img: cevCover, id: "cev" },
-        { img: nototCover, id: "notot" },
-        { img: posterCover, id: "poster" },
-        { img: szczescieCover, id: "szczescie" },
-        { img: demantCover, id: "demant" },
-    ],
-    [
-        { img: mpaCover, id: "mpa" },
-        { img: porCover, id: "por" },
-        { img: illustrationsCover, id: "illustrations" },
-        { img: plannerCover, id: "planner" },
-        { img: antoninaCover, id: "antonina" },
-    ],
-    [
-        { img: atmoCover, id: "atmo" },
-        { img: balenciagaCover, id: "poster" },
-        { img: restoCover, id: "resto" },
-        { img: lulaCover, id: "lula" },
-        { img: beeCover, id: "teambee" },
-    ],
-];
-
 export const projectsData = [
     {
         id: "resto",

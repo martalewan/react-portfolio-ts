@@ -35,9 +35,9 @@ export default function ContactSection() {
                         where I am looking for new inspirations and challenges.
                     </p>
 
-                    <h1 className="text-[36px] sm:text-[44px] lg:text-[56px] mt-8 lg:mt-10 font-[Playfair_Display] text-archive-text-inverse leading-tight">
+                    <h2 className="text-[36px] sm:text-[44px] lg:text-[56px] mt-8 lg:mt-10 font-[Playfair_Display] text-archive-text-inverse leading-tight">
                         Let's work together!
-                    </h1>
+                    </h2>
 
                     <p className="mt-5 text-archive-text leading-relaxed">
                         Feel free to reach out if you wanna collaborate with me or simply have a chat.
@@ -46,7 +46,7 @@ export default function ContactSection() {
                     <div className="flex flex-col sm:flex-row sm:justify-between gap-8 sm:gap-10 mt-8 lg:mt-10 text-archive-text">
 
                         <div>
-                            <h4 className="mb-4 lg:mb-6 font-medium">You can find me on</h4>
+                            <h3 className="mb-4 lg:mb-6 font-medium">You can find me on</h3>
                             <a href="https://instagram.com" target="_blank" className="block hover:underline">
                                 Instagram
                             </a>
