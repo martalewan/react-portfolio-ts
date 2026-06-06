@@ -4,13 +4,15 @@ import BackgroundEffects from "./../components/effects/BackgroundEffects";
 import BottomFade from "./../components/layout/BottomFade";
 import { useLenis } from "./../hooks/useLenis";
 import Hero from "./../components/sections/hero/Hero";
-import About from "./../components/sections/about/About";
-import TextWave from "./../components/effects/TextWave";
-import Skills from "./../components/sections/skills/Skills";
-import AmbientDots from "./../components/effects/AmbientDots";
-import Projects from "./../components/sections/projects/Projects";
-import Contact from "./../components/sections/contact/Contact";
-import Footer from "../components/layout/footer/Footer";
+import { lazy, Suspense } from "react";
+
+const About = lazy(() => import("./../components/sections/about/About"));
+const TextWave = lazy(() => import("./../components/effects/TextWave"));
+const Skills = lazy(() => import("./../components/sections/skills/Skills"));
+const AmbientDots = lazy(() => import("./../components/effects/AmbientDots"));
+const Projects = lazy(() => import("./../components/sections/projects/Projects"));
+const Contact = lazy(() => import("./../components/sections/contact/Contact"));
+const Footer = lazy(() => import("../components/layout/footer/Footer"));
 
 const Home = () => {
     useLenis();
@@ -23,15 +25,17 @@ const Home = () => {
 
             <Navbar />
             <Hero />
-            <About />
 
-            <TextWave />
-            <Skills />
-            <AmbientDots />
-            <Projects />
-            <Contact />
+            <Suspense fallback={null}>
+                <About />
+                <TextWave />
+                <Skills />
+                <AmbientDots />
+                <Projects />
+                <Contact />
 
-            <Footer />
+                <Footer />
+            </Suspense>
 
         </main >
     );

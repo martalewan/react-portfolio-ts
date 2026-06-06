@@ -46,7 +46,7 @@ export default function ContactSection() {
                     <div className="flex flex-col sm:flex-row sm:justify-between gap-8 sm:gap-10 mt-8 lg:mt-10 text-archive-text">
 
                         <div>
-                            <h3 className="mb-4 lg:mb-6 font-medium">You can find me on</h3>
+                            <h4 className="mb-4 lg:mb-6 font-medium">You can find me on</h4>
                             <a href="https://instagram.com" target="_blank" className="block hover:underline">
                                 Instagram
                             </a>

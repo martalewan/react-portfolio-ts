@@ -33,7 +33,7 @@ const HeroContent = () => {
 
             </motion.div>
 
-            <h3>
+            <p className="text-[18px] xl:text-[30px] text-text">
                 {lines.map((line, i) => (
                     <motion.span
                         key={i}
@@ -43,7 +43,7 @@ const HeroContent = () => {
                         {line}
                     </motion.span>
                 ))}
-            </h3>
+            </p>
 
             <motion.div
                 variants={itemReveal}

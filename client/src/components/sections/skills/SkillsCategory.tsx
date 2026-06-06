@@ -34,9 +34,9 @@ const SkillCategory = ({
                 variants={itemReveal}
                 className="flex items-center gap-3"
             >
-                <h4 className="text-xs uppercase tracking-widest text-text-40 group-hover:text-accent transition">
+                <div className="text-xs uppercase tracking-widest text-text-40 group-hover:text-accent transition">
                     {category.title}
-                </h4>
+                </div>
 
                 <div className="w-6 h-px bg-bg-inverse-15 flex-1" />
             </motion.div>

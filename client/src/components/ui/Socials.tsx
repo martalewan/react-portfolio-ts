@@ -12,7 +12,7 @@ const Socials = ({ wrapperStyles, iconsStyles }: SocialsProps) => {
         <motion.div className={wrapperStyles} variants={itemReveal}
         >
             {socialsData.map((social, index) => (
-                <a key={index} href={social.url} target="_blank" rel="noopener noreferrer" className={iconsStyles}>
+                <a key={index} href={social.url} target="_blank" rel="noopener noreferrer" className={iconsStyles} aria-label={social.label}>
                     {social.icon}
                 </a>
             ))}

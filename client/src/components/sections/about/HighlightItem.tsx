@@ -18,14 +18,14 @@ const HighlightItem = ({
         variants={itemReveal}
         className="flex flex-row gap-2"
     >
-        <h1 className="text-[70px] sm:text-[90px] lg:text-[100px] leading-none text-neon min-w-20">
+        <div className="text-[70px] sm:text-[90px] lg:text-[100px] leading-none text-neon min-w-20">
             {item.prefix}
-        </h1>
+        </div>
 
         <div className="flex flex-col gap-2">
-            <h4 className="text-sm text-text-40">
+            <div className="text-sm text-text-40">
                 {item.title}
-            </h4>
+            </div>
 
             <p className="text-sm leading-relaxed">
                 {item.text}

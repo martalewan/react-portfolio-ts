@@ -18,7 +18,8 @@ export default function About() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ">
                     <div>
-                        <h3 className="pb-5">Services</h3>
+                        <h3 className="pb-5 text-[12px]! xl:text-[16px]!">
+                            Services</h3>
 
                         <ul className="[&_li]:text-[12px] xl:[&_li]:text-[16px]">
                             <li>Visual Identity</li>
@@ -37,7 +38,8 @@ export default function About() {
                     </ul>
 
                     <div>
-                        <h3 className="pb-5">Awards</h3>
+                        <h3 className="pb-5 text-[12px]! xl:text-[16px]! mt-6 xl:mt-0">
+                            Awards</h3>
 
                         <ul className="[&_li]:text-[12px] xl:[&_li]:text-[16px] sm:col-span-2 lg:col-span-1">
 

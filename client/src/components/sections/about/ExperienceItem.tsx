@@ -23,9 +23,9 @@ const ExperienceItem = ({ item }: Props) => {
             <div className="flex justify-between w-full gap-2">
                 <div className="space-y-1">
 
-                    <h4 className="text-text text-sm">
+                    <h3 className="text-text text-sm">
                         {item.role}
-                    </h4>
+                    </h3>
 
                     <p className="text-sm text-text-40">
                         <span className="group-hover:text-accent transition-colors">
